@@ -1426,8 +1426,9 @@ main {
 }
 
 .devices__track > .device-card {
-  flex: 0 0 calc(33.333% - 16px);
-  min-width: 300px;
+  flex: 0 0 auto;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .device-card {
@@ -2485,11 +2486,6 @@ main {
   }
   .devices__track {
     gap: 16px;
-  }
-  .devices__track > .device-card {
-    flex: 0 0 85%;
-    min-width: 280px;
-    max-width: 340px;
   }
   .devices__nav {
     display: flex;

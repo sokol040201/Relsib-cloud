@@ -6,7 +6,7 @@
   <title>RelsibCloud — Умный дом, облачный сервис мониторинга микроклимата</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260607">
+  <link rel="stylesheet" href="styles.css?v=20260608">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -621,8 +621,9 @@
     (function initDevicesCarousel() {
       var wrap = document.querySelector('.devices__slider-wrap');
       if (!wrap) return;
+      var viewport = wrap.querySelector('.devices__viewport');
       var track = wrap.querySelector('.devices__track');
-      if (!track || track.dataset.carouselReady) return;
+      if (!viewport || !track || track.dataset.carouselReady) return;
       track.dataset.carouselReady = '1';
 
       var cards = track.querySelectorAll('.device-card');
@@ -632,26 +633,62 @@
       var index = 0;
       var animating = false;
 
-      function getStep() {
-        var card = cards[0];
-        if (!card) return 0;
+      function getGap() {
         var style = getComputedStyle(track);
-        var gap = parseFloat(style.gap) || parseFloat(style.columnGap) || 24;
-        return card.offsetWidth + gap;
+        return parseFloat(style.gap) || parseFloat(style.columnGap) || 24;
+      }
+
+      function getPerView() {
+        var w = viewport.clientWidth;
+        if (w >= 1100) return 3;
+        if (w >= 680) return 2;
+        return 1;
+      }
+
+      function getCardWidth() {
+        var gap = getGap();
+        var perView = getPerView();
+        var vw = viewport.clientWidth;
+        return Math.max(200, Math.floor((vw - gap * (perView - 1)) / perView));
+      }
+
+      function applySizes() {
+        var w = getCardWidth();
+        cards.forEach(function(card) {
+          card.style.flex = '0 0 ' + w + 'px';
+          card.style.width = w + 'px';
+        });
+      }
+
+      function getStep() {
+        return getCardWidth() + getGap();
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, n - getPerView());
+      }
+
+      function getOffset() {
+        var offset = index * getStep();
+        var maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
+        return Math.min(offset, maxOffset);
       }
 
       function setPosition(animate) {
+        applySizes();
+        index = Math.min(index, getMaxIndex());
         track.style.transition = animate
           ? 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
           : 'none';
-        track.style.transform = 'translate3d(' + (-index * getStep()) + 'px, 0, 0)';
+        track.style.transform = 'translate3d(' + (-getOffset()) + 'px, 0, 0)';
       }
 
       function go(dir) {
         if (animating) return;
+        var maxIndex = getMaxIndex();
         var nextIndex = index + dir;
-        if (nextIndex >= n) nextIndex = 0;
-        if (nextIndex < 0) nextIndex = n - 1;
+        if (nextIndex > maxIndex) nextIndex = 0;
+        if (nextIndex < 0) nextIndex = maxIndex;
         if (nextIndex === index) return;
         animating = true;
         index = nextIndex;
@@ -676,6 +713,9 @@
       }
       window.addEventListener('load', layout);
       window.addEventListener('resize', layout);
+      if (typeof ResizeObserver !== 'undefined') {
+        new ResizeObserver(layout).observe(viewport);
+      }
     })();
 
     function updateSelectorIndicator(selector) {
