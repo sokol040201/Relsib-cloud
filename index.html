@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RelsibCloud — Умный дом, облачный сервис мониторинга микроклимата</title>
+  <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__grid"></div>
+    <div class="loader__box" aria-label="Загрузка">
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="header__pill">
+      <a href="index.html" class="header__logo" aria-label="RelsibCloud">
+        <img src="Images/Logo/Cloud_logo.svg" alt="" width="36" height="36" class="header__logo-img">
+        <span class="header__logo-text">RelsibCloud</span>
+      </a>
+      <nav class="header__nav">
+        <a href="#solutions" class="header__nav-item">Решения</a>
+        <span class="header__sep"></span>
+        <a href="#about" class="header__nav-item">О сервисе</a>
+        <span class="header__sep"></span>
+        <a href="#schema" class="header__nav-item">Как работает</a>
+        <span class="header__sep"></span>
+        <a href="#devices" class="header__nav-item">Приборы</a>
+        <span class="header__sep"></span>
+        <a href="#instructions" class="header__nav-item">Инструкции</a>
+      </nav>
+      <div class="header__right">
+        <a href="https://relsibcloud.com" class="header__icon" title="В чат с поддержкой" aria-label="Чат">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+        <a href="https://relsibcloud.com" class="btn btn--primary header__auth-btn">Войти</a>
+        <a href="https://relsibcloud.com" class="header__nav-item header__auth-link">Регистрация</a>
+        <button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="header__menu-overlay" aria-hidden="true"></div>
+    <div class="header__menu" aria-hidden="true">
+      <button type="button" class="header__menu-close" aria-label="Закрыть меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <nav class="header__menu-nav">
+        <a href="index.html#solutions" class="header__menu-link">Решения</a>
+        <a href="index.html#about" class="header__menu-link">О сервисе</a>
+        <a href="index.html#schema" class="header__menu-link">Как работает</a>
+        <a href="index.html#devices" class="header__menu-link">Приборы</a>
+        <a href="index.html#instructions" class="header__menu-link">Инструкции</a>
+      </nav>
+      <div class="header__menu-right">
+        <a href="https://relsibcloud.com" class="btn btn--primary">Войти</a>
+        <a href="https://relsibcloud.com" class="header__menu-link">Регистрация</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__image">
+        <img src="Images/Solutions/business/Eclerk-ECO-M.png" alt="EClerk-Eco-M — прибор для мониторинга микроклимата, температура, влажность, CO₂">
+      </div>
+      <div class="hero__content hero__content--blue">
+        <h1 class="hero__title">RelsibCloud — облачный сервис мониторинга микроклимата</h1>
+        <p class="hero__subtitle">Это ваш дом, в котором умные датчики и приборы работают вместе, чтобы незаметно заботиться о комфорте, микроклимате, качестве воздуха и безопасности</p>
+        <a href="https://relsibcloud.com" class="btn btn--hero btn--pill-icon">
+          <span class="btn__pill-text">Войти в Relsibcloud.com</span>
+          <span class="btn__pill-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="solutions" id="solutions">
+      <div class="solutions__inner">
+        <h2 class="section-title">Готовые решения</h2>
+        <p class="section-subtitle">Выберите сценарий использования и узнайте, как RelsibCloud поможет вашему проекту</p>
+        <div class="selector">
+          <span class="selector__indicator" aria-hidden="true"></span>
+          <button class="selector__btn selector__btn--active" type="button" data-tab="home">Для дома</button>
+          <button class="selector__btn" type="button" data-tab="business">Для бизнеса</button>
+        </div>
+        <div class="solutions__panels">
+          <div class="solutions__panel solutions__panel--active" data-panel="home">
+            <div class="solutions__slider-wrap">
+              <div class="solutions__grid">
+                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <div class="solution-card__image">
+                  <img src="Images/Solutions/home/dacha.jpg" alt="Загородный дом">
+                  <span class="solution-card__tag">Загородный дом</span>
+                </div>
+                <div class="solution-card__body">
+                  <h4 class="solution-card__title">Позаботится о микроклимате</h4>
+                  <p class="solution-card__text">Удалённый мониторинг температуры и влажности. Проверяйте показания через приложение, пока вас нет дома</p>
+                  <span class="solution-card__btn">Подробнее</span>
+                </div>
+              </a>
+              <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <div class="solution-card__image">
+                  <img src="Images/Solutions/home/kvartira2.png" alt="Квартира">
+                  <span class="solution-card__tag">Квартира</span>
+                </div>
+                <div class="solution-card__body">
+                  <h4 class="solution-card__title">Комфорт и качество воздуха</h4>
+                  <p class="solution-card__text">Датчики будут отслеживать микроклимат. Получайте оповещения, если параметры выйдут за норму</p>
+                  <span class="solution-card__btn">Подробнее</span>
+                </div>
+              </a>
+              <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <div class="solution-card__image">
+                  <img src="Images/Solutions/home/sauna.jpg" alt="Баня и сауна">
+                  <span class="solution-card__tag">Баня и сауна</span>
+                </div>
+                <div class="solution-card__body">
+                  <h4 class="solution-card__title">Контроль температуры</h4>
+                  <p class="solution-card__text">Комплект EClerk-WM-Sauna следит за температурой в бане. Удобно подготавливать парную к приходу</p>
+                  <span class="solution-card__btn">Подробнее</span>
+                </div>
+              </a>
+              <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <div class="solution-card__image">
+                  <img src="Images/Solutions/home/chistiy-vozduh.png" alt="Чистый воздух">
+                  <span class="solution-card__tag">Чистый воздух</span>
+                </div>
+                <div class="solution-card__body">
+                  <h4 class="solution-card__title">Мониторинг воздуха</h4>
+                  <p class="solution-card__text">Температура, влажность, CO₂. RelsibCloud поможет поддерживать здоровый микроклимат в жилых помещениях</p>
+                  <span class="solution-card__btn">Подробнее</span>
+                </div>
+              </a>
+            </div>
+            <nav class="solutions__nav" aria-label="Навигация по карточкам">
+              <button type="button" class="solutions__nav-btn solutions__nav-btn--prev" aria-label="Предыдущая карточка">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              </button>
+              <button type="button" class="solutions__nav-btn solutions__nav-btn--next" aria-label="Следующая карточка">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </nav>
+            </div>
+          </div>
+          <div class="solutions__panel" data-panel="business">
+            <div class="solutions__slider-wrap">
+              <div class="solutions__grid">
+                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                  <div class="solution-card__image">
+                    <img src="Images/Solutions/business/pharma.png" alt="Холодовая цепь и аптеки"><span class="solution-card__tag">Фармацевтика</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Холодовая цепь и аптеки</h4>
+                    <p class="solution-card__text">Температурное картирование, мониторинг складов. Получайте оповещения при отклонении параметров</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                  <div class="solution-card__image">
+                    <img src="Images/Solutions/business/food.jpg" alt="Производство и склады"><span class="solution-card__tag">Пищепром</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Производство и склады</h4>
+                    <p class="solution-card__text">Контроль температуры при перевозке и хранении скоропортящихся продуктов. Архивирование, отчёты</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                  <div class="solution-card__image">
+                    <img src="Images/Solutions/business/education.jpg" alt="Школы и детские сады"><span class="solution-card__tag">Образование</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Школы и детские сады</h4>
+                    <p class="solution-card__text">Качество воздуха в помещениях, мониторинг микроклимата. Оповещения и отчёты для руководства</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                  <div class="solution-card__image">
+                    <img src="Images/Solutions/business/jkh.jpg" alt="Вентиляция и теплоснабжение"><span class="solution-card__tag">ЖКХ и склады</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Вентиляция и теплоснабжение</h4>
+                    <p class="solution-card__text">Контроль параметров удалённых объектов. RelsibCloud помогает следить за работой инженерных систем</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+              <nav class="solutions__nav" aria-label="Навигация по карточкам">
+                <button type="button" class="solutions__nav-btn solutions__nav-btn--prev" aria-label="Предыдущая карточка">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button type="button" class="solutions__nav-btn solutions__nav-btn--next" aria-label="Следующая карточка">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="schema" id="schema">
+      <h2 class="section-title">Как работает система</h2>
+      <p class="section-subtitle">Устройства передают данные на шлюз, шлюз — в облако. Просмотр, анализ настройка оповещений — в приложениях RelsibCloud</p>
+      <div class="schema__wrap" aria-hidden="true">
+        <div class="schema__house" role="img" aria-label="План дома"></div>
+        <object data="Images/Shema/Схема.svg" type="image/svg+xml" class="schema__svg" aria-hidden="true"></object>
+      </div>
+    </section>
+
+    <section class="features" id="about">
+      <h2 class="section-title">Главное о сервисе RelsibCloud</h2>
+      <p class="section-subtitle"></p>
+      <div class="features__grid">
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <h3 class="feature-card__title">Архивирование</h3>
+          <h4 class="feature-card__subtitle">Надёжное хранение данных</h4>
+          <p class="feature-card__text">Данные измерений надёжно архивируются в облаке. Просмотр графиков, экспорт в Excel.</p>
+          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="feature-card__title">Мониторинг</h3>
+          <h4 class="feature-card__subtitle">Контроль удалённых объектов</h4>
+          <p class="feature-card__text">Мониторинг за состоянием удалённых объектов. Разделы, объекты и зоны контроля.</p>
+          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3 class="feature-card__title">Оповещения</h3>
+          <h4 class="feature-card__subtitle">Периодические и тревожные</h4>
+          <p class="feature-card__text">SMS, электронная почта, Telegram. Пороги сигнализации для каждого параметра.</p>
+          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="feature-card__title">Отчёты</h3>
+          <h4 class="feature-card__subtitle">Анализ и отчётность</h4>
+          <p class="feature-card__text">Формирование отчётов. Анализ данных, экспорт в Excel, отчёт в PDF.</p>
+          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="protocols">
+      <div class="protocols__inner">
+        <div class="protocols__content">
+          <h2 class="protocols__title">Подключайте и объединяйте как удобно</h2>
+          <p class="protocols__lead">RelsibCloud работает с несколькими способами связи — через шлюзы или напрямую по Wi‑Fi</p>
+          <div class="accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span>Bluetooth 5.0</span>
+                <svg class="accordion__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion__panel">
+                <p>Беспроводные датчики EClerk-WS и термогигрометры Ivit. Передача через приложение EClerk-WM и шлюз GW-Bl/E-1</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span>RS-485</span>
+                <svg class="accordion__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion__panel">
+                <p>Шлюз GW-RS/E-1 опрашивает приборы по сети RS485 (до 32 шт.) и отправляет данные в облако</p>
+                <a href="https://relsib.com/relsibcloud/relsibcloud-devices/" class="accordion__link">Список приборов →</a>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span>Wi-Fi</span>
+                <svg class="accordion__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion__panel">
+                <p>Приборы с модулем Wi-Fi (EClerk-Eco-M-RHT-WiFi и др.) отправляют данные в облако напрямую</p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span>Шлюзы</span>
+                <svg class="accordion__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="accordion__panel">
+                <p>GW-Bl/E-1 — беспроводные датчики. GW-RS/E-1 — приборы по RS-485. Не менее 15 датчиков на шлюз</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="protocols__visual">
+          <div class="protocols__image">
+            <img src="Images/protocols-visual.png" alt="Умный дом — мониторинг микроклимата" class="protocols__image-img">
+            <div class="protocols__image-placeholder">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+              <span>Умный дом — мониторинг микроклимата</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-section" id="instructions">
+      <h2 class="section-title">Работа с сервисом RelsibCloud</h2>
+      <p class="section-subtitle">Облачное хранилище, WEB-приложение и мобильное приложение для мониторинга микроклимата</p>
+
+      <div class="app-ways">
+        <h3 class="app-ways__title">Способы работы с сервисом</h3>
+        <div class="app-ways__grid">
+          <a href="https://relsibcloud.com" class="app-way-card">
+            <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M38 28c2.2 0 4-1.8 4-4s-1.8-4-4-4h-2.4c-.6-4-4-7-8.2-7-3.6 0-6.6 2.2-7.8 5.2-.2-.2-.6-.2-.8-.2-3.2 0-5.8 2.6-5.8 5.8s2.6 5.8 5.8 5.8h18.4z"/></svg></div>
+            <h4 class="app-way-card__title">relsibcloud.com</h4>
+            <p class="app-way-card__text">Облако. Архивирование, графики, экспорт в Excel</p>
+            <span class="app-way-card__link">Войти</span>
+          </a>
+          <a href="https://app-uni.relsibcloud.com" class="app-way-card">
+            <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M14 18h20M14 24h16M14 30h12"/></svg></div>
+            <h4 class="app-way-card__title">app-uni — WEB</h4>
+            <p class="app-way-card__text">Универсальное приложение. Мнемосхемы, оповещения, отчёты</p>
+            <span class="app-way-card__link">Открыть</span>
+          </a>
+          <a href="https://relsib.com/relsibcloud/" class="app-way-card">
+            <div class="app-way-card__icon app-way-card__icon--pulse"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="10" y="4" width="28" height="40" rx="4"/><path d="M20 12h8"/></svg></div>
+            <h4 class="app-way-card__title">EClerk-WM</h4>
+            <p class="app-way-card__text">Мобильное приложение. Датчики, шлюз, оповещения</p>
+            <span class="app-way-card__link">Подробнее</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="app-mockup">
+        <h3 class="app-mockup__title"></h3>
+        <div class="app-mockup__image-wrap">
+          <img src="Images/Mockups/App-uni-ios.png" alt="Мокапы приложения App-uni: экран «Избранные» и «Структура объектов» на iPhone" class="app-mockup__image">
+        </div>
+      </div>
+
+      <div class="app-benefits">
+        <h3 class="app-benefits__title">Преимущества системы</h3>
+        <div class="app-benefits__grid">
+          <div class="app-benefit">Архивирование данных</div>
+          <div class="app-benefit">Мониторинг удалённых объектов</div>
+          <div class="app-benefit">Push-уведомления</div>
+          <div class="app-benefit">Отчёты в Excel и PDF</div>
+        </div>
+      </div>
+
+      <div class="app-features">
+        <h3 class="app-features__title">Единая экосистема RelsibCloud</h3>
+        <div class="app-features__grid">
+          <article class="app-feature">
+            <h4 class="app-feature__title">relsibcloud.com</h4>
+            <p class="app-feature__text">Архивирование, графики, экспорт в Excel. Создание разделов, объектов и зон контроля</p>
+          </article>
+          <article class="app-feature">
+            <h4 class="app-feature__title">app-uni.relsibcloud.com</h4>
+            <p class="app-feature__text">Мнемосхемы, таблицы, графики. Настройка оповещений. Журнал событий. Отчёты в PDF</p>
+          </article>
+          <article class="app-feature">
+            <h4 class="app-feature__title">EClerk Wireless Monitoring</h4>
+            <p class="app-feature__text">Мобильное приложение для работы с беспроводными датчиками и шлюзом GW-Bl/E-1</p>
+          </article>
+          <article class="app-feature">
+            <h4 class="app-feature__title">API</h4>
+            <p class="app-feature__text">Открытый API для интеграции со сторонними приложениями и системами</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="app-buttons">
+        <a href="https://relsibcloud.com" class="btn btn--primary btn--large">relsibcloud.com — войти</a>
+        <a href="https://app-uni.relsibcloud.com" class="btn btn--outline btn--large">app-uni.relsibcloud.com — WEB-приложение</a>
+      </div>
+    </section>
+
+    <section class="devices" id="devices">
+      <h2 class="section-title">Приборы НПК «Рэлсиб» для RelsibCloud</h2>
+      <p class="section-subtitle">Список регулярно обновляется. Беспроводные датчики, термогигрометры, измерители</p>
+      <div class="devices__slider-wrap">
+      <div class="devices__viewport">
+      <div class="devices__track">
+        <div class="device-card">
+          <div class="device-card__media">
+            <div class="device-card__tags">
+              <span class="device-card__tag">Wi‑Fi</span>
+            </div>
+            <div class="device-card__image">
+              <img src="Images/devices/Catalog/EClerk-WS-T.jpg" alt="EClerk-WS — беспроводные датчики">
+            </div>
+          </div>
+          <h4 class="device-card__title">EClerk-WS — беспроводные датчики</h4>
+          <p class="device-card__desc">Температура, влажность, СО2, протечка</p>
+          <div class="device-card__actions">
+            <a href="devices.html?category=eclerk-ws" class="device-card__link">Подробнее</a>
+            <div class="device-card__dropdown">
+              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+              <ul class="device-card__dropdown-menu">
+                <li><a href="https://relsib.com/catalog/eclerk-wm/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com — каталог</a></li>
+                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="device-card">
+          <div class="device-card__media">
+            <div class="device-card__tags">
+              <span class="device-card__tag">Bluetooth</span>
+            </div>
+            <div class="device-card__image">
+              <img src="Images/devices/Catalog/ivit-1.jpg" alt="Термогигрометры Ivit">
+            </div>
+          </div>
+          <h4 class="device-card__title">Термогигрометры Ivit</h4>
+          <p class="device-card__desc">Ivit-1, Ivit-s-1 — Bluetooth 5.0</p>
+          <div class="device-card__actions">
+            <a href="devices.html?category=ivit" class="device-card__link">Подробнее</a>
+            <div class="device-card__dropdown">
+              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+              <ul class="device-card__dropdown-menu">
+                <li><a href="https://relsib.com/catalog/termogigrometry-ivit/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com — каталог</a></li>
+                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+Ivit" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="device-card">
+          <div class="device-card__media">
+            <div class="device-card__tags">
+              <span class="device-card__tag">RS-485</span>
+            </div>
+            <div class="device-card__image">
+              <img src="Images/devices/Catalog/IVIT-M.jpg" alt="Ивит-М, ДВТ-03–05">
+            </div>
+          </div>
+          <h4 class="device-card__title">Ивит-М, ДВТ-03–05</h4>
+          <p class="device-card__desc">Температура и влажность, RS-485</p>
+          <div class="device-card__actions">
+            <a href="devices.html?category=ivit-m-dvt" class="device-card__link">Подробнее</a>
+            <div class="device-card__dropdown">
+              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+              <ul class="device-card__dropdown-menu">
+                <li><a href="https://relsib.com/catalog/izmeriteli-vlazhnosti-i-temperatury-elektronnye-ivit-m/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com — каталог</a></li>
+                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="device-card">
+          <div class="device-card__media">
+            <div class="device-card__tags">
+              <span class="device-card__tag">RS-485</span>
+              <span class="device-card__tag">Wi‑Fi</span>
+            </div>
+            <div class="device-card__image">
+              <img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M">
+            </div>
+          </div>
+          <h4 class="device-card__title">EClerk-Eco-M</h4>
+          <p class="device-card__desc">Качество воздуха, RS-485 и Wi-Fi</p>
+          <div class="device-card__actions">
+            <a href="devices.html?category=eclerk-eco-m" class="device-card__link">Подробнее</a>
+            <div class="device-card__dropdown">
+              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+              <ul class="device-card__dropdown-menu">
+                <li><a href="https://relsib.com/catalog/izmeriteli-registratory-eclerk-eco-m-rht-temperatury-i-otnositelnoj-i-vlazhnosti/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com — каталог</a></li>
+                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="device-card">
+          <div class="device-card__media">
+            <div class="device-card__tags">
+              <span class="device-card__tag">Шлюз</span>
+            </div>
+            <div class="device-card__image">
+              <img src="Images/devices/Catalog/GW.png" alt="Шлюзы GW-Bl/E-1 и GW-RS/E-1">
+            </div>
+          </div>
+          <h4 class="device-card__title">Шлюзы GW</h4>
+          <p class="device-card__desc">Беспроводные датчики и RS-485 до 32 приборов → облако</p>
+          <div class="device-card__actions">
+            <a href="devices.html?category=gateways" class="device-card__link">Подробнее</a>
+            <div class="device-card__dropdown">
+              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+              <ul class="device-card__dropdown-menu">
+                <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-bte-1" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>GW-Bl/E-1 — relsib.com</a></li>
+                <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-rse-1" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>GW-RS/E-1 — relsib.com</a></li>
+                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <nav class="devices__nav" aria-label="Навигация по приборам">
+        <button type="button" class="devices__nav-btn devices__nav-btn--prev" aria-label="Предыдущий прибор">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button type="button" class="devices__nav-btn devices__nav-btn--next" aria-label="Следующий прибор">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </nav>
+      </div>
+      <div class="devices__cta">
+        <h3>Полный список приборов</h3>
+        <p>К RelsibCloud подключаются приборы производства НПК «Рэлсиб». Список регулярно расширяется</p>
+        <a href="devices.html" class="btn btn--outline">Смотреть перечень приборов</a>
+      </div>
+    </section>
+
+    <section class="zigbee">
+      <h2 class="section-title">Инструкции</h2>
+      <p class="section-subtitle">Как начать работать с сервисом. Создание аккаунта, настройка объектов, подключение приборов</p>
+      <div class="zigbee__features">
+        <div class="zigbee-feature">
+          <h4>Инструкция по RelsibCloud</h4>
+          <p>Создание и базовая настройка объектов, зон контроля, подключение приборов</p>
+          <a href="https://relsib.com/relsibcloud/instruktsiya-po-rabote-s-relsibcloud/" class="protocol-card__link">Читать</a>
+        </div>
+        <div class="zigbee-feature">
+          <h4>WEB-приложение app-uni</h4>
+          <p>Настройка, мнемосхемы, отчёты, оповещения, экспорт в Excel и PDF</p>
+          <a href="https://relsib.com/relsibcloud/relsibcloud-webapp-instruction/" class="protocol-card__link">Читать</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contacts">
+        <p><strong>ООО НПК «Рэлсиб»</strong></p>
+        <p>г. Новосибирск, ул. Немировича-Данченко, д. 128/1</p>
+        <p><a href="tel:+73833830286">8 (383) 383-02-86</a></p>
+        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a></p>
+      </div>
+      <nav class="footer__nav">
+        <a href="https://relsib.com/">relsib.com</a>
+        <a href="https://relsib.com/relsibcloud/">RelsibCloud</a>
+        <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/">О сервисе</a>
+        <a href="https://relsib.com/relsibcloud/relsibcloud-devices/">Приборы</a>
+      </nav>
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="Images/Logo/Cloud_logo.svg" alt="" width="40" height="40" class="footer__logo-img">
+        </a>
+        <p class="footer__copyright">© 2026 RelsibCloud. Все права защищены</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  (function() {
+    var loader = document.getElementById('loader');
+    function hideLoader() { if (loader) loader.classList.add('loader--hidden'); }
+    if (document.readyState === 'complete') hideLoader();
+    else window.addEventListener('load', hideLoader);
+
+    var header = document.querySelector('.header');
+    if (header) {
+      var burger = header.querySelector('.header__burger');
+      var overlay = header.querySelector('.header__menu-overlay');
+      var menu = header.querySelector('.header__menu');
+      function openMenu() {
+        header.classList.add('header--menu-open');
+        if (burger) burger.setAttribute('aria-expanded', 'true');
+        if (overlay) overlay.setAttribute('aria-hidden', 'false');
+        if (menu) menu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        header.classList.remove('header--menu-open');
+        if (burger) burger.setAttribute('aria-expanded', 'false');
+        if (overlay) overlay.setAttribute('aria-hidden', 'true');
+        if (menu) menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      if (burger) burger.addEventListener('click', function() {
+        header.classList.contains('header--menu-open') ? closeMenu() : openMenu();
+      });
+      if (overlay) overlay.addEventListener('click', closeMenu);
+      var closeBtn = header.querySelector('.header__menu-close');
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (menu) menu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && header.classList.contains('header--menu-open')) closeMenu();
+      });
+    }
+
+    function initSlider(nextSel, prevSel, cardSel) {
+      var gap = 16;
+      function scroll(btn, dir) {
+        var wrap = btn.closest('.solutions__slider-wrap');
+        if (!wrap) return;
+        var grid = wrap.querySelector('.solutions__grid');
+        var card = grid && grid.querySelector(cardSel);
+        if (grid && card) grid.scrollBy({ left: dir * (card.offsetWidth + gap), behavior: 'smooth' });
+      }
+      document.querySelectorAll(nextSel).forEach(function(btn) {
+        btn.addEventListener('click', function() { scroll(btn, 1); });
+      });
+      document.querySelectorAll(prevSel).forEach(function(btn) {
+        btn.addEventListener('click', function() { scroll(btn, -1); });
+      });
+    }
+    initSlider('.solutions__nav-btn--next', '.solutions__nav-btn--prev', '.solution-card');
+
+    (function initDevicesCarousel() {
+      var wrap = document.querySelector('.devices__slider-wrap');
+      if (!wrap) return;
+      var track = wrap.querySelector('.devices__track');
+      if (!track || track.dataset.carouselReady) return;
+      track.dataset.carouselReady = '1';
+
+      var cards = track.querySelectorAll('.device-card');
+      var n = cards.length;
+      if (!n) return;
+
+      var index = 0;
+      var animating = false;
+
+      function getStep() {
+        var card = cards[0];
+        if (!card) return 0;
+        var style = getComputedStyle(track);
+        var gap = parseFloat(style.gap) || parseFloat(style.columnGap) || 24;
+        return card.offsetWidth + gap;
+      }
+
+      function setPosition(animate) {
+        track.style.transition = animate
+          ? 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+          : 'none';
+        track.style.transform = 'translate3d(' + (-index * getStep()) + 'px, 0, 0)';
+      }
+
+      function go(dir) {
+        if (animating) return;
+        var nextIndex = index + dir;
+        if (nextIndex >= n) nextIndex = 0;
+        if (nextIndex < 0) nextIndex = n - 1;
+        if (nextIndex === index) return;
+        animating = true;
+        index = nextIndex;
+        setPosition(true);
+      }
+
+      track.addEventListener('transitionend', function(e) {
+        if (e.target !== track || e.propertyName !== 'transform') return;
+        animating = false;
+      });
+
+      var nextBtn = wrap.querySelector('.devices__nav-btn--next');
+      var prevBtn = wrap.querySelector('.devices__nav-btn--prev');
+      if (nextBtn) nextBtn.addEventListener('click', function() { go(1); });
+      if (prevBtn) prevBtn.addEventListener('click', function() { go(-1); });
+
+      function layout() { setPosition(false); }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', layout);
+      } else {
+        layout();
+      }
+      window.addEventListener('load', layout);
+      window.addEventListener('resize', layout);
+    })();
+
+    function updateSelectorIndicator(selector) {
+      var ind = selector.querySelector('.selector__indicator');
+      var active = selector.querySelector('.selector__btn--active');
+      if (ind && active) {
+        ind.style.left = active.offsetLeft + 'px';
+        ind.style.width = active.offsetWidth + 'px';
+      }
+    }
+    document.querySelectorAll('.selector__btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var tab = this.getAttribute('data-tab');
+        if (!tab) return;
+        var selector = this.closest('.selector');
+        var section = selector && selector.closest('.solutions');
+        if (!section) return;
+        section.querySelectorAll('.selector__btn').forEach(function(b) {
+          b.classList.toggle('selector__btn--active', b.getAttribute('data-tab') === tab);
+        });
+        section.querySelectorAll('.solutions__panel').forEach(function(p) {
+          p.classList.toggle('solutions__panel--active', p.getAttribute('data-panel') === tab);
+        });
+        updateSelectorIndicator(selector);
+      });
+    });
+    function updateAllIndicators() {
+      document.querySelectorAll('.selector').forEach(updateSelectorIndicator);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateAllIndicators);
+    else updateAllIndicators();
+    window.addEventListener('resize', updateAllIndicators);
+
+    document.querySelectorAll('.accordion__trigger').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.accordion__item');
+        var wasOpen = item.classList.contains('accordion__item--open');
+        document.querySelectorAll('.accordion__item').forEach(function(i) { i.classList.remove('accordion__item--open'); });
+        if (!wasOpen) item.classList.add('accordion__item--open');
+        btn.setAttribute('aria-expanded', String(!wasOpen));
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('.device-card__dropdown-btn');
+      if (btn) {
+        e.preventDefault();
+        var dropdown = btn.closest('.device-card__dropdown');
+        var card = btn.closest('.device-card');
+        var willOpen = !dropdown.classList.contains('is-open');
+        document.querySelectorAll('.device-card__dropdown.is-open').forEach(function(d) {
+          d.classList.remove('is-open');
+          var c = d.closest('.device-card');
+          if (c) c.classList.remove('is-dropdown-open');
+          var t = d.querySelector('button');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
+        if (willOpen) {
+          dropdown.classList.add('is-open');
+          if (card) card.classList.add('is-dropdown-open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+        return;
+      }
+      document.querySelectorAll('.device-card__dropdown.is-open').forEach(function(d) {
+        d.classList.remove('is-open');
+        var card = d.closest('.device-card');
+        if (card) card.classList.remove('is-dropdown-open');
+        var toggle = d.querySelector('button');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
