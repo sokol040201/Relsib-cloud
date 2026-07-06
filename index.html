@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RelsibCloud — Умный дом, облачный сервис мониторинга микроклимата</title>
+  <title>RelsibCloud — система мониторинга за удалёнными объектами</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260608">
+  <link rel="stylesheet" href="styles.css?v=20260706">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -28,15 +28,17 @@
         <span class="header__logo-text">RelsibCloud</span>
       </a>
       <nav class="header__nav">
-        <a href="#solutions" class="header__nav-item">Решения</a>
+        <a href="#architecture" class="header__nav-item">Состав и архитектура</a>
         <span class="header__sep"></span>
-        <a href="#about" class="header__nav-item">О сервисе</a>
+        <a href="#how-it-works" class="header__nav-item">Как работает</a>
         <span class="header__sep"></span>
-        <a href="#schema" class="header__nav-item">Как работает</a>
+        <a href="#use-cases" class="header__nav-item">Примеры применения</a>
         <span class="header__sep"></span>
-        <a href="#devices" class="header__nav-item">Приборы</a>
+        <a href="devices.html" class="header__nav-item">Приборы</a>
         <span class="header__sep"></span>
         <a href="#instructions" class="header__nav-item">Инструкции</a>
+        <span class="header__sep"></span>
+        <a href="#faq" class="header__nav-item">Вопросы и ответы</a>
       </nav>
       <div class="header__right">
         <a href="https://relsibcloud.com" class="header__icon" title="В чат с поддержкой" aria-label="Чат">
@@ -57,11 +59,12 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
       <nav class="header__menu-nav">
-        <a href="index.html#solutions" class="header__menu-link">Решения</a>
-        <a href="index.html#about" class="header__menu-link">О сервисе</a>
-        <a href="index.html#schema" class="header__menu-link">Как работает</a>
-        <a href="index.html#devices" class="header__menu-link">Приборы</a>
+        <a href="index.html#architecture" class="header__menu-link">Состав и архитектура</a>
+        <a href="index.html#how-it-works" class="header__menu-link">Как работает</a>
+        <a href="index.html#use-cases" class="header__menu-link">Примеры применения</a>
+        <a href="devices.html" class="header__menu-link">Приборы</a>
         <a href="index.html#instructions" class="header__menu-link">Инструкции</a>
+        <a href="index.html#faq" class="header__menu-link">Вопросы и ответы</a>
       </nav>
       <div class="header__menu-right">
         <a href="https://relsibcloud.com" class="btn btn--primary">Войти</a>
@@ -76,8 +79,8 @@
         <img src="Images/solutions/business/Eclerk-ECO-M.png" alt="EClerk-Eco-M — прибор для мониторинга микроклимата, температура, влажность, CO₂">
       </div>
       <div class="hero__content hero__content--blue">
-        <h1 class="hero__title">RelsibCloud — облачный сервис мониторинга микроклимата</h1>
-        <p class="hero__subtitle">Это ваш дом, в котором умные датчики и приборы работают вместе, чтобы незаметно заботиться о комфорте, микроклимате, качестве воздуха и безопасности</p>
+        <h1 class="hero__title">RelsibCloud.com — система мониторинга за удалёнными объектами</h1>
+        <p class="hero__subtitle">Обеспечивает непрерывный контроль за важнейшими параметрами, где бы вы ни находились</p>
         <a href="https://relsibcloud.com" class="btn btn--hero btn--pill-icon">
           <span class="btn__pill-text">Войти в Relsibcloud.com</span>
           <span class="btn__pill-icon" aria-hidden="true">
@@ -87,259 +90,437 @@
       </div>
     </section>
 
-    <section class="schema" id="schema">
-      <h2 class="section-title">Как работает система</h2>
-      <p class="section-subtitle">Устройства передают данные на шлюз, шлюз — в облако. Просмотр, анализ настройка оповещений — в приложениях RelsibCloud</p>
-      <div class="schema__wrap" aria-hidden="true">
-        <div class="schema__house" role="img" aria-label="План дома"></div>
-        <object data="Images/Shema/Схема.svg" type="image/svg+xml" class="schema__svg" aria-hidden="true"></object>
-      </div>
-    </section>
+    <section class="architecture app-section" id="architecture">
+      <h2 class="section-title">Состав и архитектура системы</h2>
+      <p class="section-subtitle">Система мониторинга состоит из нижнего, среднего и верхнего уровня</p>
 
-    <section class="features" id="about">
-      <h2 class="section-title">Главное о сервисе RelsibCloud</h2>
-      <div class="features__grid">
-        <article class="feature-card">
-          <div class="feature-card__icon" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </div>
-          <h3 class="feature-card__title">Архивирование</h3>
-          <h4 class="feature-card__subtitle">Надёжное хранение данных</h4>
-          <p class="feature-card__text">Данные измерений надёжно архивируются в облаке. Просмотр графиков, экспорт в Excel.</p>
-          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
-        </article>
-        <article class="feature-card">
-          <div class="feature-card__icon" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </div>
-          <h3 class="feature-card__title">Мониторинг</h3>
-          <h4 class="feature-card__subtitle">Контроль удалённых объектов</h4>
-          <p class="feature-card__text">Мониторинг за состоянием удалённых объектов. Разделы, объекты и зоны контроля.</p>
-          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
-        </article>
-        <article class="feature-card">
-          <div class="feature-card__icon" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <h3 class="feature-card__title">Оповещения</h3>
-          <h4 class="feature-card__subtitle">Периодические и тревожные</h4>
-          <p class="feature-card__text">SMS, электронная почта, Telegram. Пороги сигнализации для каждого параметра.</p>
-          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
-        </article>
-        <article class="feature-card">
-          <div class="feature-card__icon" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <h3 class="feature-card__title">Отчёты</h3>
-          <h4 class="feature-card__subtitle">Анализ и отчётность</h4>
-          <p class="feature-card__text">Формирование отчётов. Анализ данных, экспорт в Excel, отчёт в PDF.</p>
-          <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/" class="feature-card__link" aria-label="Подробнее"></a>
-        </article>
-      </div>
-    </section>
-
-    <section class="protocols">
-      <div class="protocols__inner">
-        <div class="protocols__content">
-          <h2 class="protocols__title">Подключайте и объединяйте как удобно</h2>
-          <p class="protocols__lead">RelsibCloud работает с несколькими способами связи — через шлюзы или напрямую по Wi‑Fi</p>
-          <div class="protocols__connections">
-            <ul class="protocols__list">
-              <li class="protocols__list-item active" data-connection="bluetooth">
-                <h5 class="protocols__item-title" id="protocol-title-0">Bluetooth 5.0</h5>
-                <p class="protocols__item-text">Беспроводные датчики EClerk-WS и термогигрометры Ivit. Передача через приложение EClerk-WM и шлюз GW-Bl/E-1</p>
-              </li>
-              <li class="protocols__list-item" data-connection="rs485">
-                <h5 class="protocols__item-title" id="protocol-title-1">RS-485</h5>
-                <p class="protocols__item-text">Шлюз GW-RS/E-1 опрашивает приборы по сети RS485 (до 32 шт.) и отправляет данные в облако</p>
-                <a href="https://relsib.com/relsibcloud/relsibcloud-devices/" class="protocols__item-link">Список приборов →</a>
-              </li>
-              <li class="protocols__list-item" data-connection="wifi">
-                <h5 class="protocols__item-title" id="protocol-title-2">Wi-Fi</h5>
-                <p class="protocols__item-text">Приборы с модулем Wi-Fi (EClerk-Eco-M-RHT-WiFi и др.) отправляют данные в облако напрямую</p>
-              </li>
-              <li class="protocols__list-item" data-connection="gateways">
-                <h5 class="protocols__item-title" id="protocol-title-3">Шлюзы</h5>
-                <p class="protocols__item-text">GW-Bl/E-1 и GW-RS/E-1; линейка GW-I (IP54) — для улицы и промышленных условий. Не менее 15 датчиков на шлюз</p>
-              </li>
-            </ul>
-          </div>
+      <div class="architecture-sub">
+        <h3 class="subsection-title">Состав системы</h3>
+        <div class="architecture-levels">
+          <article class="architecture-level">
+            <h4 class="architecture-level__title">Нижний уровень</h4>
+            <p class="architecture-level__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые через преобразователи ПАС-01. Измерение физической величины, преобразование в RS-485 ModBus или Bluetooth и передача на средний уровень. Приборы с Wi‑Fi и LTE передают данные напрямую в облако.</p>
+          </article>
+          <article class="architecture-level">
+            <h4 class="architecture-level__title">Средний уровень</h4>
+            <p class="architecture-level__text">Преобразователи интерфейсов (шлюзы), телефон и планшет с приложением EClerk-WM. Тип входа шлюза соответствует выходу подключаемых приборов. Передача в облако по Ethernet, протоколы MQTT и HTTP.</p>
+          </article>
+          <article class="architecture-level">
+            <h4 class="architecture-level__title">Верхний уровень</h4>
+            <p class="architecture-level__text">Облако RelsibCloud и универсальные WEB-приложения. Неограниченные возможности удалённого контроля с ПК и мобильных устройств.</p>
+          </article>
         </div>
-        <div class="protocols__visual">
-          <div class="protocols__image">
-            <img src="Images/protocols-visual.png" alt="Умный дом — мониторинг микроклимата" class="protocols__image-img">
-            <div class="protocols__image-placeholder">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
-              <span>Умный дом — мониторинг микроклимата</span>
+      </div>
+
+      <div class="architecture-protocols">
+        <section class="protocols protocols--nested">
+          <div class="protocols__inner">
+            <div class="protocols__content">
+              <h3 class="protocols__title">Способы связи</h3>
+              <p class="protocols__lead">RelsibCloud работает с несколькими способами связи — через шлюзы или напрямую по Wi‑Fi</p>
+              <div class="protocols__connections">
+                <ul class="protocols__list">
+                  <li class="protocols__list-item active" data-connection="bluetooth">
+                    <h5 class="protocols__item-title">Bluetooth 5.0</h5>
+                    <p class="protocols__item-text">Беспроводные датчики EClerk-WS и термогигрометры Ivit. Передача через приложение EClerk-WM и шлюз GW-Bl/E-1</p>
+                  </li>
+                  <li class="protocols__list-item" data-connection="rs485">
+                    <h5 class="protocols__item-title">RS-485</h5>
+                    <p class="protocols__item-text">Шлюз GW-RS/E-1 опрашивает приборы по сети RS485 (до 32 шт.) и отправляет данные в облако</p>
+                    <a href="devices.html" class="protocols__item-link">Список приборов →</a>
+                  </li>
+                  <li class="protocols__list-item" data-connection="wifi">
+                    <h5 class="protocols__item-title">Wi-Fi</h5>
+                    <p class="protocols__item-text">Приборы с модулем Wi-Fi (EClerk-Eco-M-RHT-WiFi и др.) отправляют данные в облако напрямую</p>
+                  </li>
+                  <li class="protocols__list-item" data-connection="gateways">
+                    <h5 class="protocols__item-title">Шлюзы</h5>
+                    <p class="protocols__item-text">GW-Bl/E-1 и GW-RS/E-1; линейка GW-I (IP54) — для улицы и промышленных условий. Не менее 15 датчиков на шлюз</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="protocols__visual">
+              <div class="protocols__image">
+                <img src="Images/protocols-visual.png" alt="Мониторинг удалённых объектов" class="protocols__image-img">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="architecture-sub">
+        <h3 class="subsection-title">Преимущества облачного сервиса</h3>
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <h3 class="feature-card__title">Архивирование</h3>
+            <h4 class="feature-card__subtitle">Надёжное хранение данных</h4>
+            <p class="feature-card__text">Данные измерений надёжно архивируются в облаке. Просмотр графиков, экспорт в Excel.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h3 class="feature-card__title">Мониторинг</h3>
+            <h4 class="feature-card__subtitle">Контроль удалённых объектов</h4>
+            <p class="feature-card__text">Мониторинг за состоянием удалённых объектов. Разделы, объекты и зоны контроля.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3 class="feature-card__title">Оповещения</h3>
+            <h4 class="feature-card__subtitle">Периодические и тревожные</h4>
+            <p class="feature-card__text">SMS, электронная почта, Telegram. Пороги сигнализации для каждого параметра.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="feature-card__title">Отчёты</h3>
+            <h4 class="feature-card__subtitle">Анализ и отчётность</h4>
+            <p class="feature-card__text">Формирование отчётов. Анализ данных, экспорт в Excel, отчёт в PDF.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="architecture-sub">
+        <h3 class="subsection-title">Архитектура в облаке</h3>
+        <div class="architecture-terms">
+          <article class="architecture-term">
+            <h4 class="architecture-term__title">Зона контроля</h4>
+            <p class="architecture-term__text">Данные в «облаке» привязываются не к прибору, а к месту контроля (зоне). При замене прибора структура данных не меняется. Каждой зоне присваивается уникальный ID. К зоне привязывается один прибор (датчик).</p>
+          </article>
+          <article class="architecture-term">
+            <h4 class="architecture-term__title">Объект контроля</h4>
+            <p class="architecture-term__text">Зоны объединяются в объект контроля с логином и паролем. Для передачи данных используются шлюзы и коммуникационные устройства (телефон, планшет Android). Устройства «прозрачны» для облака.</p>
+          </article>
+          <article class="architecture-term">
+            <h4 class="architecture-term__title">Раздел контроля</h4>
+            <p class="architecture-term__text">В облаке можно создать нужное количество разделов и подразделов, в каждом — свои объекты контроля.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="architecture-sub">
+        <h3 class="subsection-title">Пример: кондитерская фабрика</h3>
+        <div class="architecture-tree">
+          <p class="architecture-tree__lead"><strong>Раздел:</strong> Кондитерская фабрика</p>
+          <div class="architecture-tree__cols">
+            <div class="architecture-tree__col">
+              <h4>Корпус 1</h4>
+              <p class="architecture-tree__objects">Механический цех, гараж, столярный цех</p>
+              <ul class="architecture-tree__zones">
+                <li><strong>Механический цех:</strong> качество воздуха, температура компрессора, давление сжатого воздуха, давление холодной воды</li>
+                <li><strong>Гараж:</strong> качество воздуха, температура на улице, положение ворот</li>
+                <li><strong>Столярный цех:</strong> качество воздуха, температура двигателя пилорамы, температура печи</li>
+              </ul>
+            </div>
+            <div class="architecture-tree__col">
+              <h4>Корпус 2</h4>
+              <p class="architecture-tree__objects">Карамельный цех, шоколадный цех, склад</p>
+              <ul class="architecture-tree__zones">
+                <li><strong>Карамельный цех:</strong> качество воздуха, давление и температура пара, температура карамели</li>
+                <li><strong>Шоколадный цех:</strong> качество воздуха, давление и температура пара, температура шоколада</li>
+                <li><strong>Склад:</strong> температура и влажность в 4 точках, положение дверей, уровень освещённости</li>
+              </ul>
+            </div>
+            <div class="architecture-tree__col">
+              <h4>Корпус 3</h4>
+              <p class="architecture-tree__objects">КБ, тех. бюро, управление</p>
+              <ul class="architecture-tree__zones">
+                <li><strong>КБ, тех. бюро, управление:</strong> качество воздуха в каждом помещении</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="architecture-sub architecture-sub--upper">
+        <h3 class="subsection-title">Верхний уровень — работа с сервисом</h3>
+        <p class="section-subtitle">Облачное хранилище, WEB-приложение и мобильное приложение для мониторинга микроклимата</p>
+
+        <div class="app-ways">
+          <h4 class="app-ways__title">Способы работы с сервисом</h4>
+          <div class="app-ways__grid">
+            <a href="https://relsibcloud.com" class="app-way-card">
+              <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M38 28c2.2 0 4-1.8 4-4s-1.8-4-4-4h-2.4c-.6-4-4-7-8.2-7-3.6 0-6.6 2.2-7.8 5.2-.2-.2-.6-.2-.8-.2-3.2 0-5.8 2.6-5.8 5.8s2.6 5.8 5.8 5.8h18.4z"/></svg></div>
+              <h5 class="app-way-card__title">relsibcloud.com</h5>
+              <p class="app-way-card__text">Облако. Архивирование, графики, экспорт в Excel</p>
+              <span class="app-way-card__link">Войти</span>
+            </a>
+            <a href="https://app-uni.relsibcloud.com" class="app-way-card">
+              <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M14 18h20M14 24h16M14 30h12"/></svg></div>
+              <h5 class="app-way-card__title">app-uni — WEB</h5>
+              <p class="app-way-card__text">Универсальное приложение. Мнемосхемы, оповещения, отчёты</p>
+              <span class="app-way-card__link">Открыть</span>
+            </a>
+            <a href="https://relsib.com/relsibcloud/" class="app-way-card">
+              <div class="app-way-card__icon app-way-card__icon--pulse"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="10" y="4" width="28" height="40" rx="4"/><path d="M20 12h8"/></svg></div>
+              <h5 class="app-way-card__title">EClerk-WM</h5>
+              <p class="app-way-card__text">Мобильное приложение. Датчики, шлюз, оповещения</p>
+              <span class="app-way-card__link">Подробнее</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="app-mockup">
+          <div class="app-mockup__image-wrap">
+            <img src="Images/Mockups/App-uni-ios.png" alt="Мокапы приложения App-uni" class="app-mockup__image">
+          </div>
+        </div>
+
+        <div class="app-benefits">
+          <h4 class="app-benefits__title">Преимущества системы</h4>
+          <div class="app-benefits__grid">
+            <div class="app-benefit">Архивирование данных</div>
+            <div class="app-benefit">Мониторинг удалённых объектов</div>
+            <div class="app-benefit">Push-уведомления</div>
+            <div class="app-benefit">Отчёты в Excel и PDF</div>
+          </div>
+        </div>
+
+        <div class="app-features">
+          <h4 class="app-features__title">Единая экосистема RelsibCloud</h4>
+          <div class="app-features__grid">
+            <article class="app-feature">
+              <h5 class="app-feature__title">relsibcloud.com</h5>
+              <p class="app-feature__text">Архивирование, графики, экспорт в Excel. Создание разделов, объектов и зон контроля</p>
+            </article>
+            <article class="app-feature">
+              <h5 class="app-feature__title">app-uni.relsibcloud.com</h5>
+              <p class="app-feature__text">Мнемосхемы, таблицы, графики. Настройка оповещений. Журнал событий. Отчёты в PDF</p>
+            </article>
+            <article class="app-feature">
+              <h5 class="app-feature__title">EClerk Wireless Monitoring</h5>
+              <p class="app-feature__text">Мобильное приложение для работы с беспроводными датчиками и шлюзом GW-Bl/E-1</p>
+            </article>
+            <article class="app-feature">
+              <h5 class="app-feature__title">API</h5>
+              <p class="app-feature__text">Открытый API для интеграции со сторонними приложениями и системами</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="app-buttons">
+          <a href="https://relsibcloud.com" class="btn btn--primary btn--large">relsibcloud.com — войти</a>
+          <a href="https://app-uni.relsibcloud.com" class="btn btn--outline btn--large">app-uni.relsibcloud.com — WEB-приложение</a>
+        </div>
+      </div>
     </section>
 
-    <section class="app-section" id="service">
-      <h2 class="section-title">Работа с сервисом RelsibCloud</h2>
-      <p class="section-subtitle">Облачное хранилище, WEB-приложение и мобильное приложение для мониторинга микроклимата</p>
+    <section class="how-it-works" id="how-it-works">
+      <h2 class="section-title">Как работает</h2>
+      <p class="section-subtitle">Система мониторинга технологических параметров угольной котельной</p>
 
-      <div class="app-ways">
-        <h3 class="app-ways__title">Способы работы с сервисом</h3>
-        <div class="app-ways__grid">
-          <a href="https://relsibcloud.com" class="app-way-card">
-            <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M38 28c2.2 0 4-1.8 4-4s-1.8-4-4-4h-2.4c-.6-4-4-7-8.2-7-3.6 0-6.6 2.2-7.8 5.2-.2-.2-.6-.2-.8-.2-3.2 0-5.8 2.6-5.8 5.8s2.6 5.8 5.8 5.8h18.4z"/></svg></div>
-            <h4 class="app-way-card__title">relsibcloud.com</h4>
-            <p class="app-way-card__text">Облако. Архивирование, графики, экспорт в Excel</p>
-            <span class="app-way-card__link">Войти</span>
-          </a>
-          <a href="https://app-uni.relsibcloud.com" class="app-way-card">
-            <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M14 18h20M14 24h16M14 30h12"/></svg></div>
-            <h4 class="app-way-card__title">app-uni — WEB</h4>
-            <p class="app-way-card__text">Универсальное приложение. Мнемосхемы, оповещения, отчёты</p>
-            <span class="app-way-card__link">Открыть</span>
-          </a>
-          <a href="https://relsib.com/relsibcloud/" class="app-way-card">
-            <div class="app-way-card__icon app-way-card__icon--pulse"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="10" y="4" width="28" height="40" rx="4"/><path d="M20 12h8"/></svg></div>
-            <h4 class="app-way-card__title">EClerk-WM</h4>
-            <p class="app-way-card__text">Мобильное приложение. Датчики, шлюз, оповещения</p>
-            <span class="app-way-card__link">Подробнее</span>
-          </a>
+      <div class="how-it-works__inner">
+        <p class="how-it-works__object"><strong>Объект:</strong> котельная</p>
+
+        <div class="how-it-works__block">
+          <h3 class="subsection-title">Зоны контроля</h3>
+          <ul class="how-it-works__zones">
+            <li>Давление холодной воды</li>
+            <li>Температура холодной воды</li>
+            <li>Температура котла</li>
+            <li>Температура горячей воды на выходе</li>
+            <li>Давление горячей воды на выходе</li>
+            <li>Температура обратной воды</li>
+            <li>Давление обратной воды</li>
+            <li>Температура уличная</li>
+            <li>Качество воздуха в котельной</li>
+          </ul>
         </div>
-      </div>
 
-      <div class="app-mockup">
-        <h3 class="app-mockup__title"></h3>
-        <div class="app-mockup__image-wrap">
-          <img src="Images/Mockups/App-uni-ios.png" alt="Мокапы приложения App-uni: экран «Избранные» и «Структура объектов» на iPhone" class="app-mockup__image">
+        <div class="how-it-works__block">
+          <h3 class="subsection-title">Приборы</h3>
+          <div class="how-it-works__table-wrap">
+            <table class="devices-table how-it-works__table">
+              <thead>
+                <tr><th>Прибор</th><th>Количество</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Преобразователь давления, выход 4–20 мА</td><td>3 шт.</td></tr>
+                <tr><td>Термометр сопротивления</td><td>4 шт.</td></tr>
+                <tr><td>Преобразователь аналоговых сигналов ПАС-01.RS</td><td>7 шт.</td></tr>
+                <tr><td>Измеритель качества воздуха EClerk-Eco-M-RHTC-RS</td><td>1 шт.</td></tr>
+                <tr><td>Преобразователь интерфейсов GW-RS/E-1-I</td><td>1 шт.</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
 
-      <div class="app-benefits">
-        <h3 class="app-benefits__title">Преимущества системы</h3>
-        <div class="app-benefits__grid">
-          <div class="app-benefit">Архивирование данных</div>
-          <div class="app-benefit">Мониторинг удалённых объектов</div>
-          <div class="app-benefit">Push-уведомления</div>
-          <div class="app-benefit">Отчёты в Excel и PDF</div>
-        </div>
+        <p class="how-it-works__flow">Значения температуры и избыточного давления преобразуются в ПАС-01 в цифровой сигнал, шлюз последовательно опрашивает ПАС-01 и измеритель качества воздуха, формирует пакет данных и отправляет его в «облако». Пользователь просматривает текущие данные и архив, формирует отчёты, настраивает пороговые значения и получает уведомления.</p>
       </div>
+    </section>
 
-    <section class="solutions" id="solutions">
+    <section class="use-cases solutions" id="use-cases">
       <div class="solutions__inner">
-        <h2 class="section-title">Готовые решения</h2>
-        <p class="section-subtitle">Выберите сценарий использования и узнайте, как RelsibCloud поможет вашему проекту</p>
+        <h2 class="section-title">Примеры применения</h2>
+        <p class="section-subtitle">Реальные сценарии использования RelsibCloud в аптеках, доме и на производстве</p>
+
         <div class="selector">
           <span class="selector__indicator" aria-hidden="true"></span>
-          <button class="selector__btn selector__btn--active" type="button" data-tab="home">Для дома</button>
-          <button class="selector__btn" type="button" data-tab="business">Для бизнеса</button>
+          <button class="selector__btn selector__btn--active" type="button" data-tab="pharmacy">Аптеки</button>
+          <button class="selector__btn" type="button" data-tab="home">Дом</button>
+          <button class="selector__btn" type="button" data-tab="business">Бизнес</button>
         </div>
+
         <div class="solutions__panels">
-          <div class="solutions__panel solutions__panel--active" data-panel="home">
-            <div class="solutions__slider-wrap">
-              <div class="solutions__grid">
-                <a href="https://relsib.com/" class="solution-card" target="_blank">
-                <div class="solution-card__image">
-                  <img src="Images/solutions/home/dacha.jpg" alt="Загородный дом">
-                  <span class="solution-card__tag">Загородный дом</span>
-                </div>
-                <div class="solution-card__body">
-                  <h4 class="solution-card__title">Позаботится о микроклимате</h4>
-                  <p class="solution-card__text">Удалённый мониторинг температуры и влажности. Проверяйте показания через приложение, пока вас нет дома</p>
-                  <span class="solution-card__btn">Подробнее</span>
-                </div>
-              </a>
-              <a href="https://relsib.com/" class="solution-card" target="_blank">
-                <div class="solution-card__image">
-                  <img src="Images/solutions/home/kvartira2.png" alt="Квартира">
-                  <span class="solution-card__tag">Квартира</span>
-                </div>
-                <div class="solution-card__body">
-                  <h4 class="solution-card__title">Комфорт и качество воздуха</h4>
-                  <p class="solution-card__text">Датчики будут отслеживать микроклимат. Получайте оповещения, если параметры выйдут за норму</p>
-                  <span class="solution-card__btn">Подробнее</span>
-                </div>
-              </a>
-              <a href="https://relsib.com/" class="solution-card" target="_blank">
-                <div class="solution-card__image">
-                  <img src="Images/solutions/home/sauna.jpg" alt="Баня и сауна">
-                  <span class="solution-card__tag">Баня и сауна</span>
-                </div>
-                <div class="solution-card__body">
-                  <h4 class="solution-card__title">Контроль температуры</h4>
-                  <p class="solution-card__text">Комплект EClerk-WM-Sauna следит за температурой в бане. Удобно подготавливать парную к приходу</p>
-                  <span class="solution-card__btn">Подробнее</span>
-                </div>
-              </a>
-              <a href="https://relsib.com/" class="solution-card" target="_blank">
-                <div class="solution-card__image">
-                  <img src="Images/solutions/home/chistiy-vozduh.png" alt="Чистый воздух">
-                  <span class="solution-card__tag">Чистый воздух</span>
-                </div>
-                <div class="solution-card__body">
-                  <h4 class="solution-card__title">Мониторинг воздуха</h4>
-                  <p class="solution-card__text">Температура, влажность, CO₂. RelsibCloud поможет поддерживать здоровый микроклимат в жилых помещениях</p>
-                  <span class="solution-card__btn">Подробнее</span>
-                </div>
-              </a>
-            </div>
-            <nav class="solutions__nav" aria-label="Навигация по карточкам">
-              <button type="button" class="solutions__nav-btn solutions__nav-btn--prev" aria-label="Предыдущая карточка">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-              </button>
-              <button type="button" class="solutions__nav-btn solutions__nav-btn--next" aria-label="Следующая карточка">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </nav>
-            </div>
+          <div class="solutions__panel solutions__panel--active" data-panel="pharmacy">
+            <article class="use-case-study">
+              <h3 class="use-case-study__title">Общероссийская сеть аптек «Артемида»</h3>
+              <p class="use-case-study__lead">Система мониторинга за условиями хранения лекарственных препаратов</p>
+              <p>В «облаке» создаётся раздел «Сеть аптек «Артемида»», подразделы — по областным центрам, объекты — аптеки (например, Аптека 54/1, Аптека 54/2).</p>
+              <div class="use-case-study__table-wrap">
+                <table class="devices-table use-case-study__table">
+                  <thead><tr><th>Зона</th><th>Прибор</th></tr></thead>
+                  <tbody>
+                    <tr><td>Температура и влажность в зале</td><td>Термогигрометр Ivit-s-1-b</td></tr>
+                    <tr><td>Температура и влажность на складе</td><td>Термогигрометр Ivit-s-1-e-b (выносной зонд)</td></tr>
+                    <tr><td>Температура в холодильнике (верхняя, средняя, нижняя полки)</td><td>Датчик EClerk-WS-T</td></tr>
+                    <tr><td>Температура в морозильнике</td><td>Датчик EClerk-WS-T</td></tr>
+                    <tr><td>Дверь холодильника откр./закр.</td><td>Датчик EClerk-WS-R</td></tr>
+                    <tr><td>Входная дверь, окна</td><td>EClerk-WS-R</td></tr>
+                    <tr><td>Протечка</td><td>EClerk-WS-L</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>На стене аптеки — планшет с приложением EClerk-WM, настроенным в соответствии с «облаком».</p>
+              <h4 class="use-case-study__subtitle">Что получаем</h4>
+              <ul class="use-case-study__benefits">
+                <li>Централизованный контроль условий хранения лекарственных препаратов</li>
+                <li>Контроль охраны аптеки и закрытия двери холодильника сотрудниками</li>
+                <li>Быстрое формирование необходимых отчётов</li>
+                <li>Невысокая стоимость системы, ремонта и поверки приборов</li>
+                <li>Возможность наращивания системы дополнительными датчиками</li>
+              </ul>
+            </article>
           </div>
-          <div class="solutions__panel" data-panel="business">
+
+          <div class="solutions__panel" data-panel="home">
+            <article class="use-case-study use-case-study--compact">
+              <h3 class="use-case-study__title">Загородный дом</h3>
+              <p class="use-case-study__lead">Удалённый мониторинг микроклимата на даче и в загородном доме</p>
+              <p>Беспроводные датчики EClerk-WS и термогигрометры Ivit передают данные через шлюз или приложение EClerk-WM в облако. Вы контролируете температуру, влажность и качество воздуха, пока вас нет дома.</p>
+            </article>
+            <div class="schema__wrap schema__wrap--use-case" aria-hidden="true">
+              <object data="Images/Shema/Схема.svg" type="image/svg+xml" class="schema__svg" aria-hidden="true"></object>
+            </div>
             <div class="solutions__slider-wrap">
               <div class="solutions__grid">
-                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/business/pharma.png" alt="Холодовая цепь и аптеки"><span class="solution-card__tag">Фармацевтика</span>
+                    <img src="Images/solutions/home/dacha.jpg" alt="Загородный дом">
+                    <span class="solution-card__tag">Загородный дом</span>
                   </div>
                   <div class="solution-card__body">
-                    <h4 class="solution-card__title">Холодовая цепь и аптеки</h4>
-                    <p class="solution-card__text">Температурное картирование, мониторинг складов. Получайте оповещения при отклонении параметров</p>
+                    <h4 class="solution-card__title">Позаботится о микроклимате</h4>
+                    <p class="solution-card__text">Удалённый мониторинг температуры и влажности через приложение</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
-                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/business/food.jpg" alt="Производство и склады"><span class="solution-card__tag">Пищепром</span>
+                    <img src="Images/solutions/home/kvartira2.png" alt="Квартира">
+                    <span class="solution-card__tag">Квартира</span>
                   </div>
                   <div class="solution-card__body">
-                    <h4 class="solution-card__title">Производство и склады</h4>
-                    <p class="solution-card__text">Контроль температуры при перевозке и хранении скоропортящихся продуктов. Архивирование, отчёты</p>
+                    <h4 class="solution-card__title">Комфорт и качество воздуха</h4>
+                    <p class="solution-card__text">Датчики отслеживают микроклимат и оповещают при отклонениях</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
-                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/business/education.jpg" alt="Школы и детские сады"><span class="solution-card__tag">Образование</span>
+                    <img src="Images/solutions/home/sauna.jpg" alt="Баня и сауна">
+                    <span class="solution-card__tag">Баня и сауна</span>
                   </div>
                   <div class="solution-card__body">
-                    <h4 class="solution-card__title">Школы и детские сады</h4>
-                    <p class="solution-card__text">Качество воздуха в помещениях, мониторинг микроклимата. Оповещения и отчёты для руководства</p>
+                    <h4 class="solution-card__title">Контроль температуры</h4>
+                    <p class="solution-card__text">Комплект EClerk-WM-Sauna для подготовки парной</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
-                <a href="https://relsib.com/" class="solution-card" target="_blank">
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/business/jkh.jpg" alt="Вентиляция и теплоснабжение"><span class="solution-card__tag">ЖКХ и склады</span>
+                    <img src="Images/solutions/home/chistiy-vozduh.png" alt="Чистый воздух">
+                    <span class="solution-card__tag">Чистый воздух</span>
                   </div>
                   <div class="solution-card__body">
-                    <h4 class="solution-card__title">Вентиляция и теплоснабжение</h4>
-                    <p class="solution-card__text">Контроль параметров удалённых объектов. RelsibCloud помогает следить за работой инженерных систем</p>
+                    <h4 class="solution-card__title">Мониторинг воздуха</h4>
+                    <p class="solution-card__text">Температура, влажность, CO₂ в жилых помещениях</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
               </div>
               <nav class="solutions__nav" aria-label="Навигация по карточкам">
                 <button type="button" class="solutions__nav-btn solutions__nav-btn--prev" aria-label="Предыдущая карточка">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                 </button>
                 <button type="button" class="solutions__nav-btn solutions__nav-btn--next" aria-label="Следующая карточка">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </nav>
+            </div>
+          </div>
+
+          <div class="solutions__panel" data-panel="business">
+            <div class="solutions__slider-wrap">
+              <div class="solutions__grid">
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
+                  <div class="solution-card__image">
+                    <img src="Images/solutions/business/pharma.png" alt="Фармацевтика">
+                    <span class="solution-card__tag">Фармацевтика</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Холодовая цепь и аптеки</h4>
+                    <p class="solution-card__text">Температурное картирование, мониторинг складов</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
+                  <div class="solution-card__image">
+                    <img src="Images/solutions/business/food.jpg" alt="Пищепром">
+                    <span class="solution-card__tag">Пищепром</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Производство и склады</h4>
+                    <p class="solution-card__text">Контроль температуры при хранении и перевозке</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
+                  <div class="solution-card__image">
+                    <img src="Images/solutions/business/education.jpg" alt="Образование">
+                    <span class="solution-card__tag">Образование</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Школы и детские сады</h4>
+                    <p class="solution-card__text">Качество воздуха в помещениях, оповещения и отчёты</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+                <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
+                  <div class="solution-card__image">
+                    <img src="Images/solutions/business/jkh.jpg" alt="ЖКХ">
+                    <span class="solution-card__tag">ЖКХ и склады</span>
+                  </div>
+                  <div class="solution-card__body">
+                    <h4 class="solution-card__title">Вентиляция и теплоснабжение</h4>
+                    <p class="solution-card__text">Контроль удалённых инженерных систем</p>
+                    <span class="solution-card__btn">Подробнее</span>
+                  </div>
+                </a>
+              </div>
+              <nav class="solutions__nav" aria-label="Навигация по карточкам">
+                <button type="button" class="solutions__nav-btn solutions__nav-btn--prev" aria-label="Предыдущая карточка">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button type="button" class="solutions__nav-btn solutions__nav-btn--next" aria-label="Следующая карточка">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </nav>
             </div>
@@ -347,35 +528,6 @@
         </div>
       </div>
     </section>
-
-      <div class="app-features">
-        <h3 class="app-features__title">Единая экосистема RelsibCloud</h3>
-        <div class="app-features__grid">
-          <article class="app-feature">
-            <h4 class="app-feature__title">relsibcloud.com</h4>
-            <p class="app-feature__text">Архивирование, графики, экспорт в Excel. Создание разделов, объектов и зон контроля</p>
-          </article>
-          <article class="app-feature">
-            <h4 class="app-feature__title">app-uni.relsibcloud.com</h4>
-            <p class="app-feature__text">Мнемосхемы, таблицы, графики. Настройка оповещений. Журнал событий. Отчёты в PDF</p>
-          </article>
-          <article class="app-feature">
-            <h4 class="app-feature__title">EClerk Wireless Monitoring</h4>
-            <p class="app-feature__text">Мобильное приложение для работы с беспроводными датчиками и шлюзом GW-Bl/E-1</p>
-          </article>
-          <article class="app-feature">
-            <h4 class="app-feature__title">API</h4>
-            <p class="app-feature__text">Открытый API для интеграции со сторонними приложениями и системами</p>
-          </article>
-        </div>
-      </div>
-
-      <div class="app-buttons">
-        <a href="https://relsibcloud.com" class="btn btn--primary btn--large">relsibcloud.com — войти</a>
-        <a href="https://app-uni.relsibcloud.com" class="btn btn--outline btn--large">app-uni.relsibcloud.com — WEB-приложение</a>
-      </div>
-    </section>
-
     <section class="devices" id="devices">
       <h2 class="section-title">Приборы НПК «Рэлсиб» для RelsibCloud</h2>
       <p class="section-subtitle">Список регулярно обновляется. Беспроводные датчики, термогигрометры, измерители</p>
@@ -561,6 +713,42 @@
           <p>Настройка, мнемосхемы, отчёты, оповещения, экспорт в Excel и PDF</p>
           <a href="https://relsib.com/relsibcloud/relsibcloud-webapp-instruction/" class="protocol-card__link">Читать</a>
         </div>
+        <div class="zigbee-feature">
+          <h4>Мобильное приложение EClerk-WM</h4>
+          <p>Настройка беспроводных датчиков, шлюза и оповещений на планшете или телефоне</p>
+          <a href="https://relsib.com/relsibcloud/" class="protocol-card__link">Читать</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 class="section-title">Вопросы и ответы</h2>
+      <p class="section-subtitle">Частые вопросы о сервисе RelsibCloud</p>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary class="faq__question">Что такое RelsibCloud?</summary>
+          <p class="faq__answer">RelsibCloud — облачный сервис мониторинга за удалёнными объектами. Данные с приборов НПК «Рэлсиб» передаются в облако для архивирования, просмотра графиков, формирования отчётов и оповещений.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Какие приборы можно подключить?</summary>
+          <p class="faq__answer">Беспроводные датчики EClerk-WS, термогигрометры Ivit, измерители по RS-485, приборы с Wi‑Fi и LTE, а также аналоговые датчики через преобразователи ПАС-01. Полный перечень — в <a href="devices.html">каталоге приборов</a>.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Нужен ли шлюз для всех приборов?</summary>
+          <p class="faq__answer">Нет. Приборы с Bluetooth и RS-485 передают данные через шлюзы GW. Приборы с Wi‑Fi и LTE могут отправлять данные в облако напрямую.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Что такое зона контроля?</summary>
+          <p class="faq__answer">В RelsibCloud данные привязаны к месту измерения (зоне), а не к конкретному прибору. При замене датчика структура в облаке сохраняется — достаточно привязать новый прибор к той же зоне.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Как получить доступ к сервису?</summary>
+          <p class="faq__answer">Зарегистрируйтесь на <a href="https://relsibcloud.com">relsibcloud.com</a>, создайте разделы, объекты и зоны контроля. Для работы с беспроводными датчиками используйте приложение EClerk-WM или WEB-приложение app-uni.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Где найти подробные инструкции?</summary>
+          <p class="faq__answer">Раздел <a href="#instructions">Инструкции</a> на этой странице и документация на <a href="https://relsib.com/relsibcloud/">relsib.com/relsibcloud</a>.</p>
+        </details>
       </div>
     </section>
   </main>
@@ -756,7 +944,7 @@
         var tab = this.getAttribute('data-tab');
         if (!tab) return;
         var selector = this.closest('.selector');
-        var section = selector && selector.closest('.solutions');
+        var section = selector && selector.closest('.use-cases, .solutions');
         if (!section) return;
         section.querySelectorAll('.selector__btn').forEach(function(b) {
           b.classList.toggle('selector__btn--active', b.getAttribute('data-tab') === tab);

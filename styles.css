@@ -2585,3 +2585,357 @@ main {
   .footer__nav a { font-size: 14px; }
   .footer__copyright { font-size: 13px; }
 }
+
+/* === Anchor scroll offset (fixed header) === */
+#architecture,
+#how-it-works,
+#use-cases,
+#devices,
+#instructions,
+#faq {
+  scroll-margin-top: 96px;
+}
+
+/* === Architecture === */
+.architecture {
+  padding: var(--section-padding);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.architecture-sub {
+  margin-bottom: 56px;
+}
+
+.architecture-sub:last-child {
+  margin-bottom: 0;
+}
+
+.architecture-sub .subsection-title {
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.architecture-levels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.architecture-level {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.architecture-level__title {
+  font-family: var(--font-main);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.architecture-level__text {
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.architecture-protocols {
+  margin-bottom: 56px;
+}
+
+.architecture-protocols .protocols {
+  padding: 0;
+}
+
+.protocols--nested .protocols__inner {
+  max-width: none;
+}
+
+.architecture-terms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.architecture-term {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.architecture-term__title {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 10px;
+  color: var(--text);
+}
+
+.architecture-term__text {
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.architecture-tree {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.architecture-tree__lead {
+  margin: 0 0 24px;
+  font-size: var(--font-size-body-sm);
+  color: var(--text);
+}
+
+.architecture-tree__cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.architecture-tree__col h4 {
+  margin: 0 0 8px;
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.architecture-tree__objects {
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+
+.architecture-tree__zones {
+  margin: 0;
+  padding-left: 18px;
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-loose);
+}
+
+.architecture-tree__zones li + li {
+  margin-top: 8px;
+}
+
+.architecture-sub--upper .section-subtitle {
+  margin-bottom: 32px;
+}
+
+/* === How it works === */
+.how-it-works {
+  padding: var(--section-padding);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.how-it-works__inner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+}
+
+.how-it-works__object {
+  margin: 0 0 24px;
+  font-size: var(--font-size-body-lg);
+}
+
+.how-it-works__block {
+  margin-bottom: 28px;
+}
+
+.how-it-works__block .subsection-title {
+  margin: 0 0 16px;
+  text-align: left;
+}
+
+.how-it-works__zones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 24px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-body);
+}
+
+.how-it-works__table-wrap,
+.use-case-study__table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.how-it-works__flow {
+  margin: 0;
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-loose);
+}
+
+/* === Use cases === */
+.use-cases.solutions {
+  padding: var(--section-padding);
+}
+
+.use-case-study {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-loose);
+}
+
+.use-case-study__title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  margin: 0 0 8px;
+}
+
+.use-case-study__lead {
+  font-size: var(--font-size-body-lg);
+  color: var(--text);
+  margin: 0 0 16px;
+}
+
+.use-case-study__subtitle {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  margin: 24px 0 12px;
+}
+
+.use-case-study__benefits {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.use-case-study__benefits li + li {
+  margin-top: 6px;
+}
+
+.use-case-study--compact {
+  margin-bottom: 16px;
+}
+
+.schema__wrap--use-case {
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+/* === FAQ === */
+.faq {
+  padding: var(--section-padding);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq__item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.faq__question {
+  padding: 18px 20px;
+  font-family: var(--font-main);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: '+';
+  float: right;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+.faq__item[open] .faq__question::after {
+  content: '−';
+}
+
+.faq__answer {
+  margin: 0;
+  padding: 0 20px 18px;
+  font-size: var(--font-size-body-sm);
+  color: var(--text-muted);
+  line-height: var(--line-height-loose);
+}
+
+.faq__answer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.faq__answer a:hover {
+  text-decoration: underline;
+}
+
+/* === Catalog cloud ID === */
+.device-card__cloud-id {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 24px 8px;
+  font-weight: 500;
+}
+
+.device-card__cloud-id span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.catalog-chips--protocol {
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .architecture-levels,
+  .architecture-terms,
+  .architecture-tree__cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #architecture,
+  #how-it-works,
+  #use-cases,
+  #devices,
+  #instructions,
+  #faq {
+    scroll-margin-top: 72px;
+  }
+
+  .how-it-works__zones {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-sub {
+    margin-bottom: 40px;
+  }
+}
