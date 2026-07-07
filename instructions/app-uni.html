@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB-приложение app-uni — RelsibCloud</title>
+  <link rel="icon" type="image/svg+xml" href="../Images/Logo/Cloud_logo.svg">
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=20260605i">
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__grid"></div>
+    <div class="loader__box" aria-label="Загрузка">
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+      <div class="loader__square"></div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="header__pill">
+      <a href="../index.html" class="header__logo" aria-label="RelsibCloud">
+        <img src="../Images/Logo/Cloud_logo.svg" alt="" width="36" height="36" class="header__logo-img">
+        <span class="header__logo-text">RelsibCloud</span>
+      </a>
+      <nav class="header__nav">
+        <a href="../index.html#architecture" class="header__nav-item">Архитектура</a>
+        <span class="header__sep"></span>
+        <a href="../index.html#use-cases" class="header__nav-item">Примеры</a>
+        <span class="header__sep"></span>
+        <a href="../devices.html" class="header__nav-item">Приборы</a>
+        <span class="header__sep"></span>
+        <a href="../index.html#instructions" class="header__nav-item header__nav-item--active">Инструкции</a>
+      </nav>
+      <div class="header__right">
+        <a href="https://relsibcloud.com" class="header__icon" title="Войти" aria-label="Войти">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+        <a href="https://relsibcloud.com" class="btn btn--primary header__auth-btn">Войти</a>
+        <a href="https://relsibcloud.com" class="header__nav-item header__auth-link">Регистрация</a>
+        <button type="button" class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="header__menu-overlay" aria-hidden="true"></div>
+    <div class="header__menu" aria-hidden="true">
+      <button type="button" class="header__menu-close" aria-label="Закрыть меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <nav class="header__menu-nav">
+        <a href="../index.html#architecture" class="header__menu-link">Архитектура</a>
+        <a href="../index.html#use-cases" class="header__menu-link">Примеры</a>
+        <a href="../devices.html" class="header__menu-link">Приборы</a>
+        <a href="../index.html#instructions" class="header__menu-link header__menu-link--active">Инструкции</a>
+      </nav>
+      <div class="header__menu-right">
+        <a href="https://relsibcloud.com" class="btn btn--primary">Войти</a>
+        <a href="https://relsibcloud.com" class="header__menu-link">Регистрация</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page page--guide">
+    <div class="page__inner">
+      <nav class="breadcrumb" aria-label="Навигация">
+        <a href="../index.html">Главная</a>
+        <span class="breadcrumb__sep">/</span>
+        <a href="../index.html#instructions">Инструкции</a>
+        <span class="breadcrumb__sep">/</span>
+        <span>WEB-приложение app-uni</span>
+      </nav>
+
+      <header class="catalog-header">
+        <a href="../index.html#instructions" class="catalog-header__back" aria-label="Назад к инструкциям">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </a>
+        <h1 class="catalog-header__title">WEB-приложение app-uni</h1>
+      </header>
+      <p class="catalog-hero__lead">Настройка, мнемосхемы, отчёты, оповещения, экспорт в Excel и PDF</p>
+
+      <article class="guide">
+        <section class="guide__section">
+          <h2 class="guide__heading">Видеоинструкция</h2>
+          <div class="guide__video-wrap">
+            <!-- Вставьте iframe с YouTube или Rutube, например:
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Инструкция по app-uni" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            -->
+            <div class="guide__video-placeholder">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+              <p>Видео скоро появится</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="guide__section">
+          <h2 class="guide__heading">Пошаговая инструкция</h2>
+          <ol class="guide__steps">
+            <li>Откройте <a href="https://app-uni.relsibcloud.com">app-uni.relsibcloud.com</a> и войдите под учётной записью RelsibCloud.</li>
+            <li>Выберите раздел, объект и зону — структура совпадает с настройками в облаке.</li>
+            <li>Настройте <strong>мнемосхемы</strong> и таблицы для наглядного отображения параметров на объекте.</li>
+            <li>Задайте пороги и правила <strong>оповещений</strong>, проверьте журнал событий.</li>
+            <li>Формируйте <strong>отчёты</strong> в PDF и выгружайте данные в Excel для анализа архива.</li>
+            <li>Используйте графики и архив для анализа истории измерений по каждой зоне.</li>
+          </ol>
+          <p class="guide__more">
+            <a href="https://relsib.com/relsibcloud/relsibcloud-webapp-instruction/" target="_blank" rel="noopener">Полная инструкция на relsib.com →</a>
+          </p>
+        </section>
+      </article>
+
+      <nav class="guide-nav" aria-label="Другие инструкции">
+        <a href="relsibcloud.html" class="guide-nav__link">Инструкция по RelsibCloud</a>
+        <a href="eclerk-wm.html" class="guide-nav__link">Мобильное приложение EClerk-WM</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contacts">
+        <p><strong>ООО НПК «Рэлсиб»</strong></p>
+        <p>г. Новосибирск, ул. Немировича-Данченко, д. 128/1</p>
+        <p><a href="tel:+73833830286">8 (383) 383-02-86</a></p>
+        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a></p>
+      </div>
+      <nav class="footer__nav">
+        <a href="https://relsib.com/">relsib.com</a>
+        <a href="https://relsib.com/relsibcloud/">RelsibCloud</a>
+        <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/">О сервисе</a>
+        <a href="https://relsib.com/relsibcloud/relsibcloud-devices/">Приборы</a>
+      </nav>
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__logo">
+          <img src="../Images/Logo/Cloud_logo.svg" alt="" width="40" height="40" class="footer__logo-img">
+        </a>
+        <p class="footer__copyright">© 2026 RelsibCloud. Все права защищены</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    var loader = document.getElementById('loader');
+    function hideLoader() { if (loader) loader.classList.add('loader--hidden'); }
+    if (document.readyState === 'complete') hideLoader();
+    else window.addEventListener('load', hideLoader);
+
+    var header = document.querySelector('.header');
+    if (!header) return;
+    var burger = header.querySelector('.header__burger');
+    var overlay = header.querySelector('.header__menu-overlay');
+    var menu = header.querySelector('.header__menu');
+    function openMenu() {
+      header.classList.add('header--menu-open');
+      if (burger) burger.setAttribute('aria-expanded', 'true');
+      if (overlay) overlay.setAttribute('aria-hidden', 'false');
+      if (menu) menu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      header.classList.remove('header--menu-open');
+      if (burger) burger.setAttribute('aria-expanded', 'false');
+      if (overlay) overlay.setAttribute('aria-hidden', 'true');
+      if (menu) menu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    if (burger) burger.addEventListener('click', function() {
+      header.classList.contains('header--menu-open') ? closeMenu() : openMenu();
+    });
+    if (overlay) overlay.addEventListener('click', closeMenu);
+    var closeBtn = header.querySelector('.header__menu-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (menu) menu.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && header.classList.contains('header--menu-open')) closeMenu();
+    });
+  })();
+  </script>
+</body>
+</html>

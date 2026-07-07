@@ -6,7 +6,7 @@
   <title>RelsibCloud — система мониторинга за удалёнными объектами</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260605f">
+  <link rel="stylesheet" href="styles.css?v=20260605j">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -29,8 +29,6 @@
       </a>
       <nav class="header__nav">
         <a href="#architecture" class="header__nav-item">Архитектура</a>
-        <span class="header__sep"></span>
-        <a href="#how-it-works" class="header__nav-item">Как работает</a>
         <span class="header__sep"></span>
         <a href="#use-cases" class="header__nav-item">Примеры</a>
         <span class="header__sep"></span>
@@ -58,7 +56,6 @@
       </button>
       <nav class="header__menu-nav">
         <a href="index.html#architecture" class="header__menu-link">Архитектура</a>
-        <a href="index.html#how-it-works" class="header__menu-link">Как работает</a>
         <a href="index.html#use-cases" class="header__menu-link">Примеры</a>
         <a href="devices.html" class="header__menu-link">Приборы</a>
         <a href="index.html#instructions" class="header__menu-link">Инструкции</a>
@@ -73,7 +70,7 @@
   <main>
     <section class="hero">
       <div class="hero__image">
-        <img src="Images/solutions/business/Eclerk-ECO-M.png" alt="EClerk-Eco-M — прибор для мониторинга микроклимата, температура, влажность, CO₂">
+        <img src="Images/main.png" alt="EClerk-Eco — прибор мониторинга микроклимата на объекте">
       </div>
       <div class="hero__content hero__content--blue">
         <h1 class="hero__title">RelsibCloud.com — система мониторинга за удалёнными объектами</h1>
@@ -596,15 +593,6 @@
       </div>
     </section>
 
-    <section class="how-it-works" id="how-it-works">
-      <h2 class="section-title">Как работает</h2>
-      <p class="section-subtitle">Система мониторинга технологических параметров угольной котельной</p>
-
-      <figure class="schematic schematic--wide how-it-works__schematic">
-        <img src="Images/schematics/boiler-flow.svg?v=4" alt="Котельная: датчики и ПАС-01 через шлюз GW-RS в облако RelsibCloud, 9 зон контроля" width="960" height="540" loading="lazy">
-      </figure>
-    </section>
-
     <section class="use-cases solutions" id="use-cases">
       <div class="solutions__inner">
         <h2 class="section-title">Примеры применения</h2>
@@ -915,17 +903,17 @@
         <div class="zigbee-feature">
           <h4>Инструкция по RelsibCloud</h4>
           <p>Создание и базовая настройка объектов, зон контроля, подключение приборов</p>
-          <a href="https://relsib.com/relsibcloud/instruktsiya-po-rabote-s-relsibcloud/" class="protocol-card__link">Читать</a>
+          <a href="instructions/relsibcloud.html" class="protocol-card__link">Читать</a>
         </div>
         <div class="zigbee-feature">
           <h4>WEB-приложение app-uni</h4>
           <p>Настройка, мнемосхемы, отчёты, оповещения, экспорт в Excel и PDF</p>
-          <a href="https://relsib.com/relsibcloud/relsibcloud-webapp-instruction/" class="protocol-card__link">Читать</a>
+          <a href="instructions/app-uni.html" class="protocol-card__link">Читать</a>
         </div>
         <div class="zigbee-feature">
           <h4>Мобильное приложение EClerk-WM</h4>
           <p>Настройка беспроводных датчиков, шлюза и оповещений на планшете или телефоне</p>
-          <a href="https://relsib.com/relsibcloud/" class="protocol-card__link">Читать</a>
+          <a href="instructions/eclerk-wm.html" class="protocol-card__link">Читать</a>
         </div>
       </div>
     </section>
@@ -935,28 +923,70 @@
       <p class="section-subtitle">Частые вопросы о сервисе RelsibCloud</p>
       <div class="faq__list">
         <details class="faq__item">
-          <summary class="faq__question">Что такое RelsibCloud?</summary>
-          <p class="faq__answer">RelsibCloud — облачный сервис мониторинга за удалёнными объектами. Данные с приборов НПК «Рэлсиб» передаются в облако для архивирования, просмотра графиков, формирования отчётов и оповещений.</p>
+          <summary class="faq__question">
+            <span class="faq__question-text">Что такое RelsibCloud?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <div class="faq__body-inner">
+              <p class="faq__answer">RelsibCloud — облачный сервис мониторинга за удалёнными объектами. Данные с приборов НПК «Рэлсиб» передаются в облако для архивирования, просмотра графиков, формирования отчётов и оповещений.</p>
+            </div>
+          </div>
         </details>
         <details class="faq__item">
-          <summary class="faq__question">Какие приборы можно подключить?</summary>
-          <p class="faq__answer">Беспроводные датчики EClerk-WS, термогигрометры Ivit, измерители по RS-485, приборы с Wi‑Fi и LTE, а также аналоговые датчики через преобразователи ПАС-01. Полный перечень — в <a href="devices.html">каталоге приборов</a>.</p>
+          <summary class="faq__question">
+            <span class="faq__question-text">Какие приборы можно подключить?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <div class="faq__body-inner">
+              <p class="faq__answer">Беспроводные датчики EClerk-WS, термогигрометры Ivit, измерители по RS-485, приборы с Wi‑Fi и LTE, а также аналоговые датчики через преобразователи ПАС-01. Полный перечень — в <a href="devices.html">каталоге приборов</a>.</p>
+            </div>
+          </div>
         </details>
         <details class="faq__item">
-          <summary class="faq__question">Нужен ли шлюз для всех приборов?</summary>
-          <p class="faq__answer">Нет. Приборы с Bluetooth и RS-485 передают данные через шлюзы GW. Приборы с Wi‑Fi и LTE могут отправлять данные в облако напрямую.</p>
+          <summary class="faq__question">
+            <span class="faq__question-text">Нужен ли шлюз для всех приборов?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <div class="faq__body-inner">
+              <p class="faq__answer">Нет. Приборы с Bluetooth и RS-485 передают данные через шлюзы GW. Приборы с Wi‑Fi и LTE могут отправлять данные в облако напрямую.</p>
+            </div>
+          </div>
         </details>
         <details class="faq__item">
-          <summary class="faq__question">Что такое зона контроля?</summary>
-          <p class="faq__answer">В RelsibCloud данные привязаны к месту измерения (зоне), а не к конкретному прибору. При замене датчика структура в облаке сохраняется — достаточно привязать новый прибор к той же зоне.</p>
+          <summary class="faq__question">
+            <span class="faq__question-text">Что такое зона контроля?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <div class="faq__body-inner">
+              <p class="faq__answer">В RelsibCloud данные привязаны к месту измерения (зоне), а не к конкретному прибору. При замене датчика структура в облаке сохраняется — достаточно привязать новый прибор к той же зоне.</p>
+            </div>
+          </div>
         </details>
         <details class="faq__item">
-          <summary class="faq__question">Как получить доступ к сервису?</summary>
-          <p class="faq__answer">Зарегистрируйтесь на <a href="https://relsibcloud.com">relsibcloud.com</a>, создайте разделы, объекты и зоны контроля. Для работы с беспроводными датчиками используйте приложение EClerk-WM или WEB-приложение app-uni.</p>
+          <summary class="faq__question">
+            <span class="faq__question-text">Как получить доступ к сервису?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <div class="faq__body-inner">
+              <p class="faq__answer">Зарегистрируйтесь на <a href="https://relsibcloud.com">relsibcloud.com</a>, создайте разделы, объекты и зоны контроля. Для работы с беспроводными датчиками используйте приложение EClerk-WM или WEB-приложение app-uni.</p>
+            </div>
+          </div>
         </details>
         <details class="faq__item">
-          <summary class="faq__question">Где найти подробные инструкции?</summary>
-          <p class="faq__answer">Раздел <a href="#instructions">Инструкции</a> на этой странице и документация на <a href="https://relsib.com/relsibcloud/">relsib.com/relsibcloud</a>.</p>
+          <summary class="faq__question">
+            <span class="faq__question-text">Где найти подробные инструкции?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__body">
+            <div class="faq__body-inner">
+              <p class="faq__answer">Раздел <a href="#instructions">Инструкции</a> на этой странице: <a href="instructions/relsibcloud.html">RelsibCloud</a>, <a href="instructions/app-uni.html">app-uni</a>, <a href="instructions/eclerk-wm.html">EClerk-WM</a>. Также документация на <a href="https://relsib.com/relsibcloud/">relsib.com/relsibcloud</a>.</p>
+            </div>
+          </div>
         </details>
       </div>
     </section>
@@ -1503,6 +1533,84 @@
           }
           activateRow(row);
         });
+      });
+    })();
+
+    (function initScrollReveal() {
+      var main = document.querySelector('main');
+      if (!main || !main.querySelector('.hero')) return;
+
+      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function mark(selector) {
+        main.querySelectorAll(selector).forEach(function(el) {
+          el.classList.add('scroll-reveal');
+        });
+      }
+
+      function markStagger(selector, step) {
+        var groups = new Map();
+        main.querySelectorAll(selector).forEach(function(el) {
+          var key = el.parentElement;
+          if (!groups.has(key)) groups.set(key, []);
+          groups.get(key).push(el);
+        });
+        groups.forEach(function(items) {
+          items.forEach(function(el, index) {
+            el.classList.add('scroll-reveal');
+            el.style.setProperty('--reveal-delay', (index * step) + 'ms');
+          });
+        });
+      }
+
+      mark('.section-title');
+      mark('.section-subtitle:not(:empty)');
+      mark('.subsection-title');
+      mark('.architecture-sub');
+      mark('.architecture-protocols');
+      mark('.app-ways');
+      mark('.app-mockup');
+      mark('.app-benefits');
+      mark('.app-features');
+      mark('.app-buttons');
+      mark('.selector');
+      mark('.devices__slider-wrap');
+      mark('.devices__cta');
+      markStagger('.feature-card', 90);
+      markStagger('.solution-card', 80);
+      markStagger('.device-card', 70);
+      markStagger('.zigbee-feature', 100);
+      markStagger('.faq__item', 70);
+
+      var items = main.querySelectorAll('.scroll-reveal');
+      if (!items.length) return;
+
+      document.body.classList.add('scroll-reveal--enabled');
+
+      if (reducedMotion) {
+        items.forEach(function(el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
+
+      function revealIfInView(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.94 && rect.bottom > 0) {
+          el.classList.add('is-visible');
+          return true;
+        }
+        return false;
+      }
+
+      items.forEach(function(el) {
+        if (!revealIfInView(el)) observer.observe(el);
       });
     })();
 
