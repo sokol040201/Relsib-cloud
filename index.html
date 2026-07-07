@@ -6,7 +6,7 @@
   <title>RelsibCloud — система мониторинга за удалёнными объектами</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260706">
+  <link rel="stylesheet" href="styles.css?v=20260605f">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -28,17 +28,15 @@
         <span class="header__logo-text">RelsibCloud</span>
       </a>
       <nav class="header__nav">
-        <a href="#architecture" class="header__nav-item">Состав и архитектура</a>
+        <a href="#architecture" class="header__nav-item">Архитектура</a>
         <span class="header__sep"></span>
         <a href="#how-it-works" class="header__nav-item">Как работает</a>
         <span class="header__sep"></span>
-        <a href="#use-cases" class="header__nav-item">Примеры применения</a>
+        <a href="#use-cases" class="header__nav-item">Примеры</a>
         <span class="header__sep"></span>
         <a href="devices.html" class="header__nav-item">Приборы</a>
         <span class="header__sep"></span>
         <a href="#instructions" class="header__nav-item">Инструкции</a>
-        <span class="header__sep"></span>
-        <a href="#faq" class="header__nav-item">Вопросы и ответы</a>
       </nav>
       <div class="header__right">
         <a href="https://relsibcloud.com" class="header__icon" title="В чат с поддержкой" aria-label="Чат">
@@ -59,12 +57,11 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
       <nav class="header__menu-nav">
-        <a href="index.html#architecture" class="header__menu-link">Состав и архитектура</a>
+        <a href="index.html#architecture" class="header__menu-link">Архитектура</a>
         <a href="index.html#how-it-works" class="header__menu-link">Как работает</a>
-        <a href="index.html#use-cases" class="header__menu-link">Примеры применения</a>
+        <a href="index.html#use-cases" class="header__menu-link">Примеры</a>
         <a href="devices.html" class="header__menu-link">Приборы</a>
         <a href="index.html#instructions" class="header__menu-link">Инструкции</a>
-        <a href="index.html#faq" class="header__menu-link">Вопросы и ответы</a>
       </nav>
       <div class="header__menu-right">
         <a href="https://relsibcloud.com" class="btn btn--primary">Войти</a>
@@ -92,23 +89,43 @@
 
     <section class="architecture app-section" id="architecture">
       <h2 class="section-title">Состав и архитектура системы</h2>
-      <p class="section-subtitle">Система мониторинга состоит из нижнего, среднего и верхнего уровня</p>
 
       <div class="architecture-sub">
-        <h3 class="subsection-title">Состав системы</h3>
-        <div class="architecture-levels">
-          <article class="architecture-level">
-            <h4 class="architecture-level__title">Нижний уровень</h4>
-            <p class="architecture-level__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые через преобразователи ПАС-01. Измерение физической величины, преобразование в RS-485 ModBus или Bluetooth и передача на средний уровень. Приборы с Wi‑Fi и LTE передают данные напрямую в облако.</p>
-          </article>
-          <article class="architecture-level">
-            <h4 class="architecture-level__title">Средний уровень</h4>
-            <p class="architecture-level__text">Преобразователи интерфейсов (шлюзы), телефон и планшет с приложением EClerk-WM. Тип входа шлюза соответствует выходу подключаемых приборов. Передача в облако по Ethernet, протоколы MQTT и HTTP.</p>
-          </article>
-          <article class="architecture-level">
-            <h4 class="architecture-level__title">Верхний уровень</h4>
-            <p class="architecture-level__text">Облако RelsibCloud и универсальные WEB-приложения. Неограниченные возможности удалённого контроля с ПК и мобильных устройств.</p>
-          </article>
+        <div class="system-stack" role="img" aria-label="Состав системы: нижний уровень — датчики и ПАС-01, средний — шлюзы и EClerk-WM, верхний — RelsibCloud">
+          <div class="system-stack__line" aria-hidden="true"></div>
+
+          <div class="system-stack__row">
+            <article class="system-stack__level">
+              <header class="system-stack__head">
+                <span class="system-stack__num" aria-hidden="true">1</span>
+                <h3 class="system-stack__title">Нижний уровень</h3>
+              </header>
+              <p class="system-stack__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые к системе через преобразователи ПАС-01. Их задача — измерение физической величины, преобразование её в один из внешних интерфейсов, например, RS-485 ModBus или Bluetooth, и передача данных на средний уровень.</p>
+            </article>
+            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
+          </div>
+
+          <div class="system-stack__row">
+            <article class="system-stack__level">
+              <header class="system-stack__head">
+                <span class="system-stack__num" aria-hidden="true">2</span>
+                <h3 class="system-stack__title">Средний уровень</h3>
+              </header>
+              <p class="system-stack__text">В него входят преобразователи интерфейсов (шлюзы), а также стандартные устройства: телефон, планшет с установленным мобильным приложением. Тип входа шлюза должен соответствовать выходу подключаемых к нему приборов и датчиков. Шлюзы передают данные в облако через Ethernet по протоколам MQTT и HTTP.</p>
+            </article>
+            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
+          </div>
+
+          <div class="system-stack__row">
+            <article class="system-stack__level">
+              <header class="system-stack__head">
+                <span class="system-stack__num" aria-hidden="true">3</span>
+                <h3 class="system-stack__title">Верхний уровень</h3>
+              </header>
+              <p class="system-stack__text">Это «облако» RelsibCloud, а также универсальное и специализированные WEB-приложения, предоставляющие пользователю неограниченные возможности по удалённому контролю.</p>
+            </article>
+            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
+          </div>
         </div>
       </div>
 
@@ -189,79 +206,354 @@
 
       <div class="architecture-sub">
         <h3 class="subsection-title">Архитектура в облаке</h3>
-        <div class="architecture-terms">
-          <article class="architecture-term">
-            <h4 class="architecture-term__title">Зона контроля</h4>
-            <p class="architecture-term__text">Данные в «облаке» привязываются не к прибору, а к месту контроля (зоне). При замене прибора структура данных не меняется. Каждой зоне присваивается уникальный ID. К зоне привязывается один прибор (датчик).</p>
-          </article>
-          <article class="architecture-term">
-            <h4 class="architecture-term__title">Объект контроля</h4>
-            <p class="architecture-term__text">Зоны объединяются в объект контроля с логином и паролем. Для передачи данных используются шлюзы и коммуникационные устройства (телефон, планшет Android). Устройства «прозрачны» для облака.</p>
-          </article>
-          <article class="architecture-term">
-            <h4 class="architecture-term__title">Раздел контроля</h4>
-            <p class="architecture-term__text">В облаке можно создать нужное количество разделов и подразделов, в каждом — свои объекты контроля.</p>
-          </article>
-        </div>
-      </div>
+        <div class="cloud-tree" id="cloud-tree">
 
-      <div class="architecture-sub">
-        <h3 class="subsection-title">Пример: кондитерская фабрика</h3>
-        <div class="architecture-tree">
-          <p class="architecture-tree__lead"><strong>Раздел:</strong> Кондитерская фабрика</p>
-          <div class="architecture-tree__cols">
-            <div class="architecture-tree__col">
-              <h4>Корпус 1</h4>
-              <p class="architecture-tree__objects">Механический цех, гараж, столярный цех</p>
-              <ul class="architecture-tree__zones">
-                <li><strong>Механический цех:</strong> качество воздуха, температура компрессора, давление сжатого воздуха, давление холодной воды</li>
-                <li><strong>Гараж:</strong> качество воздуха, температура на улице, положение ворот</li>
-                <li><strong>Столярный цех:</strong> качество воздуха, температура двигателя пилорамы, температура печи</li>
-              </ul>
+          <div class="cloud-tree__glossary">
+            <div class="cloud-tree__glossary-item">
+              <span class="cloud-tree__glossary-tag cloud-tree__glossary-tag--section">Раздел</span>
+              <p>Группа объектов одного подразделения или площадки. Разделов и подразделов может быть сколько угодно.</p>
             </div>
-            <div class="architecture-tree__col">
-              <h4>Корпус 2</h4>
-              <p class="architecture-tree__objects">Карамельный цех, шоколадный цех, склад</p>
-              <ul class="architecture-tree__zones">
-                <li><strong>Карамельный цех:</strong> качество воздуха, давление и температура пара, температура карамели</li>
-                <li><strong>Шоколадный цех:</strong> качество воздуха, давление и температура пара, температура шоколада</li>
-                <li><strong>Склад:</strong> температура и влажность в 4 точках, положение дверей, уровень освещённости</li>
-              </ul>
+            <div class="cloud-tree__glossary-item is-active">
+              <span class="cloud-tree__glossary-tag cloud-tree__glossary-tag--object">Объект</span>
+              <p>Здание или площадка с собственным логином и паролем. Через них шлюз или телефон передаёт данные в облако.</p>
             </div>
-            <div class="architecture-tree__col">
-              <h4>Корпус 3</h4>
-              <p class="architecture-tree__objects">КБ, тех. бюро, управление</p>
-              <ul class="architecture-tree__zones">
-                <li><strong>КБ, тех. бюро, управление:</strong> качество воздуха в каждом помещении</li>
-              </ul>
+            <div class="cloud-tree__glossary-item">
+              <span class="cloud-tree__glossary-tag cloud-tree__glossary-tag--zone">Зона</span>
+              <p>Место контроля с уникальным <strong>ID зоны</strong>. К зоне привязан один датчик; архив остаётся при замене прибора.</p>
             </div>
           </div>
+
+          <div class="cloud-tree__layout">
+            <div class="cloud-tree__panel">
+              <div role="tree" aria-label="Иерархия: раздел, объект, зоны контроля">
+                <div class="cloud-tree__branch">
+                  <button type="button" class="cloud-tree__row cloud-tree__row--section" role="treeitem" aria-expanded="true" data-tree-type="section" data-tree-id="section-1">
+                    <span class="cloud-tree__chevron" aria-hidden="true"></span>
+                    <span class="cloud-tree__icon cloud-tree__icon--section" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    </span>
+                    <span class="cloud-tree__body">
+                      <span class="cloud-tree__level">Раздел</span>
+                      <span class="cloud-tree__name">Промышленный комплекс</span>
+                      <span class="cloud-tree__badge">2 объекта</span>
+                    </span>
+                  </button>
+                  <div class="cloud-tree__children" role="group">
+                    <div class="cloud-tree__branch">
+                      <button type="button" class="cloud-tree__row cloud-tree__row--object is-active" role="treeitem" aria-expanded="true" data-tree-type="object" data-tree-id="object-boiler">
+                        <span class="cloud-tree__chevron" aria-hidden="true"></span>
+                        <span class="cloud-tree__icon cloud-tree__icon--object" aria-hidden="true">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 21h18"/><path d="M6 21V7l6-4 6 4v14"/><path d="M10 21v-6h4v6"/></svg>
+                        </span>
+                        <span class="cloud-tree__body">
+                          <span class="cloud-tree__level">Объект</span>
+                          <span class="cloud-tree__name">Угольная котельная</span>
+                          <span class="cloud-tree__badge">4 зоны</span>
+                          <span class="cloud-tree__meta">г. Томск, ул. Заводская, 12</span>
+                        </span>
+                      </button>
+                      <div class="cloud-tree__children" role="group">
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-101">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Давление подачи</span>
+                              <span class="cloud-tree__id">ID: 101</span>
+                              <span class="cloud-tree__status cloud-tree__status--ok">Норма</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                                <span>1,2 кгс/см²</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-102">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Температура котла</span>
+                              <span class="cloud-tree__id">ID: 102</span>
+                              <span class="cloud-tree__status cloud-tree__status--alarm">Тревога</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                                <span>96 °C</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-103">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Температура обратки</span>
+                              <span class="cloud-tree__id">ID: 103</span>
+                              <span class="cloud-tree__status cloud-tree__status--ok">Норма</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                                <span>62 °C</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-104">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4a2 2 0 1 0-.6 1.3H2"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Качество воздуха</span>
+                              <span class="cloud-tree__id">ID: 104</span>
+                              <span class="cloud-tree__status cloud-tree__status--off">Не в сети</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric cloud-tree__metric--empty">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                                <span>— °C</span>
+                              </span>
+                              <span class="cloud-tree__metric cloud-tree__metric--empty">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-5-7-13-7-13S5 10 5 15a7 7 0 0 0 7 7z"/></svg>
+                                <span>— %</span>
+                              </span>
+                              <span class="cloud-tree__metric cloud-tree__metric--empty">
+                                <span class="cloud-tree__metric-label">CO₂</span>
+                                <span>— ppm</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cloud-tree__branch is-collapsed">
+                      <button type="button" class="cloud-tree__row cloud-tree__row--object" role="treeitem" aria-expanded="false" data-tree-type="object" data-tree-id="object-pump">
+                        <span class="cloud-tree__chevron" aria-hidden="true"></span>
+                        <span class="cloud-tree__icon cloud-tree__icon--object" aria-hidden="true">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 21h18"/><path d="M6 21V7l6-4 6 4v14"/><path d="M10 21v-6h4v6"/></svg>
+                        </span>
+                        <span class="cloud-tree__body">
+                          <span class="cloud-tree__level">Объект</span>
+                          <span class="cloud-tree__name">Насосная станция</span>
+                          <span class="cloud-tree__badge">3 зоны</span>
+                          <span class="cloud-tree__meta">г. Томск, ул. Заводская, 12 · корпус 2</span>
+                        </span>
+                      </button>
+                      <div class="cloud-tree__children" role="group">
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-201">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Давление магистрали</span>
+                              <span class="cloud-tree__id">ID: 201</span>
+                              <span class="cloud-tree__status cloud-tree__status--ok">Норма</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                                <span>3,8 кгс/см²</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-202">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Температура насосов</span>
+                              <span class="cloud-tree__id">ID: 202</span>
+                              <span class="cloud-tree__status cloud-tree__status--off">Не в сети</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric cloud-tree__metric--empty">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                                <span>— °C</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-203">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-5-7-13-7-13S5 10 5 15a7 7 0 0 0 7 7z"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Протечка в подвале</span>
+                              <span class="cloud-tree__id">ID: 203</span>
+                              <span class="cloud-tree__status cloud-tree__status--alarm">Тревога</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-5-7-13-7-13S5 10 5 15a7 7 0 0 0 7 7z"/></svg>
+                                <span>Обнаружена</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cloud-tree__branch is-collapsed">
+                  <button type="button" class="cloud-tree__row cloud-tree__row--section" role="treeitem" aria-expanded="false" data-tree-type="section" data-tree-id="section-2">
+                    <span class="cloud-tree__chevron" aria-hidden="true"></span>
+                    <span class="cloud-tree__icon cloud-tree__icon--section" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    </span>
+                    <span class="cloud-tree__body">
+                      <span class="cloud-tree__level">Раздел</span>
+                      <span class="cloud-tree__name">Офисный центр</span>
+                      <span class="cloud-tree__badge">1 объект</span>
+                    </span>
+                  </button>
+                  <div class="cloud-tree__children" role="group">
+                    <div class="cloud-tree__branch is-collapsed">
+                      <button type="button" class="cloud-tree__row cloud-tree__row--object" role="treeitem" aria-expanded="false" data-tree-type="object" data-tree-id="object-office">
+                        <span class="cloud-tree__chevron" aria-hidden="true"></span>
+                        <span class="cloud-tree__icon cloud-tree__icon--object" aria-hidden="true">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 21h18"/><path d="M6 21V7l6-4 6 4v14"/><path d="M10 21v-6h4v6"/></svg>
+                        </span>
+                        <span class="cloud-tree__body">
+                          <span class="cloud-tree__level">Объект</span>
+                          <span class="cloud-tree__name">Офис, 3 этаж</span>
+                          <span class="cloud-tree__badge">3 зоны</span>
+                          <span class="cloud-tree__meta">г. Новосибирск, пр. Димитрова, 7 · EClerk-WM</span>
+                        </span>
+                      </button>
+                      <div class="cloud-tree__children" role="group">
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-301">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4a2 2 0 1 0-.6 1.3H2"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Микроклимат open space</span>
+                              <span class="cloud-tree__id">ID: 301</span>
+                              <span class="cloud-tree__status cloud-tree__status--ok">Норма</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                                <span>23,1 °C</span>
+                              </span>
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-5-7-13-7-13S5 10 5 15a7 7 0 0 0 7 7z"/></svg>
+                                <span>41 %</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-302">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4a2 2 0 1 0-.6 1.3H2"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Переговорная</span>
+                              <span class="cloud-tree__id">ID: 302</span>
+                              <span class="cloud-tree__status cloud-tree__status--off">Не в сети</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric cloud-tree__metric--empty">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                                <span>— °C</span>
+                              </span>
+                              <span class="cloud-tree__metric cloud-tree__metric--empty">
+                                <span class="cloud-tree__metric-label">CO₂</span>
+                                <span>— ppm</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <button type="button" class="cloud-tree__row cloud-tree__row--zone" role="treeitem" data-tree-type="zone" data-tree-id="zone-303">
+                          <span class="cloud-tree__chevron cloud-tree__chevron--leaf" aria-hidden="true"></span>
+                          <span class="cloud-tree__icon cloud-tree__icon--zone" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4a2 2 0 1 0-.6 1.3H2"/></svg>
+                          </span>
+                          <span class="cloud-tree__body cloud-tree__body--zone">
+                            <span class="cloud-tree__zone-head">
+                              <span class="cloud-tree__name">Кухня сотрудников</span>
+                              <span class="cloud-tree__id">ID: 303</span>
+                              <span class="cloud-tree__status cloud-tree__status--alarm">Тревога</span>
+                            </span>
+                            <span class="cloud-tree__metrics">
+                              <span class="cloud-tree__metric">
+                                <svg class="cloud-tree__metric-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                                <span>26,8 °C</span>
+                              </span>
+                              <span class="cloud-tree__metric">
+                                <span class="cloud-tree__metric-label">CO₂</span>
+                                <span>1&nbsp;240 ppm</span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="cloud-tree__detail" id="cloud-tree-detail" aria-live="polite">
+              <p class="cloud-tree__detail-kicker">Объект контроля</p>
+              <h4 class="cloud-tree__detail-title">Угольная котельная</h4>
+              <p class="cloud-tree__detail-lead">Объект с 4 зонами контроля режима котельной. Логин и пароль прописаны в шлюзе GW-RS.</p>
+              <ul class="cloud-tree__detail-list">
+                <li>4 зоны: давление, температуры, качество воздуха</li>
+                <li>Архив по каждой зоне хранится отдельно по ID</li>
+                <li>Данные передаются в облако под одним логином объекта</li>
+              </ul>
+              <div class="cloud-tree__detail-example">
+                <p class="cloud-tree__detail-example-title">В примере</p>
+                <p class="cloud-tree__detail-example-text">При замене датчика на зоне 102 история останется у ID 102.</p>
+              </div>
+            </aside>
+          </div>
+
+          <p class="cloud-tree__legend"><strong>1 зона = 1 датчик.</strong> Данные и архив привязаны к ID зоны (месту), а не к серийному номеру прибора — при замене датчика история сохраняется.</p>
         </div>
       </div>
 
       <div class="architecture-sub architecture-sub--upper">
-        <h3 class="subsection-title">Верхний уровень — работа с сервисом</h3>
-        <p class="section-subtitle">Облачное хранилище, WEB-приложение и мобильное приложение для мониторинга микроклимата</p>
+        <h3 class="subsection-title">Работа с сервисом</h3>
+        <p class="section-subtitle">Веб-приложение и мобильное приложение для мониторинга микроклимата</p>
 
         <div class="app-ways">
           <h4 class="app-ways__title">Способы работы с сервисом</h4>
           <div class="app-ways__grid">
-            <a href="https://relsibcloud.com" class="app-way-card">
-              <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M38 28c2.2 0 4-1.8 4-4s-1.8-4-4-4h-2.4c-.6-4-4-7-8.2-7-3.6 0-6.6 2.2-7.8 5.2-.2-.2-.6-.2-.8-.2-3.2 0-5.8 2.6-5.8 5.8s2.6 5.8 5.8 5.8h18.4z"/></svg></div>
-              <h5 class="app-way-card__title">relsibcloud.com</h5>
-              <p class="app-way-card__text">Облако. Архивирование, графики, экспорт в Excel</p>
-              <span class="app-way-card__link">Войти</span>
-            </a>
             <a href="https://app-uni.relsibcloud.com" class="app-way-card">
               <div class="app-way-card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M14 18h20M14 24h16M14 30h12"/></svg></div>
-              <h5 class="app-way-card__title">app-uni — WEB</h5>
-              <p class="app-way-card__text">Универсальное приложение. Мнемосхемы, оповещения, отчёты</p>
+              <h5 class="app-way-card__title">Веб-приложение</h5>
+              <p class="app-way-card__text">Работа с облаком RelsibCloud в браузере: архив данных, графики, мнемосхемы, оповещения и отчёты</p>
               <span class="app-way-card__link">Открыть</span>
             </a>
-            <a href="https://relsib.com/relsibcloud/" class="app-way-card">
+            <a href="https://relsib.com/catalog/eclerk-wm/" class="app-way-card">
               <div class="app-way-card__icon app-way-card__icon--pulse"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="10" y="4" width="28" height="40" rx="4"/><path d="M20 12h8"/></svg></div>
               <h5 class="app-way-card__title">EClerk-WM</h5>
-              <p class="app-way-card__text">Мобильное приложение. Датчики, шлюз, оповещения</p>
+              <p class="app-way-card__text">Мобильное приложение для Android. Беспроводные датчики, настройка шлюза и push-оповещения</p>
               <span class="app-way-card__link">Подробнее</span>
             </a>
           </div>
@@ -287,27 +579,19 @@
           <h4 class="app-features__title">Единая экосистема RelsibCloud</h4>
           <div class="app-features__grid">
             <article class="app-feature">
-              <h5 class="app-feature__title">relsibcloud.com</h5>
-              <p class="app-feature__text">Архивирование, графики, экспорт в Excel. Создание разделов, объектов и зон контроля</p>
+              <h5 class="app-feature__title">Веб-приложение</h5>
+              <p class="app-feature__text">Архивирование, графики, мнемосхемы, оповещения и отчёты. Создание разделов, объектов и зон контроля в облаке RelsibCloud</p>
             </article>
             <article class="app-feature">
-              <h5 class="app-feature__title">app-uni.relsibcloud.com</h5>
-              <p class="app-feature__text">Мнемосхемы, таблицы, графики. Настройка оповещений. Журнал событий. Отчёты в PDF</p>
-            </article>
-            <article class="app-feature">
-              <h5 class="app-feature__title">EClerk Wireless Monitoring</h5>
-              <p class="app-feature__text">Мобильное приложение для работы с беспроводными датчиками и шлюзом GW-Bl/E-1</p>
-            </article>
-            <article class="app-feature">
-              <h5 class="app-feature__title">API</h5>
-              <p class="app-feature__text">Открытый API для интеграции со сторонними приложениями и системами</p>
+              <h5 class="app-feature__title">EClerk-WM</h5>
+              <p class="app-feature__text">Мобильное приложение для Android: работа с беспроводными датчиками EClerk-WS, настройка шлюза GW-Bl/E-1 и push-уведомления</p>
             </article>
           </div>
         </div>
 
         <div class="app-buttons">
-          <a href="https://relsibcloud.com" class="btn btn--primary btn--large">relsibcloud.com — войти</a>
-          <a href="https://app-uni.relsibcloud.com" class="btn btn--outline btn--large">app-uni.relsibcloud.com — WEB-приложение</a>
+          <a href="https://app-uni.relsibcloud.com" class="btn btn--primary btn--large">Веб-приложение</a>
+          <a href="https://relsib.com/catalog/eclerk-wm/" class="btn btn--outline btn--large">EClerk-WM — мобильное приложение</a>
         </div>
       </div>
     </section>
@@ -316,99 +600,24 @@
       <h2 class="section-title">Как работает</h2>
       <p class="section-subtitle">Система мониторинга технологических параметров угольной котельной</p>
 
-      <div class="how-it-works__inner">
-        <p class="how-it-works__object"><strong>Объект:</strong> котельная</p>
-
-        <div class="how-it-works__block">
-          <h3 class="subsection-title">Зоны контроля</h3>
-          <ul class="how-it-works__zones">
-            <li>Давление холодной воды</li>
-            <li>Температура холодной воды</li>
-            <li>Температура котла</li>
-            <li>Температура горячей воды на выходе</li>
-            <li>Давление горячей воды на выходе</li>
-            <li>Температура обратной воды</li>
-            <li>Давление обратной воды</li>
-            <li>Температура уличная</li>
-            <li>Качество воздуха в котельной</li>
-          </ul>
-        </div>
-
-        <div class="how-it-works__block">
-          <h3 class="subsection-title">Приборы</h3>
-          <div class="how-it-works__table-wrap">
-            <table class="devices-table how-it-works__table">
-              <thead>
-                <tr><th>Прибор</th><th>Количество</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Преобразователь давления, выход 4–20 мА</td><td>3 шт.</td></tr>
-                <tr><td>Термометр сопротивления</td><td>4 шт.</td></tr>
-                <tr><td>Преобразователь аналоговых сигналов ПАС-01.RS</td><td>7 шт.</td></tr>
-                <tr><td>Измеритель качества воздуха EClerk-Eco-M-RHTC-RS</td><td>1 шт.</td></tr>
-                <tr><td>Преобразователь интерфейсов GW-RS/E-1-I</td><td>1 шт.</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <p class="how-it-works__flow">Значения температуры и избыточного давления преобразуются в ПАС-01 в цифровой сигнал, шлюз последовательно опрашивает ПАС-01 и измеритель качества воздуха, формирует пакет данных и отправляет его в «облако». Пользователь просматривает текущие данные и архив, формирует отчёты, настраивает пороговые значения и получает уведомления.</p>
-      </div>
+      <figure class="schematic schematic--wide how-it-works__schematic">
+        <img src="Images/schematics/boiler-flow.svg?v=4" alt="Котельная: датчики и ПАС-01 через шлюз GW-RS в облако RelsibCloud, 9 зон контроля" width="960" height="540" loading="lazy">
+      </figure>
     </section>
 
     <section class="use-cases solutions" id="use-cases">
       <div class="solutions__inner">
         <h2 class="section-title">Примеры применения</h2>
-        <p class="section-subtitle">Реальные сценарии использования RelsibCloud в аптеках, доме и на производстве</p>
+        <p class="section-subtitle">Реальные сценарии использования RelsibCloud дома и на производстве</p>
 
         <div class="selector">
           <span class="selector__indicator" aria-hidden="true"></span>
-          <button class="selector__btn selector__btn--active" type="button" data-tab="pharmacy">Аптеки</button>
           <button class="selector__btn" type="button" data-tab="home">Дом</button>
-          <button class="selector__btn" type="button" data-tab="business">Бизнес</button>
+          <button class="selector__btn selector__btn--active" type="button" data-tab="business">Бизнес</button>
         </div>
 
         <div class="solutions__panels">
-          <div class="solutions__panel solutions__panel--active" data-panel="pharmacy">
-            <article class="use-case-study">
-              <h3 class="use-case-study__title">Общероссийская сеть аптек «Артемида»</h3>
-              <p class="use-case-study__lead">Система мониторинга за условиями хранения лекарственных препаратов</p>
-              <p>В «облаке» создаётся раздел «Сеть аптек «Артемида»», подразделы — по областным центрам, объекты — аптеки (например, Аптека 54/1, Аптека 54/2).</p>
-              <div class="use-case-study__table-wrap">
-                <table class="devices-table use-case-study__table">
-                  <thead><tr><th>Зона</th><th>Прибор</th></tr></thead>
-                  <tbody>
-                    <tr><td>Температура и влажность в зале</td><td>Термогигрометр Ivit-s-1-b</td></tr>
-                    <tr><td>Температура и влажность на складе</td><td>Термогигрометр Ivit-s-1-e-b (выносной зонд)</td></tr>
-                    <tr><td>Температура в холодильнике (верхняя, средняя, нижняя полки)</td><td>Датчик EClerk-WS-T</td></tr>
-                    <tr><td>Температура в морозильнике</td><td>Датчик EClerk-WS-T</td></tr>
-                    <tr><td>Дверь холодильника откр./закр.</td><td>Датчик EClerk-WS-R</td></tr>
-                    <tr><td>Входная дверь, окна</td><td>EClerk-WS-R</td></tr>
-                    <tr><td>Протечка</td><td>EClerk-WS-L</td></tr>
-                  </tbody>
-                </table>
-              </div>
-              <p>На стене аптеки — планшет с приложением EClerk-WM, настроенным в соответствии с «облаком».</p>
-              <h4 class="use-case-study__subtitle">Что получаем</h4>
-              <ul class="use-case-study__benefits">
-                <li>Централизованный контроль условий хранения лекарственных препаратов</li>
-                <li>Контроль охраны аптеки и закрытия двери холодильника сотрудниками</li>
-                <li>Быстрое формирование необходимых отчётов</li>
-                <li>Невысокая стоимость системы, ремонта и поверки приборов</li>
-                <li>Возможность наращивания системы дополнительными датчиками</li>
-              </ul>
-            </article>
-          </div>
-
           <div class="solutions__panel" data-panel="home">
-            <article class="use-case-study use-case-study--compact">
-              <h3 class="use-case-study__title">Загородный дом</h3>
-              <p class="use-case-study__lead">Удалённый мониторинг микроклимата на даче и в загородном доме</p>
-              <p>Беспроводные датчики EClerk-WS и термогигрометры Ivit передают данные через шлюз или приложение EClerk-WM в облако. Вы контролируете температуру, влажность и качество воздуха, пока вас нет дома.</p>
-            </article>
-            <div class="schema__wrap schema__wrap--use-case" aria-hidden="true">
-              <object data="Images/Shema/Схема.svg" type="image/svg+xml" class="schema__svg" aria-hidden="true"></object>
-            </div>
             <div class="solutions__slider-wrap">
               <div class="solutions__grid">
                 <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
@@ -418,7 +627,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Позаботится о микроклимате</h4>
-                    <p class="solution-card__text">Удалённый мониторинг температуры и влажности через приложение</p>
+                    <p class="solution-card__text">Удалённый мониторинг температуры и влажности. Проверяйте показания через приложение, пока вас нет дома</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -429,7 +638,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Комфорт и качество воздуха</h4>
-                    <p class="solution-card__text">Датчики отслеживают микроклимат и оповещают при отклонениях</p>
+                    <p class="solution-card__text">Датчики будут отслеживать микроклимат. Получайте оповещения, если параметры выйдут за норму</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -440,7 +649,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Контроль температуры</h4>
-                    <p class="solution-card__text">Комплект EClerk-WM-Sauna для подготовки парной</p>
+                    <p class="solution-card__text">Комплект EClerk-WM-Sauna следит за температурой в бане. Удобно подготавливать парную к приходу</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -451,7 +660,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Мониторинг воздуха</h4>
-                    <p class="solution-card__text">Температура, влажность, CO₂ в жилых помещениях</p>
+                    <p class="solution-card__text">Температура, влажность, CO₂. RelsibCloud поможет поддерживать здоровый микроклимат в жилых помещениях</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -467,7 +676,7 @@
             </div>
           </div>
 
-          <div class="solutions__panel" data-panel="business">
+          <div class="solutions__panel solutions__panel--active" data-panel="business">
             <div class="solutions__slider-wrap">
               <div class="solutions__grid">
                 <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
@@ -477,7 +686,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Холодовая цепь и аптеки</h4>
-                    <p class="solution-card__text">Температурное картирование, мониторинг складов</p>
+                    <p class="solution-card__text">Температурное картирование, мониторинг складов. Получайте оповещения при отклонении параметров</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -488,7 +697,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Производство и склады</h4>
-                    <p class="solution-card__text">Контроль температуры при хранении и перевозке</p>
+                    <p class="solution-card__text">Контроль температуры при перевозке и хранении скоропортящихся продуктов. Архивирование, отчёты</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -499,7 +708,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Школы и детские сады</h4>
-                    <p class="solution-card__text">Качество воздуха в помещениях, оповещения и отчёты</p>
+                    <p class="solution-card__text">Качество воздуха в помещениях, мониторинг микроклимата. Оповещения и отчёты для руководства</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -510,7 +719,7 @@
                   </div>
                   <div class="solution-card__body">
                     <h4 class="solution-card__title">Вентиляция и теплоснабжение</h4>
-                    <p class="solution-card__text">Контроль удалённых инженерных систем</p>
+                    <p class="solution-card__text">Контроль параметров удалённых объектов. RelsibCloud помогает следить за работой инженерных систем</p>
                     <span class="solution-card__btn">Подробнее</span>
                   </div>
                 </a>
@@ -1016,6 +1225,314 @@
         if (toggle) toggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    (function initCloudTree() {
+      var root = document.getElementById('cloud-tree');
+      if (!root) return;
+
+      var detail = document.getElementById('cloud-tree-detail');
+      var kicker = detail && detail.querySelector('.cloud-tree__detail-kicker');
+      var title = detail && detail.querySelector('.cloud-tree__detail-title');
+      var lead = detail && detail.querySelector('.cloud-tree__detail-lead');
+      var list = detail && detail.querySelector('.cloud-tree__detail-list');
+      var exampleTitle = detail && detail.querySelector('.cloud-tree__detail-example-title');
+      var exampleText = detail && detail.querySelector('.cloud-tree__detail-example-text');
+
+      var copy = {
+        section: {
+          kicker: 'Раздел контроля',
+          title: 'Верхний уровень дерева',
+          lead: 'Раздел объединяет объекты одной организационной зоны: цех, корпус, филиал или площадку.',
+          bullets: [
+            'Можно создать любое число разделов и подразделов',
+            'Внутри раздела — только свои объекты контроля',
+            'Удобно для навигации и разграничения доступа'
+          ],
+          example: 'В примере два раздела: промышленный комплекс и офисный центр.'
+        },
+        'section-1': {
+          kicker: 'Раздел контроля',
+          title: 'Промышленный комплекс',
+          lead: 'Производственная площадка с несколькими зданиями под одним разделом.',
+          bullets: [
+            '2 объекта: котельная и насосная станция',
+            'У каждого объекта — свой логин для шлюза',
+            'Зоны разных объектов видны в одном дереве'
+          ],
+          example: 'Котельная и насосная на одной территории — типичная структура для ЖКХ и промышленности.'
+        },
+        'section-2': {
+          kicker: 'Раздел контроля',
+          title: 'Офисный центр',
+          lead: 'Отдельный раздел для административных зданий — не смешивается с производством.',
+          bullets: [
+            '1 объект: офис на 3 этаже',
+            'Данные передаёт приложение EClerk-WM на планшете',
+            'Разделы помогают разграничить доступ сотрудников'
+          ],
+          example: 'Офис и производство удобно вести в разных разделах одного аккаунта.'
+        },
+        object: {
+          kicker: 'Объект контроля',
+          title: 'Средний уровень — площадка',
+          lead: 'Объект — это здание или территория, где установлены датчики. Все зоны объекта объединены под одним логином и паролем.',
+          bullets: [
+            'Облако выдаёт объекту логин и пароль',
+            'Их прописывают в шлюз GW-RS/GW-Bl или в приложение EClerk-WM на Android',
+            'Устройства передачи «прозрачны» — облако видит зоны, а не модель телефона',
+            'На одном объекте может работать несколько шлюзов или телефонов'
+          ],
+          example: 'Выберите объект слева, чтобы увидеть его зоны и статусы.'
+        },
+        'object-boiler': {
+          kicker: 'Объект контроля',
+          title: 'Угольная котельная',
+          lead: 'Объект с 4 зонами контроля режима котельной. Логин и пароль прописаны в шлюзе GW-RS.',
+          bullets: [
+            '4 зоны: давление, температуры, качество воздуха',
+            'Архив по каждой зоне хранится отдельно по ID',
+            'Данные передаются в облако под одним логином объекта'
+          ],
+          example: 'При замене датчика на зоне 102 история останется у ID 102.'
+        },
+        'object-pump': {
+          kicker: 'Объект контроля',
+          title: 'Насосная станция',
+          lead: 'Второй объект в том же разделе. Три зоны с разными статусами: норма, offline и тревога.',
+          bullets: [
+            'ID 201 — давление в норме',
+            'ID 202 — датчик не в сети, показания «—»',
+            'ID 203 — протечка, активная тревога'
+          ],
+          example: 'Offline не значит, что зона удалена — датчик может снова выйти на связь.'
+        },
+        'object-office': {
+          kicker: 'Объект контроля',
+          title: 'Офис, 3 этаж',
+          lead: 'Офисный объект в отдельном разделе. Микроклимат передаётся через EClerk-WM.',
+          bullets: [
+            'Open space — норма по температуре и влажности',
+            'Переговорная — датчик offline',
+            'Кухня — тревога по CO₂'
+          ],
+          example: 'Оповещения приходят по имени зоны и ID, независимо от модели прибора.'
+        },
+        zone: {
+          kicker: 'Зона контроля',
+          title: 'Нижний уровень — место измерения',
+          lead: 'Зона — это конкретное место контроля, а не прибор. Облако присваивает зоне уникальный номер — ID зоны.',
+          bullets: [
+            'Один датчик = одна зона',
+            'Статус: Норма, Не в сети или Тревога',
+            'При замене прибора меняется только привязка — история сохраняется',
+            'ID зоны не меняется на протяжении эксплуатации'
+          ],
+          example: 'Выберите зону слева, чтобы увидеть показания и статус.'
+        },
+        'zone-101': {
+          kicker: 'Зона · ID 101',
+          title: 'Давление подачи',
+          lead: 'ID 101 — постоянный идентификатор места измерения давления на выходе котла. Даже если заменить датчик давления, график за прошлый год останется у зоны 101.',
+          bullets: [
+            'Параметр: давление · 1,2 кгс/см²',
+            'Типичный датчик: 4–20 мА через ПАС-01',
+            'Пороги оповещения настраиваются для этой зоны'
+          ],
+          example: 'В отчётах и оповещениях вы видите «Зона 101 — Давление подачи», а не модель прибора.'
+        },
+        'zone-102': {
+          kicker: 'Зона · ID 102 · Тревога',
+          title: 'Температура котла',
+          lead: 'ID 102 — температура на выходе котла. Сейчас 96 °C — превышен порог, статус «Тревога».',
+          bullets: [
+            'Параметр: 96 °C — выше допустимого',
+            'Оповещение отправлено ответственному',
+            'Архив и ID зоны сохраняются при замене датчика'
+          ],
+          example: 'Тревога привязана к зоне 102, а не к конкретному термометру.'
+        },
+        'zone-103': {
+          kicker: 'Зона · ID 103',
+          title: 'Температура обратки',
+          lead: 'ID 103 — зона контроля температуры обратного трубопровода. Отдельный ID для каждой физической точки.',
+          bullets: [
+            'Параметр: температура · 62 °C',
+            'Контроль режима котельной и эффективности отопления',
+            'Оповещения приходят по имени зоны и ID'
+          ],
+          example: 'Зоны 102 и 103 — разные ID, хотя обе измеряют температуру: это разные места установки.'
+        },
+        'zone-104': {
+          kicker: 'Зона · ID 104 · Не в сети',
+          title: 'Качество воздуха',
+          lead: 'ID 104 — датчик микроклимата в котельной сейчас не на связи. Зона и ID сохраняются, показания «—».',
+          bullets: [
+            'Температура, влажность и CO₂ недоступны',
+            'История до обрыва связи остаётся в архиве',
+            'После восстановления связи данные снова появятся у ID 104'
+          ],
+          example: 'При расширении системы добавляют новые зоны с новыми ID — структура объекта не ломается.'
+        },
+        'zone-201': {
+          kicker: 'Зона · ID 201',
+          title: 'Давление магистрали',
+          lead: 'ID 201 — контроль давления в насосной. Статус «Норма».',
+          bullets: ['Параметр: 3,8 кгс/см²', 'Датчик через аналоговый вход ПАС-01', 'Пороги настраиваются для зоны'],
+          example: 'Давление магистрали — отдельная зона с собственным ID.'
+        },
+        'zone-202': {
+          kicker: 'Зона · ID 202 · Не в сети',
+          title: 'Температура насосов',
+          lead: 'ID 202 — датчик сейчас не передаёт данные. Зона и ID сохраняются, показания «—».',
+          bullets: [
+            'Статус «Не в сети» — нет связи с прибором',
+            'История до обрыва связи доступна в архиве',
+            'После восстановления связи зона снова покажет значения'
+          ],
+          example: 'Offline не удаляет зону — это временное состояние датчика.'
+        },
+        'zone-203': {
+          kicker: 'Зона · ID 203 · Тревога',
+          title: 'Протечка в подвале',
+          lead: 'ID 203 — датчик протечки EClerk-WS-L. Зафиксировано срабатывание.',
+          bullets: ['Статус: Тревога', 'Параметр: обнаружена протечка', 'Оповещение по SMS и e-mail'],
+          example: 'Тревожная зона остаётся в дереве с тем же ID после устранения аварии.'
+        },
+        'zone-301': {
+          kicker: 'Зона · ID 301',
+          title: 'Микроклимат open space',
+          lead: 'ID 301 — термогигрометр в open space. Температура и влажность в норме.',
+          bullets: ['23,1 °C · 41 %', 'Статус: Норма', 'Данные с планшета EClerk-WM'],
+          example: 'Офисные зоны устроены так же, как производственные — по ID места.'
+        },
+        'zone-302': {
+          kicker: 'Зона · ID 302 · Не в сети',
+          title: 'Переговорная',
+          lead: 'ID 302 — датчик воздуха в переговорной не на связи. Показания недоступны.',
+          bullets: ['Температура и CO₂: —', 'Зона сохраняется в облаке', 'Проверьте питание и связь датчика'],
+          example: 'Пока датчик offline, отчёты используют последние полученные данные.'
+        },
+        'zone-303': {
+          kicker: 'Зона · ID 303 · Тревога',
+          title: 'Кухня сотрудников',
+          lead: 'ID 303 — CO₂ 1 240 ppm, превышен порог. Статус «Тревога».',
+          bullets: ['26,8 °C · CO₂ 1 240 ppm', 'Рекомендуется проветривание', 'Оповещение отправлено'],
+          example: 'Тревога по CO₂ — типичный сценарий для офисных зон.'
+        }
+      };
+
+      function setDetail(id, type) {
+        var data = copy[id] || copy[type];
+        if (!detail || !data || !kicker || !title || !lead || !list) return;
+        detail.classList.add('is-updating');
+        window.setTimeout(function() {
+          kicker.textContent = data.kicker;
+          title.textContent = data.title;
+          lead.textContent = data.lead;
+          list.innerHTML = data.bullets.map(function(b) {
+            return '<li>' + b + '</li>';
+          }).join('');
+          if (exampleTitle && exampleText && data.example) {
+            exampleTitle.textContent = 'В примере';
+            exampleText.textContent = data.example;
+          }
+          detail.classList.remove('is-updating');
+        }, 100);
+      }
+
+      function activateRow(row) {
+        root.querySelectorAll('.cloud-tree__row').forEach(function(r) {
+          r.classList.remove('is-active');
+        });
+        row.classList.add('is-active');
+        setDetail(row.getAttribute('data-tree-id'), row.getAttribute('data-tree-type'));
+
+        var glossaryIndex = { section: 0, object: 1, zone: 2 };
+        var type = row.getAttribute('data-tree-type');
+        root.querySelectorAll('.cloud-tree__glossary-item').forEach(function(g, i) {
+          g.classList.toggle('is-active', type !== 'zone' && glossaryIndex[type] === i);
+        });
+
+        var branch = row.parentElement;
+        if (branch && branch.classList.contains('cloud-tree__branch')) {
+          branch.classList.remove('is-collapsed');
+          if (row.getAttribute('aria-expanded') === 'false') {
+            row.setAttribute('aria-expanded', 'true');
+          }
+        }
+      }
+
+      root.querySelectorAll('.cloud-tree__glossary-item').forEach(function(item, index) {
+        item.addEventListener('click', function() {
+          var types = ['section', 'object', 'zone'];
+          var type = types[index];
+          root.querySelectorAll('.cloud-tree__glossary-item').forEach(function(g) {
+            g.classList.remove('is-active');
+          });
+          item.classList.add('is-active');
+
+          if (type === 'zone') {
+            root.querySelectorAll('.cloud-tree__row').forEach(function(r) {
+              r.classList.remove('is-active');
+            });
+            setDetail('zone', 'zone');
+            return;
+          }
+          var row = root.querySelector('[data-tree-type="' + type + '"]');
+          if (row) activateRow(row);
+        });
+        item.setAttribute('role', 'button');
+        item.setAttribute('tabindex', '0');
+        item.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            item.click();
+          }
+        });
+      });
+
+      root.querySelectorAll('.cloud-tree__row').forEach(function(row) {
+        row.addEventListener('click', function(e) {
+          if (e.target.closest('.cloud-tree__chevron:not(.cloud-tree__chevron--leaf)')) {
+            var branch = row.parentElement;
+            if (branch && branch.classList.contains('cloud-tree__branch')) {
+              branch.classList.toggle('is-collapsed');
+              row.setAttribute('aria-expanded', branch.classList.contains('is-collapsed') ? 'false' : 'true');
+            }
+            return;
+          }
+          activateRow(row);
+        });
+      });
+    })();
+
+    (function initSystemStackLine() {
+      var stack = document.querySelector('.system-stack');
+      if (!stack) return;
+
+      var line = stack.querySelector('.system-stack__line');
+      var nodes = stack.querySelectorAll('.system-stack__node');
+      if (!line || nodes.length < 2) return;
+
+      function updateLine() {
+        if (window.matchMedia('(max-width: 640px)').matches) return;
+
+        var stackRect = stack.getBoundingClientRect();
+        var first = nodes[0].getBoundingClientRect();
+        var last = nodes[nodes.length - 1].getBoundingClientRect();
+        var top = first.top + first.height / 2 - stackRect.top;
+        var height = last.top + last.height / 2 - (first.top + first.height / 2);
+
+        line.style.top = top + 'px';
+        line.style.height = Math.max(0, height) + 'px';
+      }
+
+      updateLine();
+      window.addEventListener('resize', updateLine);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(updateLine);
+      }
+    })();
   })();
   </script>
 </body>

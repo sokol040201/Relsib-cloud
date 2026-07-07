@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-hidden="true">
+<style>
+  text { font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .t { font-size: 15px; font-weight: 600; fill: #18181b; }
+  .h { font-size: 13px; font-weight: 600; fill: #71717a; letter-spacing: 0.02em; }
+  .l { font-size: 12px; font-weight: 500; fill: #71717a; }
+  .c { font-size: 11px; font-weight: 600; fill: #0e9fe9; }
+  .a { stroke: #0e9fe9; stroke-width: 1.75; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .g { stroke: #d4d4d8; stroke-width: 1.25; fill: none; }
+  .d { stroke: #71717a; stroke-width: 1.25; fill: none; stroke-dasharray: 5 4; }
+  .ic { fill: none; stroke: #18181b; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .if { fill: #0e9fe9; stroke: none; }
+</style>
+<rect width="100%" height="100%" fill="#fafafa"/>
+
+<text class="t" x="450" y="28" text-anchor="middle">Кондитерская фабрика</text>
+<path class="g" d="M450 36 V56 M150 56 H750 M150 56 V74 M450 56 V74 M750 56 V74"/>
+
+<text class="h" x="150" y="96" text-anchor="middle">Корпус 1</text>
+<text class="h" x="450" y="96" text-anchor="middle">Корпус 2</text>
+<text class="h" x="750" y="96" text-anchor="middle">Корпус 3</text>
+<path class="g" d="M150 104 V124 M90 124 H210 M90 124 V144 M150 124 V144 M210 124 V144"/>
+<path class="g" d="M450 104 V124 M390 124 H510 M390 124 V144 M450 124 V144 M510 124 V144"/>
+<path class="g" d="M750 104 V124 M690 124 H810 M690 124 V144 M750 124 V144 M810 124 V144"/>
+
+<text class="l" x="90" y="164" text-anchor="middle">Мех.</text><text class="c" x="78" y="182" font-size="10">T</text><text class="c" x="94" y="182" font-size="10">P</text><text class="c" x="110" y="182" font-size="10">AQ</text>
+<text class="l" x="150" y="164" text-anchor="middle">Гараж</text><text class="c" x="142" y="182" font-size="10">AQ</text><text class="c" x="158" y="182" font-size="10">T</text>
+<text class="l" x="210" y="164" text-anchor="middle">Столяр.</text><text class="c" x="198" y="182" font-size="10">AQ</text><text class="c" x="222" y="182" font-size="10">T</text>
+
+<text class="l" x="390" y="164" text-anchor="middle">Карам.</text><text class="c" x="378" y="182" font-size="10">T</text><text class="c" x="402" y="182" font-size="10">P</text>
+<text class="l" x="450" y="164" text-anchor="middle">Шокол.</text><text class="c" x="438" y="182" font-size="10">T</text><text class="c" x="462" y="182" font-size="10">P</text>
+<text class="l" x="510" y="164" text-anchor="middle">Склад</text><text class="c" x="496" y="182" font-size="10">T×4</text><text class="c" x="524" y="182" font-size="10">RH</text>
+
+<text class="l" x="690" y="164" text-anchor="middle">КБ</text><text class="c" x="690" y="182" text-anchor="middle" font-size="10">AQ</text>
+<text class="l" x="750" y="164" text-anchor="middle">Тех.</text><text class="c" x="750" y="182" text-anchor="middle" font-size="10">AQ</text>
+<text class="l" x="810" y="164" text-anchor="middle">Упр.</text><text class="c" x="810" y="182" text-anchor="middle" font-size="10">AQ</text>
+
+<text class="l" x="450" y="248" text-anchor="middle">T — температура · P — давление · AQ — воздух · RH — влажность</text>
+
+</svg>
