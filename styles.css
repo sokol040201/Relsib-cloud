@@ -2683,117 +2683,219 @@ body.scroll-reveal--enabled .scroll-reveal.is-visible {
   max-width: 960px;
 }
 
-/* === System stack diagram (3 levels) === */
-.system-stack {
+/* === System architecture diagram (3 levels) === */
+.system-diagram {
   position: relative;
-  max-width: 920px;
+  max-width: 1080px;
   margin: 0 auto;
+  padding: 40px 32px 48px;
+  background: #050505;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.system-stack__line {
+.system-diagram__flow {
   position: absolute;
-  top: 0;
-  height: 0;
-  right: 18px;
-  width: 3px;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(14, 159, 233, 0.65) 0,
-    rgba(14, 159, 233, 0.65) 10px,
-    transparent 10px,
-    transparent 18px
-  );
-  background-size: 3px 18px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
-  animation: systemLineDash 1.4s linear infinite;
+  overflow: visible;
 }
 
-@keyframes systemLineDash {
-  to { background-position: 0 18px; }
+.system-diagram__path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 10 8;
+  animation: systemDiagramDash 2s linear infinite;
 }
 
-.system-stack__row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
+.system-diagram__node {
+  fill: #050505;
+  stroke: var(--accent);
+  stroke-width: 3;
 }
 
-.system-stack__row + .system-stack__row {
-  margin-top: 48px;
+@keyframes systemDiagramDash {
+  to { stroke-dashoffset: -36; }
 }
 
-.system-stack__level {
-  flex: 1;
-  min-width: 0;
-}
-
-.system-stack__track {
+.system-diagram__level {
   position: relative;
   z-index: 1;
-  flex: 0 0 40px;
-  display: flex;
-  justify-content: center;
-  padding-top: 28px;
+  display: grid;
+  align-items: start;
+  gap: 20px 28px;
+  margin-bottom: 72px;
 }
 
-.system-stack__node {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  background: var(--bg-card);
-  box-sizing: border-box;
+.system-diagram__level:last-child {
+  margin-bottom: 0;
 }
 
-.system-stack__head {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+.system-diagram__level--1 {
+  grid-template-columns: clamp(56px, 8vw, 88px) minmax(0, 1fr) minmax(220px, 38%);
 }
 
-.system-stack__num {
-  flex: 0 0 auto;
-  font-size: clamp(48px, 6vw, 64px);
+.system-diagram__level--2 {
+  grid-template-columns: clamp(56px, 8vw, 88px) minmax(0, 1fr);
+}
+
+.system-diagram__level--3 {
+  grid-template-columns: clamp(56px, 8vw, 88px) minmax(0, 1fr) minmax(280px, 46%);
+}
+
+.system-diagram__num {
+  grid-row: 1 / -1;
+  font-size: clamp(56px, 9vw, 96px);
   font-weight: var(--font-weight-semibold);
-  line-height: 1;
+  line-height: 0.9;
   color: var(--accent);
 }
 
-.system-stack__title {
-  margin: 0;
-  font-size: clamp(20px, 2.2vw, 24px);
+.system-diagram__title {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 2.4vw, 28px);
   font-weight: var(--font-weight-semibold);
-  color: var(--text);
+  color: var(--accent);
 }
 
-.system-stack__text {
+.system-diagram__text {
   margin: 0;
   font-size: var(--font-size-body);
-  color: var(--text-muted);
+  color: #9aa3b2;
   line-height: var(--line-height-loose);
-  max-width: none;
+  max-width: 56ch;
+}
+
+.system-diagram__copy {
+  grid-column: 2;
+}
+
+.system-diagram__visuals img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.system-diagram__visuals--sensors {
+  grid-column: 3;
+  grid-row: 1 / -1;
+  align-self: start;
+  justify-self: end;
+}
+
+.system-diagram__visuals--sensors img {
+  width: min(100%, 400px);
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.1));
+}
+
+.system-diagram__visuals--middle {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 32px);
+  flex-wrap: wrap;
+  padding-top: 8px;
+}
+
+.system-diagram__device--gw-box {
+  width: min(34vw, 220px);
+}
+
+.system-diagram__device--gw-dome {
+  width: min(24vw, 150px);
+  margin-bottom: 8px;
+}
+
+.system-diagram__phone {
+  width: min(28vw, 190px);
+  padding: 10px 8px 14px;
+  background: #111;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.system-diagram__phone img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.system-diagram__cloud {
+  display: block;
+  margin-top: 24px;
+  width: 160px;
+  height: auto;
+}
+
+.system-diagram__visuals--top {
+  grid-column: 3;
+  grid-row: 1 / -1;
+  align-self: end;
+  justify-self: end;
+}
+
+.system-diagram__laptop {
+  width: min(100%, 520px);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+}
+
+@media (max-width: 900px) {
+  .system-diagram__level--1,
+  .system-diagram__level--2,
+  .system-diagram__level--3 {
+    grid-template-columns: clamp(48px, 10vw, 72px) minmax(0, 1fr);
+  }
+
+  .system-diagram__visuals--sensors,
+  .system-diagram__visuals--top {
+    grid-column: 2;
+    grid-row: auto;
+    justify-self: start;
+  }
+
+  .system-diagram__visuals--middle {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  .system-diagram__flow {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
-  .system-stack__line,
-  .system-stack__track {
-    display: none;
+  .system-diagram__level {
+    margin-bottom: 48px;
   }
 
-  .system-stack__row {
-    gap: 0;
+  .system-diagram__num {
+    grid-row: auto;
   }
 
-  .system-stack__text {
+  .system-diagram__visuals--middle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .system-diagram__phone {
+    width: min(70vw, 220px);
+  }
+
+  .system-diagram__text {
     font-size: var(--font-size-body-sm);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .system-stack__line {
+  .system-diagram__path {
     animation: none;
+    stroke-dasharray: none;
   }
 }
 

@@ -6,7 +6,7 @@
   <title>RelsibCloud — система мониторинга за удалёнными объектами</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260605j">
+  <link rel="stylesheet" href="styles.css?v=20260713">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -88,41 +88,51 @@
       <h2 class="section-title">Состав и архитектура системы</h2>
 
       <div class="architecture-sub">
-        <div class="system-stack" role="img" aria-label="Состав системы: нижний уровень — датчики и ПАС-01, средний — шлюзы и EClerk-WM, верхний — RelsibCloud">
-          <div class="system-stack__line" aria-hidden="true"></div>
+        <div class="system-diagram" role="img" aria-label="Состав системы: нижний уровень — датчики и ПАС-01, средний — шлюзы и EClerk-WM, верхний — RelsibCloud">
+          <svg class="system-diagram__flow" viewBox="0 0 1000 1180" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path class="system-diagram__path" d="M 820 120 L 820 250 L 140 250 L 140 520 L 760 520 L 760 760 L 200 760 L 200 980"/>
+            <circle class="system-diagram__node" cx="820" cy="120" r="7"/>
+            <circle class="system-diagram__node" cx="140" cy="520" r="7"/>
+            <circle class="system-diagram__node" cx="200" cy="980" r="7"/>
+          </svg>
 
-          <div class="system-stack__row">
-            <article class="system-stack__level">
-              <header class="system-stack__head">
-                <span class="system-stack__num" aria-hidden="true">1</span>
-                <h3 class="system-stack__title">Нижний уровень</h3>
-              </header>
-              <p class="system-stack__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые к системе через преобразователи ПАС-01. Их задача — измерение физической величины, преобразование её в один из внешних интерфейсов, например, RS-485 ModBus или Bluetooth, и передача данных на средний уровень.</p>
-            </article>
-            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
-          </div>
+          <section class="system-diagram__level system-diagram__level--1">
+            <span class="system-diagram__num" aria-hidden="true">1</span>
+            <div class="system-diagram__copy">
+              <h3 class="system-diagram__title">Нижний уровень</h3>
+              <p class="system-diagram__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые к системе через преобразователи ПАС-01. Их задача — измерение физической величины, преобразование её в один из внешних интерфейсов, например, RS-485 ModBus или Bluetooth, и передача данных на средний уровень.</p>
+            </div>
+            <div class="system-diagram__visuals system-diagram__visuals--sensors">
+              <img src="Images/structure-schema/sensors.png" alt="Беспроводные датчики EClerk" width="420" height="280" loading="lazy">
+            </div>
+          </section>
 
-          <div class="system-stack__row">
-            <article class="system-stack__level">
-              <header class="system-stack__head">
-                <span class="system-stack__num" aria-hidden="true">2</span>
-                <h3 class="system-stack__title">Средний уровень</h3>
-              </header>
-              <p class="system-stack__text">В него входят преобразователи интерфейсов (шлюзы), а также стандартные устройства: телефон, планшет с установленным мобильным приложением. Тип входа шлюза должен соответствовать выходу подключаемых к нему приборов и датчиков. Шлюзы передают данные в облако через Ethernet по протоколам MQTT и HTTP.</p>
-            </article>
-            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
-          </div>
+          <section class="system-diagram__level system-diagram__level--2">
+            <span class="system-diagram__num" aria-hidden="true">2</span>
+            <div class="system-diagram__copy">
+              <h3 class="system-diagram__title">Средний уровень</h3>
+              <p class="system-diagram__text">В него входят преобразователи интерфейсов (шлюзы), а также стандартные устройства: телефон, планшет с установленным мобильным приложением. Тип входа шлюза должен соответствовать выходу подключаемых к нему приборов и датчиков. Шлюзы передают данные в облако через Ethernet по протоколам MQTT и HTTP.</p>
+            </div>
+            <div class="system-diagram__visuals system-diagram__visuals--middle">
+              <img class="system-diagram__device system-diagram__device--gw-box" src="Images/structure-schema/gw-bt-rs.png" alt="Шлюз GW-BT/RS" width="220" height="180" loading="lazy">
+              <img class="system-diagram__device system-diagram__device--gw-dome" src="Images/structure-schema/gw-dome.png" alt="Шлюз GW" width="160" height="160" loading="lazy">
+              <div class="system-diagram__phone">
+                <img src="Images/structure-schema/app-mobile.png" alt="Мобильное приложение EClerk-WM" width="220" height="476" loading="lazy">
+              </div>
+            </div>
+          </section>
 
-          <div class="system-stack__row">
-            <article class="system-stack__level">
-              <header class="system-stack__head">
-                <span class="system-stack__num" aria-hidden="true">3</span>
-                <h3 class="system-stack__title">Верхний уровень</h3>
-              </header>
-              <p class="system-stack__text">Это «облако» RelsibCloud, а также универсальное и специализированные WEB-приложения, предоставляющие пользователю неограниченные возможности по удалённому контролю.</p>
-            </article>
-            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
-          </div>
+          <section class="system-diagram__level system-diagram__level--3">
+            <span class="system-diagram__num" aria-hidden="true">3</span>
+            <div class="system-diagram__copy">
+              <h3 class="system-diagram__title">Верхний уровень</h3>
+              <p class="system-diagram__text">Это «облако» RelsibCloud, а также универсальное и специализированные WEB-приложения, предоставляющие пользователю неограниченные возможности по удалённому контролю.</p>
+              <img class="system-diagram__cloud" src="Images/Logo/Cloud_logo_text.svg" alt="RelsibCloud" width="180" height="72" loading="lazy">
+            </div>
+            <div class="system-diagram__visuals system-diagram__visuals--top">
+              <img class="system-diagram__laptop" src="Images/structure-schema/macbook.png" alt="WEB-приложение RelsibCloud" width="520" height="320" loading="lazy">
+            </div>
+          </section>
         </div>
       </div>
 
@@ -1567,6 +1577,7 @@
       mark('.section-subtitle:not(:empty)');
       mark('.subsection-title');
       mark('.architecture-sub');
+      markStagger('.system-diagram__level', 120);
       mark('.architecture-protocols');
       mark('.app-ways');
       mark('.app-mockup');
@@ -1612,34 +1623,6 @@
       items.forEach(function(el) {
         if (!revealIfInView(el)) observer.observe(el);
       });
-    })();
-
-    (function initSystemStackLine() {
-      var stack = document.querySelector('.system-stack');
-      if (!stack) return;
-
-      var line = stack.querySelector('.system-stack__line');
-      var nodes = stack.querySelectorAll('.system-stack__node');
-      if (!line || nodes.length < 2) return;
-
-      function updateLine() {
-        if (window.matchMedia('(max-width: 640px)').matches) return;
-
-        var stackRect = stack.getBoundingClientRect();
-        var first = nodes[0].getBoundingClientRect();
-        var last = nodes[nodes.length - 1].getBoundingClientRect();
-        var top = first.top + first.height / 2 - stackRect.top;
-        var height = last.top + last.height / 2 - (first.top + first.height / 2);
-
-        line.style.top = top + 'px';
-        line.style.height = Math.max(0, height) + 'px';
-      }
-
-      updateLine();
-      window.addEventListener('resize', updateLine);
-      if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(updateLine);
-      }
     })();
   })();
   </script>
