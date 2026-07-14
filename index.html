@@ -6,7 +6,7 @@
   <title>RelsibCloud — система мониторинга за удалёнными объектами</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260605j">
+  <link rel="stylesheet" href="styles.css?v=20260713z">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -88,40 +88,46 @@
       <h2 class="section-title">Состав и архитектура системы</h2>
 
       <div class="architecture-sub">
-        <div class="system-stack" role="img" aria-label="Состав системы: нижний уровень — датчики и ПАС-01, средний — шлюзы и EClerk-WM, верхний — RelsibCloud">
+        <div class="system-stack" role="img" aria-label="Состав системы: верхний уровень — RelsibCloud, средний — шлюзы и EClerk-WM, нижний — датчики и ПАС-01">
           <div class="system-stack__line" aria-hidden="true"></div>
 
           <div class="system-stack__row">
-            <article class="system-stack__level">
-              <header class="system-stack__head">
-                <span class="system-stack__num" aria-hidden="true">1</span>
-                <h3 class="system-stack__title">Нижний уровень</h3>
-              </header>
-              <p class="system-stack__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые к системе через преобразователи ПАС-01. Их задача — измерение физической величины, преобразование её в один из внешних интерфейсов, например, RS-485 ModBus или Bluetooth, и передача данных на средний уровень.</p>
-            </article>
             <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
-          </div>
-
-          <div class="system-stack__row">
             <article class="system-stack__level">
               <header class="system-stack__head">
-                <span class="system-stack__num" aria-hidden="true">2</span>
-                <h3 class="system-stack__title">Средний уровень</h3>
-              </header>
-              <p class="system-stack__text">В него входят преобразователи интерфейсов (шлюзы), а также стандартные устройства: телефон, планшет с установленным мобильным приложением. Тип входа шлюза должен соответствовать выходу подключаемых к нему приборов и датчиков. Шлюзы передают данные в облако через Ethernet по протоколам MQTT и HTTP.</p>
-            </article>
-            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
-          </div>
-
-          <div class="system-stack__row">
-            <article class="system-stack__level">
-              <header class="system-stack__head">
-                <span class="system-stack__num" aria-hidden="true">3</span>
                 <h3 class="system-stack__title">Верхний уровень</h3>
               </header>
               <p class="system-stack__text">Это «облако» RelsibCloud, а также универсальное и специализированные WEB-приложения, предоставляющие пользователю неограниченные возможности по удалённому контролю.</p>
             </article>
+            <div class="system-stack__visual">
+              <img src="Images/structure%20shema/Macbook%20Air%20M2%20Silver%20Flatten.png" alt="WEB-приложение RelsibCloud" width="480" height="290" loading="lazy">
+            </div>
+          </div>
+
+          <div class="system-stack__row">
             <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
+            <article class="system-stack__level">
+              <header class="system-stack__head">
+                <h3 class="system-stack__title">Средний уровень</h3>
+              </header>
+              <p class="system-stack__text">В него входят преобразователи интерфейсов (шлюзы), а также стандартные устройства: телефон, планшет с установленным мобильным приложением. Тип входа шлюза должен соответствовать выходу подключаемых к нему приборов и датчиков. Шлюзы передают данные в облако через Ethernet по протоколам MQTT и HTTP.</p>
+            </article>
+            <div class="system-stack__visual system-stack__visual--hardware">
+              <img src="Images/structure%20shema/GW-sideangle%203.png" alt="Шлюз GW" width="200" height="200" loading="lazy">
+            </div>
+          </div>
+
+          <div class="system-stack__row">
+            <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
+            <article class="system-stack__level">
+              <header class="system-stack__head">
+                <h3 class="system-stack__title">Нижний уровень</h3>
+              </header>
+              <p class="system-stack__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые к системе через преобразователи ПАС-01. Их задача — измерение физической величины, преобразование её в один из внешних интерфейсов, например, RS-485 ModBus или Bluetooth, и передача данных на средний уровень.</p>
+            </article>
+            <div class="system-stack__visual system-stack__visual--hardware">
+              <img src="Images/structure%20shema/freepik_0001%20(5)%201.png" alt="Беспроводные датчики EClerk" width="320" height="320" loading="lazy">
+            </div>
           </div>
         </div>
       </div>
@@ -205,23 +211,9 @@
         <h3 class="subsection-title">Архитектура в облаке</h3>
         <div class="cloud-tree" id="cloud-tree">
 
-          <div class="cloud-tree__glossary">
-            <div class="cloud-tree__glossary-item">
-              <span class="cloud-tree__glossary-tag cloud-tree__glossary-tag--section">Раздел</span>
-              <p>Группа объектов одного подразделения или площадки. Разделов и подразделов может быть сколько угодно.</p>
-            </div>
-            <div class="cloud-tree__glossary-item is-active">
-              <span class="cloud-tree__glossary-tag cloud-tree__glossary-tag--object">Объект</span>
-              <p>Здание или площадка с собственным логином и паролем. Через них шлюз или телефон передаёт данные в облако.</p>
-            </div>
-            <div class="cloud-tree__glossary-item">
-              <span class="cloud-tree__glossary-tag cloud-tree__glossary-tag--zone">Зона</span>
-              <p>Место контроля с уникальным <strong>ID зоны</strong>. К зоне привязан один датчик; архив остаётся при замене прибора.</p>
-            </div>
-          </div>
-
           <div class="cloud-tree__layout">
-            <div class="cloud-tree__panel">
+            <div class="cloud-tree__panel" id="cloud-tree-panel">
+              <div class="cloud-tree__nav" id="cloud-tree-nav">
               <div role="tree" aria-label="Иерархия: раздел, объект, зоны контроля">
                 <div class="cloud-tree__branch">
                   <button type="button" class="cloud-tree__row cloud-tree__row--section" role="treeitem" aria-expanded="true" data-tree-type="section" data-tree-id="section-1">
@@ -512,20 +504,264 @@
                   </div>
                 </div>
               </div>
+              </div>
+
+              <div class="cloud-tree__zone-app is-hidden" id="cloud-tree-zone-app" hidden>
+                <div class="zone-ui" id="zone-ui">
+                  <button type="button" class="zone-ui__back" id="zone-ui-back">← К дереву</button>
+                  <header class="zone-ui__header">
+                    <div class="zone-ui__header-top">
+                      <p class="zone-ui__breadcrumb" id="zone-ui-breadcrumb">Угольная котельная</p>
+                      <p class="zone-ui__updated" id="zone-ui-updated">Обновлено: —</p>
+                    </div>
+                    <div class="zone-ui__title-row">
+                      <h4 class="zone-ui__title" id="zone-ui-title">Зона</h4>
+                      <span class="zone-ui__id" id="zone-ui-id">ID: —</span>
+                      <span class="zone-ui__status zone-ui__status--ok" id="zone-ui-status">Норма</span>
+                    </div>
+                  </header>
+
+                  <div class="zone-ui__tabs cloud-tree__zone-tabs" role="tablist" aria-label="Экраны зоны">
+                    <button type="button" class="cloud-tree__zone-tab zone-ui__tab is-active" role="tab" aria-selected="true" data-zone-tab="overview">Обзор</button>
+                    <button type="button" class="cloud-tree__zone-tab zone-ui__tab" role="tab" aria-selected="false" data-zone-tab="settings">Настройки</button>
+                    <button type="button" class="cloud-tree__zone-tab zone-ui__tab" role="tab" aria-selected="false" data-zone-tab="notifications">Уведомления</button>
+                  </div>
+
+                  <div class="zone-ui__panel is-active" data-zone-panel="overview" role="tabpanel">
+                    <div class="zone-ui__metrics" id="zone-ui-metrics"></div>
+                    <div class="zone-ui__period">
+                      <p class="zone-ui__period-label">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                        Период:
+                      </p>
+                      <div class="zone-ui__range">
+                        <div class="zone-ui__range-pills" id="zone-ui-range-pills">
+                          <button type="button" class="zone-ui__pill" data-hours="1">1 час</button>
+                          <button type="button" class="zone-ui__pill" data-hours="6">6 часов</button>
+                          <button type="button" class="zone-ui__pill is-active" data-hours="24">24 часа</button>
+                          <button type="button" class="zone-ui__pill" data-hours="72">3 дня</button>
+                          <button type="button" class="zone-ui__pill" data-hours="168">7 дней</button>
+                        </div>
+                        <div class="zone-ui__dates">
+                          <label class="zone-ui__date-field">с: <input type="text" class="zone-ui__input zone-ui__input--date" id="zone-ui-date-from" readonly></label>
+                          <label class="zone-ui__date-field">по: <input type="text" class="zone-ui__input zone-ui__input--date" id="zone-ui-date-to" readonly></label>
+                          <select class="zone-ui__select" id="zone-ui-tz" disabled>
+                            <option>время наблюдателя</option>
+                          </select>
+                        </div>
+                        <button type="button" class="zone-ui__btn zone-ui__btn--primary" id="zone-ui-apply-range">Показать</button>
+                      </div>
+                    </div>
+                    <div class="zone-ui__export">
+                      <div class="zone-ui__export-text">
+                        <span class="zone-ui__export-icon" aria-hidden="true">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" fill="#e8f8ee" stroke="#16a34a" stroke-width="1.5"/><path d="M7 15l3-3 2 2 5-5" stroke="#16a34a" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <div class="zone-ui__export-copy">
+                          <strong>Экспорт в XLS</strong>
+                          <span>Экспорт загруженных данных в формате xls.</span>
+                        </div>
+                      </div>
+                      <button type="button" class="zone-ui__btn zone-ui__btn--outline" id="zone-ui-export">Экспорт</button>
+                    </div>
+                    <div class="zone-ui__chart-wrap">
+                      <div class="zone-ui__chart-head">
+                        <p class="zone-ui__chart-title" id="zone-ui-chart-title">температура, °C</p>
+                        <span class="zone-ui__chart-legend" id="zone-ui-chart-legend"></span>
+                      </div>
+                      <svg class="zone-ui__chart" id="zone-ui-chart" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+                        <line x1="0" y1="30" x2="400" y2="30" class="zone-ui__chart-grid"/>
+                        <line x1="0" y1="60" x2="400" y2="60" class="zone-ui__chart-grid"/>
+                        <line x1="0" y1="90" x2="400" y2="90" class="zone-ui__chart-grid"/>
+                        <path class="zone-ui__chart-line" id="zone-ui-chart-path" d=""/>
+                        <path class="zone-ui__chart-area" id="zone-ui-chart-area" d=""/>
+                      </svg>
+                    </div>
+                    <p class="zone-ui__toast is-hidden" id="zone-ui-toast" role="status"></p>
+                  </div>
+
+                  <div class="zone-ui__panel" data-zone-panel="settings" role="tabpanel" hidden>
+                    <div class="zone-ui__card">
+                      <div class="zone-ui__form-head">
+                        <h5 class="zone-ui__form-title">Настройки зоны</h5>
+                        <button type="button" class="zone-ui__edit-btn" id="zone-ui-edit-toggle">
+                          <svg class="zone-ui__edit-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                          <span class="zone-ui__edit-label">Редактировать</span>
+                        </button>
+                      </div>
+                      <label class="zone-ui__field">
+                        <span>Название зоны</span>
+                        <input type="text" class="zone-ui__input" id="zone-ui-settings-name" readonly>
+                      </label>
+                      <label class="zone-ui__field">
+                        <span>Описание</span>
+                        <input type="text" class="zone-ui__input" id="zone-ui-settings-desc" readonly>
+                      </label>
+                      <div class="zone-ui__checks">
+                        <label class="zone-ui__check"><input type="checkbox" id="zone-ui-settings-transit" disabled> Транзит</label>
+                        <label class="zone-ui__check"><input type="checkbox" id="zone-ui-settings-visible" disabled> Видимость</label>
+                      </div>
+                      <div class="zone-ui__params">
+                        <p class="zone-ui__params-title">Параметры</p>
+                        <ul class="zone-ui__params-table" id="zone-ui-params-list"></ul>
+                      </div>
+                      <button type="button" class="zone-ui__btn zone-ui__btn--primary zone-ui__btn--save is-hidden" id="zone-ui-settings-save">Сохранить</button>
+                    </div>
+                  </div>
+
+                  <div class="zone-ui__panel" data-zone-panel="notifications" role="tabpanel" hidden>
+                    <div class="zone-ui__card">
+                      <div class="zone-ui__form-head">
+                        <h5 class="zone-ui__form-title">Настройки уведомлений</h5>
+                        <button type="button" class="zone-ui__edit-btn" id="zone-ui-notify-edit">
+                          <svg class="zone-ui__edit-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                          <span class="zone-ui__edit-label">Редактировать</span>
+                        </button>
+                      </div>
+                      <div class="zone-ui__notify-top">
+                        <div class="zone-ui__notify-box">
+                          <label class="zone-ui__switch">
+                            <input type="checkbox" id="zone-ui-notify-enabled" disabled>
+                            <span class="zone-ui__switch-ui"></span>
+                            <span class="zone-ui__switch-text">Включить уведомления</span>
+                          </label>
+                          <p class="zone-ui__hint">Получать оповещения о превышении пороговых значений</p>
+                        </div>
+                        <div class="zone-ui__notify-box zone-ui__notify-box--color">
+                          <label class="zone-ui__field zone-ui__field--color">
+                            <span>Цвет зоны</span>
+                            <input type="color" class="zone-ui__color" id="zone-ui-notify-color" value="#0e9fe9" disabled>
+                          </label>
+                          <p class="zone-ui__hint">Этим цветом будут отображаться данные зоны на совмещённых графиках</p>
+                        </div>
+                      </div>
+                      <div class="zone-ui__thresholds" id="zone-ui-thresholds"></div>
+                      <div class="zone-ui__field-row">
+                        <label class="zone-ui__field">
+                          <span>Интервал повтора уведомлений (минуты)</span>
+                          <input type="number" class="zone-ui__input" id="zone-ui-notify-repeat" value="60" min="1" readonly>
+                        </label>
+                        <label class="zone-ui__field">
+                          <span>Время задержки до первого уведомления (минуты)</span>
+                          <input type="number" class="zone-ui__input" id="zone-ui-notify-delay" value="5" min="0" readonly>
+                        </label>
+                      </div>
+                      <button type="button" class="zone-ui__btn zone-ui__btn--primary zone-ui__btn--save is-hidden" id="zone-ui-notify-save">Сохранить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cloud-tree__object-app is-hidden" id="cloud-tree-object-app" hidden>
+                <div class="object-ui" id="object-ui">
+                  <button type="button" class="object-ui__back" id="object-ui-back">← К дереву</button>
+                  <header class="object-ui__header">
+                    <p class="object-ui__section" id="object-ui-section">Промышленный комплекс</p>
+                    <div class="object-ui__title-row">
+                      <h4 class="object-ui__title" id="object-ui-title">Объект</h4>
+                      <span class="object-ui__id" id="object-ui-id">ID: —</span>
+                    </div>
+                    <p class="object-ui__address" id="object-ui-address">—</p>
+                  </header>
+
+                  <div class="object-ui__stats" id="object-ui-stats"></div>
+
+                  <div class="object-ui__tabs" role="tablist" aria-label="Экраны объекта">
+                    <button type="button" class="object-ui__tab is-active" role="tab" aria-selected="true" data-object-tab="overview">Обзор</button>
+                    <button type="button" class="object-ui__tab" role="tab" aria-selected="false" data-object-tab="problems">Проблемы</button>
+                    <button type="button" class="object-ui__tab" role="tab" aria-selected="false" data-object-tab="charts">Графики</button>
+                    <button type="button" class="object-ui__tab" role="tab" aria-selected="false" data-object-tab="settings">Настройки</button>
+                    <button type="button" class="object-ui__tab" role="tab" aria-selected="false" data-object-tab="scheme">Схема</button>
+                  </div>
+
+                  <div class="object-ui__panel is-active" data-object-panel="overview" role="tabpanel">
+                    <div class="object-ui__devices" id="object-ui-devices"></div>
+                  </div>
+
+                  <div class="object-ui__panel" data-object-panel="problems" role="tabpanel" hidden>
+                    <div id="object-ui-problems"></div>
+                  </div>
+
+                  <div class="object-ui__panel" data-object-panel="charts" role="tabpanel" hidden>
+                    <div class="object-ui__charts-toolbar">
+                      <button type="button" class="object-ui__zones-btn" id="object-ui-zones-btn">Выбор зон</button>
+                      <div class="object-ui__range-pills" id="object-ui-range-pills">
+                        <button type="button" class="object-ui__pill" data-hours="1">1ч</button>
+                        <button type="button" class="object-ui__pill" data-hours="6">6ч</button>
+                        <button type="button" class="object-ui__pill is-active" data-hours="24">24ч</button>
+                        <button type="button" class="object-ui__pill" data-hours="72">3д</button>
+                        <button type="button" class="object-ui__pill" data-hours="168">7д</button>
+                      </div>
+                      <button type="button" class="object-ui__btn object-ui__btn--primary" id="object-ui-apply-range">Показать</button>
+                    </div>
+                    <div class="object-ui__chart-block">
+                      <p class="object-ui__chart-title">температура, °C</p>
+                      <svg class="object-ui__chart" id="object-ui-chart-temp" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"></svg>
+                    </div>
+                    <div class="object-ui__chart-block">
+                      <p class="object-ui__chart-title">влажность, %</p>
+                      <svg class="object-ui__chart" id="object-ui-chart-hum" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true"></svg>
+                    </div>
+                    <p class="object-ui__toast is-hidden" id="object-ui-toast" role="status"></p>
+                  </div>
+
+                  <div class="object-ui__panel" data-object-panel="settings" role="tabpanel" hidden>
+                    <div class="object-ui__form-head">
+                      <h5 class="object-ui__form-title">Настройки объекта</h5>
+                      <button type="button" class="object-ui__btn object-ui__btn--ghost" id="object-ui-edit-toggle">Редактировать</button>
+                    </div>
+                    <label class="object-ui__field">
+                      <span>Название объекта</span>
+                      <input type="text" class="object-ui__input" id="object-ui-settings-name" readonly>
+                    </label>
+                    <label class="object-ui__field">
+                      <span>Адрес</span>
+                      <input type="text" class="object-ui__input" id="object-ui-settings-address" readonly>
+                    </label>
+                    <label class="object-ui__field">
+                      <span>Раздел</span>
+                      <input type="text" class="object-ui__input" id="object-ui-settings-section" readonly>
+                    </label>
+                    <label class="object-ui__field">
+                      <span>Часовой пояс</span>
+                      <input type="text" class="object-ui__input" id="object-ui-settings-tz" readonly>
+                    </label>
+                    <div class="object-ui__checks">
+                      <label class="object-ui__check"><input type="checkbox" id="object-ui-settings-access" disabled> Права доступа</label>
+                      <label class="object-ui__check"><input type="checkbox" id="object-ui-settings-visible" disabled> Видимость</label>
+                    </div>
+                    <button type="button" class="object-ui__btn object-ui__btn--primary object-ui__btn--save is-hidden" id="object-ui-settings-save">Сохранить</button>
+                  </div>
+
+                  <div class="object-ui__panel" data-object-panel="scheme" role="tabpanel" hidden>
+                    <div class="object-ui__scheme" id="object-ui-scheme">
+                      <div class="object-ui__scheme-bg" id="object-ui-scheme-bg"></div>
+                      <div class="object-ui__scheme-widgets" id="object-ui-scheme-widgets"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <aside class="cloud-tree__detail" id="cloud-tree-detail" aria-live="polite">
-              <p class="cloud-tree__detail-kicker">Объект контроля</p>
-              <h4 class="cloud-tree__detail-title">Угольная котельная</h4>
-              <p class="cloud-tree__detail-lead">Объект с 4 зонами контроля режима котельной. Логин и пароль прописаны в шлюзе GW-RS.</p>
-              <ul class="cloud-tree__detail-list">
-                <li>4 зоны: давление, температуры, качество воздуха</li>
-                <li>Архив по каждой зоне хранится отдельно по ID</li>
-                <li>Данные передаются в облако под одним логином объекта</li>
-              </ul>
-              <div class="cloud-tree__detail-example">
-                <p class="cloud-tree__detail-example-title">В примере</p>
-                <p class="cloud-tree__detail-example-text">При замене датчика на зоне 102 история останется у ID 102.</p>
+              <div class="cloud-tree__type-def" id="cloud-tree-type-def">
+                <span class="cloud-tree__glossary-tag cloud-tree__glossary-tag--object" id="cloud-tree-type-tag">Объект</span>
+                <p class="cloud-tree__type-text" id="cloud-tree-type-text">Здание или площадка с собственным логином и паролем. Через них шлюз или телефон передаёт данные в облако.</p>
+              </div>
+
+              <div class="cloud-tree__detail-body" id="cloud-tree-detail-body">
+                <p class="cloud-tree__detail-kicker">Объект контроля</p>
+                <h4 class="cloud-tree__detail-title">Угольная котельная</h4>
+                <p class="cloud-tree__detail-lead">Объект с 4 зонами контроля режима котельной. Логин и пароль прописаны в шлюзе GW-RS.</p>
+                <ul class="cloud-tree__detail-list">
+                  <li>4 зоны: давление, температуры, качество воздуха</li>
+                  <li>Архив по каждой зоне хранится отдельно по ID</li>
+                  <li>Данные передаются в облако под одним логином объекта</li>
+                </ul>
+                <div class="cloud-tree__detail-example">
+                  <p class="cloud-tree__detail-example-title">В примере</p>
+                  <p class="cloud-tree__detail-example-text">При замене датчика на зоне 102 история останется у ID 102.</p>
+                </div>
               </div>
             </aside>
           </div>
@@ -1261,12 +1497,761 @@
       if (!root) return;
 
       var detail = document.getElementById('cloud-tree-detail');
-      var kicker = detail && detail.querySelector('.cloud-tree__detail-kicker');
-      var title = detail && detail.querySelector('.cloud-tree__detail-title');
-      var lead = detail && detail.querySelector('.cloud-tree__detail-lead');
-      var list = detail && detail.querySelector('.cloud-tree__detail-list');
-      var exampleTitle = detail && detail.querySelector('.cloud-tree__detail-example-title');
-      var exampleText = detail && detail.querySelector('.cloud-tree__detail-example-text');
+      var detailBody = document.getElementById('cloud-tree-detail-body');
+      var typeTag = document.getElementById('cloud-tree-type-tag');
+      var typeText = document.getElementById('cloud-tree-type-text');
+      var zoneApp = document.getElementById('cloud-tree-zone-app');
+      var objectApp = document.getElementById('cloud-tree-object-app');
+      var treeNav = document.getElementById('cloud-tree-nav');
+      var panel = document.getElementById('cloud-tree-panel');
+      var layout = root.querySelector('.cloud-tree__layout');
+      var kicker = detailBody && detailBody.querySelector('.cloud-tree__detail-kicker');
+      var title = detailBody && detailBody.querySelector('.cloud-tree__detail-title');
+      var lead = detailBody && detailBody.querySelector('.cloud-tree__detail-lead');
+      var list = detailBody && detailBody.querySelector('.cloud-tree__detail-list');
+      var exampleTitle = detailBody && detailBody.querySelector('.cloud-tree__detail-example-title');
+      var exampleText = detailBody && detailBody.querySelector('.cloud-tree__detail-example-text');
+
+      var typeDefs = {
+        section: {
+          tag: 'Раздел',
+          tagClass: 'cloud-tree__glossary-tag--section',
+          text: 'Группа объектов одного подразделения или площадки. Разделов и подразделов может быть сколько угодно.'
+        },
+        object: {
+          tag: 'Объект',
+          tagClass: 'cloud-tree__glossary-tag--object',
+          text: 'Здание или площадка с собственным логином и паролем. Через них шлюз или телефон передаёт данные в облако.'
+        },
+        zone: {
+          tag: 'Зона',
+          tagClass: 'cloud-tree__glossary-tag--zone',
+          text: 'Место контроля с уникальным ID зоны. К зоне привязан один датчик; архив остаётся при замене прибора.'
+        }
+      };
+
+      function initZoneOpenButtons() {
+        root.querySelectorAll('.cloud-tree__row--zone').forEach(function(row) {
+          if (row.parentElement && row.parentElement.classList.contains('cloud-tree__zone-wrap')) return;
+          var wrap = document.createElement('div');
+          wrap.className = 'cloud-tree__zone-wrap';
+          row.parentNode.insertBefore(wrap, row);
+          wrap.appendChild(row);
+          var openBtn = document.createElement('button');
+          openBtn.type = 'button';
+          openBtn.className = 'cloud-tree__zone-open';
+          openBtn.setAttribute('aria-label', 'Открыть интерфейс зоны');
+          openBtn.textContent = 'Открыть →';
+          wrap.appendChild(openBtn);
+          openBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            activateRow(row);
+            toggleZoneApp(true, row);
+          });
+        });
+      }
+
+      initZoneOpenButtons();
+
+      function initObjectOpenButtons() {
+        root.querySelectorAll('.cloud-tree__row--object').forEach(function(row) {
+          if (row.parentElement && row.parentElement.classList.contains('cloud-tree__object-wrap')) return;
+          var wrap = document.createElement('div');
+          wrap.className = 'cloud-tree__object-wrap';
+          row.parentNode.insertBefore(wrap, row);
+          wrap.appendChild(row);
+          var openBtn = document.createElement('button');
+          openBtn.type = 'button';
+          openBtn.className = 'cloud-tree__object-open';
+          openBtn.setAttribute('aria-label', 'Открыть интерфейс объекта');
+          openBtn.textContent = 'Открыть →';
+          wrap.appendChild(openBtn);
+          openBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            activateRow(row);
+            toggleObjectApp(true, row);
+          });
+        });
+      }
+
+      initObjectOpenButtons();
+
+      function setTypeDef(type) {
+        var def = typeDefs[type];
+        if (!def || !typeTag || !typeText) return;
+        typeTag.textContent = def.tag;
+        typeTag.className = 'cloud-tree__glossary-tag ' + def.tagClass;
+        typeText.innerHTML = type === 'zone'
+          ? 'Место контроля с уникальным <strong>ID зоны</strong>. К зоне привязан один датчик; архив остаётся при замене прибора.'
+          : def.text;
+      }
+
+      function setZoneTab(tabName) {
+        root.querySelectorAll('.cloud-tree__zone-tab').forEach(function(btn) {
+          var active = btn.getAttribute('data-zone-tab') === tabName;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        root.querySelectorAll('[data-zone-panel]').forEach(function(panel) {
+          var active = panel.getAttribute('data-zone-panel') === tabName;
+          panel.classList.toggle('is-active', active);
+          panel.hidden = !active;
+        });
+      }
+
+      function showToast(msg) {
+        var toast = document.getElementById('zone-ui-toast');
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.classList.remove('is-hidden');
+        clearTimeout(showToast._t);
+        showToast._t = setTimeout(function() {
+          toast.classList.add('is-hidden');
+        }, 2600);
+      }
+
+      function generateChartPoints(seed, hours) {
+        var n = Math.min(48, Math.max(16, Math.round(hours / 2)));
+        var pts = [];
+        var base = 20 + (seed % 7);
+        for (var i = 0; i < n; i++) {
+          var wave = Math.sin((i + seed) * 0.55) * 4 + Math.cos((i + seed) * 0.2) * 2;
+          pts.push(base + wave + (seed % 3) * 0.4);
+        }
+        return pts;
+      }
+
+      function drawChart(points, color, alarm) {
+        var pathEl = document.getElementById('zone-ui-chart-path');
+        var areaEl = document.getElementById('zone-ui-chart-area');
+        if (!pathEl || !areaEl || !points.length) return;
+        var w = 400;
+        var h = 120;
+        var pad = 8;
+        var min = Math.min.apply(null, points);
+        var max = Math.max.apply(null, points);
+        var range = max - min || 1;
+        var step = (w - pad * 2) / (points.length - 1);
+        var coords = points.map(function(v, i) {
+          var x = pad + i * step;
+          var y = h - pad - ((v - min) / range) * (h - pad * 2);
+          return x.toFixed(1) + ',' + y.toFixed(1);
+        });
+        var line = 'M' + coords.join(' L');
+        var stroke = alarm ? '#ef4444' : (color || '#0ea5e9');
+        pathEl.setAttribute('d', line);
+        pathEl.style.stroke = stroke;
+        areaEl.setAttribute('d', line + ' L' + (w - pad) + ',' + (h - pad) + ' L' + pad + ',' + (h - pad) + ' Z');
+        areaEl.style.fill = alarm ? 'rgba(239,68,68,0.12)' : 'rgba(14,165,233,0.12)';
+        updateChartLegend(stroke);
+      }
+
+      function metricIcon(label) {
+        var key = (label || '').toLowerCase();
+        if (key.indexOf('температ') !== -1) {
+          return '<svg class="zone-ui__metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0Z"/></svg>';
+        }
+        if (key.indexOf('влаж') !== -1) {
+          return '<svg class="zone-ui__metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>';
+        }
+        if (key.indexOf('co') !== -1) {
+          return '<span class="zone-ui__metric-icon zone-ui__metric-icon--co" aria-hidden="true">CO₂</span>';
+        }
+        if (key.indexOf('давлен') !== -1) {
+          return '<svg class="zone-ui__metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+        }
+        return '<svg class="zone-ui__metric-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+      }
+
+      function thresholdUnit(label) {
+        var key = (label || '').toLowerCase();
+        if (key.indexOf('температ') !== -1) return '°C';
+        if (key.indexOf('влаж') !== -1) return '%';
+        if (key.indexOf('co') !== -1) return 'ppm';
+        if (key.indexOf('давлен') !== -1) return 'кгс/см²';
+        return '';
+      }
+
+      function parseParamRow(item) {
+        if (typeof item === 'string') {
+          var parts = item.split('·').map(function(s) { return s.trim(); });
+          return { name: parts[0] || item, unit: parts[1] || '' };
+        }
+        return item;
+      }
+
+      function formatZoneDate(date) {
+        var pad = function(n) { return n < 10 ? '0' + n : '' + n; };
+        return pad(date.getHours()) + ':' + pad(date.getMinutes()) + ' ' + pad(date.getDate()) + '.' + pad(date.getMonth() + 1) + '.' + date.getFullYear();
+      }
+
+      function updateDateRange(hours) {
+        var to = new Date();
+        var from = new Date(to.getTime() - hours * 3600000);
+        var fromEl = document.getElementById('zone-ui-date-from');
+        var toEl = document.getElementById('zone-ui-date-to');
+        if (fromEl) fromEl.value = formatZoneDate(from);
+        if (toEl) toEl.value = formatZoneDate(to);
+      }
+
+      function updateChartLegend(color) {
+        var legend = document.getElementById('zone-ui-chart-legend');
+        var title = document.getElementById('zone-ui-chart-title');
+        if (!legend || !title) return;
+        var name = title.textContent.split(',')[0].trim();
+        legend.innerHTML = '<span class="zone-ui__legend-swatch" style="background:' + color + '"></span><span>' + name + '</span>';
+      }
+
+      var zoneProfiles = {
+        'zone-101': {
+          object: 'Угольная котельная',
+          chartLabel: 'давление, кгс/см²',
+          chartSeed: 3,
+          metrics: [{ label: 'давление', value: '1,2', unit: 'кгс/см²', norm: 'Норма: 0…6' }],
+          settings: { desc: 'Датчик на выходе котла', transit: true, visible: true },
+          params: ['давление · кгс/см²'],
+          notify: { enabled: true, color: '#0e9fe9', thresholds: [{ label: 'давление', min: 0, max: 6 }] }
+        },
+        'zone-102': {
+          object: 'Угольная котельная',
+          chartLabel: 'температура, °C',
+          chartSeed: 11,
+          alarm: true,
+          metrics: [{ label: 'температура', value: '96', unit: '°C', norm: 'Норма: 0…85', alarm: true }],
+          settings: { desc: 'Термопара на выходе котла', transit: false, visible: true },
+          params: ['температура · °C'],
+          notify: { enabled: true, color: '#ef4444', thresholds: [{ label: 'температура', min: 0, max: 85 }] }
+        },
+        'zone-103': {
+          object: 'Угольная котельная',
+          chartLabel: 'температура, °C',
+          chartSeed: 5,
+          metrics: [{ label: 'температура', value: '62', unit: '°C', norm: 'Норма: 40…75' }],
+          settings: { desc: 'Обратный трубопровод', transit: true, visible: true },
+          params: ['температура · °C'],
+          notify: { enabled: true, color: '#0e9fe9', thresholds: [{ label: 'температура', min: 40, max: 75 }] }
+        },
+        'zone-104': {
+          object: 'Угольная котельная',
+          chartLabel: 'CO₂, ppm',
+          chartSeed: 8,
+          offline: true,
+          metrics: [
+            { label: 'температура', value: '—', unit: '°C', norm: 'Нет данных' },
+            { label: 'влажность', value: '—', unit: '%', norm: 'Нет данных' },
+            { label: 'CO₂', value: '—', unit: 'ppm', norm: 'Нет данных' }
+          ],
+          settings: { desc: 'Микроклимат котельной', transit: true, visible: true },
+          params: ['температура · °C', 'влажность · %', 'CO₂ · ppm'],
+          notify: { enabled: false, color: '#94a3b8', thresholds: [
+            { label: 'температура', min: 0, max: 40 },
+            { label: 'влажность', min: 0, max: 80 },
+            { label: 'CO₂', min: 0, max: 1000 }
+          ]}
+        },
+        'zone-301': {
+          object: 'Офис, 3 этаж',
+          chartLabel: 'температура, °C',
+          chartSeed: 4,
+          metrics: [
+            { label: 'температура', value: '23,1', unit: '°C', norm: 'Норма: 18…26' },
+            { label: 'влажность', value: '41', unit: '%', norm: 'Норма: 30…60' }
+          ],
+          settings: { desc: 'Open space, 3 этаж', transit: false, visible: true },
+          params: ['температура · °C', 'влажность · %'],
+          notify: { enabled: true, color: '#0e9fe9', thresholds: [
+            { label: 'температура', min: 18, max: 26 },
+            { label: 'влажность', min: 30, max: 60 }
+          ]}
+        },
+        'zone-303': {
+          object: 'Офис, 3 этаж',
+          chartLabel: 'CO₂, ppm',
+          chartSeed: 14,
+          alarm: true,
+          metrics: [
+            { label: 'температура', value: '26,8', unit: '°C', norm: 'Норма: 18…26', alarm: true },
+            { label: 'CO₂', value: '1240', unit: 'ppm', norm: 'Норма: 0…1000', alarm: true }
+          ],
+          settings: { desc: 'Кухня сотрудников', transit: true, visible: true },
+          params: ['температура · °C', 'CO₂ · ppm'],
+          notify: { enabled: true, color: '#f59e0b', thresholds: [
+            { label: 'температура', min: 18, max: 26 },
+            { label: 'CO₂', min: 0, max: 1000 }
+          ]}
+        }
+      };
+
+      var currentZone = null;
+      var currentHours = 24;
+
+      function readRowZone(row) {
+        var idEl = row.querySelector('.cloud-tree__id');
+        var statusEl = row.querySelector('.cloud-tree__status');
+        var nameEl = row.querySelector('.cloud-tree__zone-head .cloud-tree__name') || row.querySelector('.cloud-tree__name');
+        return {
+          id: idEl ? idEl.textContent.replace('ID:', '').trim() : '—',
+          name: nameEl ? nameEl.textContent.trim() : 'Зона',
+          status: statusEl ? statusEl.textContent.trim() : 'Норма',
+          statusClass: statusEl ? (statusEl.classList.contains('cloud-tree__status--alarm') ? 'alarm' : statusEl.classList.contains('cloud-tree__status--off') ? 'off' : 'ok') : 'ok'
+        };
+      }
+
+      function renderMetrics(metrics, zoneStatus) {
+        var box = document.getElementById('zone-ui-metrics');
+        if (!box) return;
+        zoneStatus = zoneStatus || {};
+        box.innerHTML = metrics.map(function(m) {
+          var isAlarm = !!m.alarm || (zoneStatus.statusClass === 'alarm' && metrics.length === 1);
+          var isOff = !!m.offline || zoneStatus.statusClass === 'off';
+          var mod = isAlarm ? ' zone-ui__metric--alarm' : isOff ? ' zone-ui__metric--off' : '';
+          var statusHtml = '';
+          if (isAlarm) {
+            statusHtml = '<span class="zone-ui__metric-status zone-ui__metric-status--alarm">Тревога</span>';
+          } else if (isOff) {
+            statusHtml = '<span class="zone-ui__metric-status zone-ui__metric-status--off">Нет связи</span>';
+          }
+          return '<div class="zone-ui__metric' + mod + '">' +
+            '<div class="zone-ui__metric-head">' + metricIcon(m.label) +
+            '<span class="zone-ui__metric-label">' + m.label + '</span></div>' +
+            '<div class="zone-ui__metric-value-row">' +
+            '<span class="zone-ui__metric-value">' + m.value + ' <small>' + m.unit + '</small></span>' +
+            statusHtml +
+            '</div>' +
+            '<span class="zone-ui__metric-norm">' + m.norm + '</span></div>';
+        }).join('');
+      }
+
+      function renderParams(items) {
+        var box = document.getElementById('zone-ui-params-list');
+        if (!box) return;
+        box.innerHTML = items.map(function(item) {
+          var row = parseParamRow(item);
+          return '<li class="zone-ui__param-row">' +
+            '<span class="zone-ui__param-name">' + row.name + '</span>' +
+            '<span class="zone-ui__param-unit">' + row.unit + '</span>' +
+            '<button type="button" class="zone-ui__param-menu" aria-label="Действия" tabindex="-1">⋮</button>' +
+            '</li>';
+        }).join('');
+      }
+
+      function renderThresholds(items) {
+        var box = document.getElementById('zone-ui-thresholds');
+        if (!box) return;
+        box.innerHTML = items.map(function(t, i) {
+          var unit = thresholdUnit(t.label);
+          return '<div class="zone-ui__threshold-block">' +
+            '<div class="zone-ui__threshold-head">' + metricIcon(t.label) +
+            '<span class="zone-ui__threshold-name">' + t.label + '</span></div>' +
+            '<div class="zone-ui__threshold-fields">' +
+            '<label class="zone-ui__field"><span>Минимум (' + unit + ')</span>' +
+            '<input type="number" class="zone-ui__input" data-threshold-min="' + i + '" value="' + t.min + '" readonly></label>' +
+            '<label class="zone-ui__field"><span>Максимум (' + unit + ')</span>' +
+            '<input type="number" class="zone-ui__input" data-threshold-max="' + i + '" value="' + t.max + '" readonly></label>' +
+            '</div></div>';
+        }).join('');
+      }
+
+      function loadZoneUI(row) {
+        var treeId = row.getAttribute('data-tree-id');
+        var base = readRowZone(row);
+        var profile = zoneProfiles[treeId] || {
+          object: 'Объект',
+          chartLabel: 'показания',
+          chartSeed: parseInt(base.id, 10) || 1,
+          metrics: [{ label: 'значение', value: '—', unit: '', norm: 'Демо-данные' }],
+          settings: { desc: 'Зона контроля', transit: true, visible: true },
+          params: ['параметр'],
+          notify: { enabled: true, color: '#0e9fe9', thresholds: [{ label: 'параметр', min: 0, max: 100 }] }
+        };
+        currentZone = { treeId: treeId, base: base, profile: profile };
+
+        document.getElementById('zone-ui-breadcrumb').textContent = profile.object;
+        document.getElementById('zone-ui-title').textContent = base.name;
+        document.getElementById('zone-ui-id').textContent = 'ID: ' + base.id;
+        var statusEl = document.getElementById('zone-ui-status');
+        statusEl.textContent = base.status;
+        statusEl.className = 'zone-ui__status zone-ui__status--' + base.statusClass;
+        var showHeaderStatus = base.statusClass !== 'alarm';
+        statusEl.hidden = !showHeaderStatus;
+        statusEl.classList.toggle('is-hidden', !showHeaderStatus);
+        document.getElementById('zone-ui-updated').textContent = 'Обновлено: ' + new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+
+        renderMetrics(profile.metrics, base);
+        document.getElementById('zone-ui-chart-title').textContent = profile.chartLabel;
+        updateDateRange(currentHours);
+        drawChart(generateChartPoints(profile.chartSeed, currentHours), profile.notify.color, profile.alarm);
+
+        document.getElementById('zone-ui-settings-name').value = base.name;
+        document.getElementById('zone-ui-settings-desc').value = profile.settings.desc;
+        document.getElementById('zone-ui-settings-transit').checked = profile.settings.transit;
+        document.getElementById('zone-ui-settings-visible').checked = profile.settings.visible;
+        renderParams(profile.params);
+
+        document.getElementById('zone-ui-notify-enabled').checked = profile.notify.enabled;
+        document.getElementById('zone-ui-notify-color').value = profile.notify.color;
+        renderThresholds(profile.notify.thresholds);
+
+        setZoneTab('overview');
+        setEditMode(false);
+        setNotifyEditMode(false);
+      }
+
+      function setEditMode(on) {
+        ['zone-ui-settings-name', 'zone-ui-settings-desc'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) el.readOnly = !on;
+        });
+        ['zone-ui-settings-transit', 'zone-ui-settings-visible'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) el.disabled = !on;
+        });
+        document.getElementById('zone-ui-edit-toggle').querySelector('.zone-ui__edit-label').textContent = on ? 'Отмена' : 'Редактировать';
+        document.getElementById('zone-ui-settings-save').classList.toggle('is-hidden', !on);
+      }
+
+      function setNotifyEditMode(on) {
+        document.getElementById('zone-ui-notify-enabled').disabled = !on;
+        document.getElementById('zone-ui-notify-color').disabled = !on;
+        document.getElementById('zone-ui-notify-repeat').readOnly = !on;
+        document.getElementById('zone-ui-notify-delay').readOnly = !on;
+        root.querySelectorAll('#zone-ui-thresholds input').forEach(function(inp) {
+          inp.readOnly = !on;
+        });
+        document.getElementById('zone-ui-notify-edit').querySelector('.zone-ui__edit-label').textContent = on ? 'Отмена' : 'Редактировать';
+        document.getElementById('zone-ui-notify-save').classList.toggle('is-hidden', !on);
+      }
+
+      function toggleZoneApp(show, row) {
+        if (show) toggleObjectApp(false);
+        if (!zoneApp) return;
+        zoneApp.classList.toggle('is-hidden', !show);
+        zoneApp.hidden = !show;
+        if (treeNav) {
+          treeNav.classList.toggle('is-hidden', show);
+          treeNav.hidden = show;
+        }
+        if (panel) {
+          panel.classList.toggle('cloud-tree__panel--zone-open', show);
+          panel.classList.toggle('cloud-tree__panel--app-open', show || (objectApp && !objectApp.hidden));
+        }
+        if (layout) layout.classList.toggle('cloud-tree__layout--app-open', show || (objectApp && !objectApp.hidden));
+        if (show && row) {
+          loadZoneUI(row);
+          setZoneTab('overview');
+          setEditMode(false);
+          setNotifyEditMode(false);
+        }
+      }
+
+      var objectProfiles = {
+        'object-boiler': {
+          id: '142',
+          section: 'Промышленный комплекс',
+          address: 'г. Томск, ул. Заводская, 12',
+          stats: { total: 4, ok: 2, problems: 2 },
+          devices: [
+            { name: 'ПАС-01', id: '881', zoneId: '101', battery: 100, location: 'Угольная котельная', model: '4–20 мА', updated: '15:32 13.07.2026', metrics: [{ label: 'давление', v: '1,2', u: 'кгс/см²' }], ok: true },
+            { name: 'Термопара котла', id: '882', zoneId: '102', battery: 87, location: 'Угольная котельная', model: 'Термопара', updated: '15:31 13.07.2026', metrics: [{ label: 'температура', v: '96', u: '°C' }], alarm: true },
+            { name: 'Термопара обратки', id: '883', zoneId: '103', battery: 92, location: 'Угольная котельная', model: 'Термопара', updated: '15:32 13.07.2026', metrics: [{ label: 'температура', v: '62', u: '°C' }], ok: true },
+            { name: 'EClerk-WS-HTC', id: '884', zoneId: '104', battery: 0, location: 'Угольная котельная', model: 'Микроклимат', updated: '—', metrics: [{ label: 'температура', v: '—', u: '°C' }, { label: 'влажность', v: '—', u: '%' }], offline: true }
+          ],
+          problems: [
+            { title: 'Температура котла', id: '102', text: '96 °C — превышен порог 85 °C' },
+            { title: 'Качество воздуха', id: '104', text: 'Датчик не в сети' }
+          ],
+          chartSeed: 7,
+          chartLines: [
+            { name: 'Температура котла', color: '#ef4444' },
+            { name: 'Температура обратки', color: '#0e9fe9' }
+          ],
+          settings: { section: 'Промышленный комплекс', tz: 'GMT +7', access: true, visible: true },
+          scheme: {
+            image: 'Images/Mockups/floor-plan.jpg',
+            widgets: [
+              { name: 'Давление', top: '18%', left: '10%', metrics: ['1,2 кгс/см²'] },
+              { name: 'Температура котла', top: '28%', left: '58%', metrics: ['96 °C'], alarm: true },
+              { name: 'Обратка', top: '62%', left: '12%', metrics: ['62 °C'] },
+              { name: 'Качество воздуха', top: '58%', left: '55%', metrics: ['offline'], offline: true }
+            ]
+          }
+        },
+        'object-pump': {
+          id: '156',
+          section: 'Промышленный комплекс',
+          address: 'г. Томск, ул. Заводская, 12 · корпус 2',
+          stats: { total: 3, ok: 1, problems: 2 },
+          devices: [
+            { name: 'ПАС-01', id: '901', zoneId: '201', battery: 95, location: 'Насосная станция', model: 'ПАС-01', updated: '15:30 13.07.2026', metrics: [{ label: 'давление', v: '3,8', u: 'кгс/см²' }], ok: true },
+            { name: 'Термодатчик', id: '902', zoneId: '202', battery: 0, location: 'Насосная станция', model: 'Термопара', updated: '—', metrics: [{ label: 'температура', v: '—', u: '°C' }], offline: true },
+            { name: 'EClerk-WS-L', id: '903', zoneId: '203', battery: 78, location: 'Насосная станция', model: 'Протечка', updated: '15:28 13.07.2026', metrics: [{ label: 'состояние', v: 'Обнаружена', u: '' }], alarm: true }
+          ],
+          problems: [
+            { title: 'Протечка в подвале', id: '203', text: 'Зафиксировано срабатывание датчика протечки' },
+            { title: 'Температура насосов', id: '202', text: 'Датчик не в сети' }
+          ],
+          chartSeed: 9,
+          chartLines: [
+            { name: 'Давление', color: '#0e9fe9' },
+            { name: 'Температура', color: '#94a3b8' }
+          ],
+          settings: { section: 'Промышленный комплекс', tz: 'GMT +7', access: true, visible: true },
+          scheme: {
+            image: 'Images/Mockups/floor-plan.jpg',
+            widgets: [
+              { name: 'Давление', top: '22%', left: '14%', metrics: ['3,8 кгс/см²'] },
+              { name: 'Температура', top: '30%', left: '60%', metrics: ['— °C'], offline: true },
+              { name: 'Протечка', top: '64%', left: '48%', metrics: ['Обнаружена'], alarm: true }
+            ]
+          }
+        },
+        'object-office': {
+          id: '181',
+          section: 'Офисный центр',
+          address: 'г. Новосибирск, пр. Димитрова, 7 · 3 этаж',
+          stats: { total: 3, ok: 1, problems: 2 },
+          devices: [
+            { name: 'Eclerk-HTC-B', id: '880', zoneId: '301', battery: 100, location: 'Open space', model: 'EClerk-WS-HTC', updated: '15:38 13.07.2026', metrics: [{ label: 'температура', v: '23,1', u: '°C' }, { label: 'влажность', v: '41', u: '%' }], ok: true },
+            { name: 'Ivit', id: '881', zoneId: '302', battery: 0, location: 'Переговорная', model: 'Ivit-s-1', updated: '—', metrics: [{ label: 'температура', v: '—', u: '°C' }, { label: 'влажность', v: '—', u: '%' }], offline: true },
+            { name: 'EClerk-WS-AQ', id: '882', zoneId: '303', battery: 88, location: 'Кухня сотрудников', model: 'CO₂ + температура', updated: '15:37 13.07.2026', metrics: [{ label: 'температура', v: '26,8', u: '°C' }, { label: 'co₂', v: '1240', u: 'ppm' }], alarm: true }
+          ],
+          problems: [
+            { title: 'Кухня сотрудников', id: '303', text: 'CO₂ 1 240 ppm — превышен порог' },
+            { title: 'Переговорная', id: '302', text: 'Датчик не в сети' }
+          ],
+          chartSeed: 4,
+          chartLines: [
+            { name: 'Eclerk-HTC-B', color: '#14b8a6' },
+            { name: 'Ivit', color: '#ef4444' }
+          ],
+          settings: { section: 'Офисный центр · 3 этаж', tz: 'GMT +7', access: true, visible: true },
+          scheme: {
+            image: 'Images/Mockups/floor-plan.jpg',
+            widgets: [
+              { name: 'Open space', top: '20%', left: '12%', metrics: ['23,1 °C', '41 %'] },
+              { name: 'Переговорная', top: '26%', left: '58%', metrics: ['— °C'], offline: true },
+              { name: 'Кухня', top: '60%', left: '52%', metrics: ['26,8 °C', '1240 ppm'], alarm: true }
+            ]
+          }
+        }
+      };
+
+      var currentObject = null;
+      var currentObjectHours = 24;
+
+      function readRowObject(row) {
+        var nameEl = row.querySelector('.cloud-tree__name');
+        var metaEl = row.querySelector('.cloud-tree__meta');
+        var badgeEl = row.querySelector('.cloud-tree__badge');
+        return {
+          name: nameEl ? nameEl.textContent.trim() : 'Объект',
+          address: metaEl ? metaEl.textContent.trim() : '—',
+          zones: badgeEl ? badgeEl.textContent.trim() : ''
+        };
+      }
+
+      function setObjectTab(tabName) {
+        root.querySelectorAll('[data-object-tab]').forEach(function(btn) {
+          var active = btn.getAttribute('data-object-tab') === tabName;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        root.querySelectorAll('[data-object-panel]').forEach(function(panel) {
+          var active = panel.getAttribute('data-object-panel') === tabName;
+          panel.classList.toggle('is-active', active);
+          panel.hidden = !active;
+        });
+      }
+
+      function showObjectToast(msg) {
+        var toast = document.getElementById('object-ui-toast');
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.classList.remove('is-hidden');
+        clearTimeout(showObjectToast._t);
+        showObjectToast._t = setTimeout(function() {
+          toast.classList.add('is-hidden');
+        }, 2600);
+      }
+
+      function renderObjectStats(stats) {
+        var box = document.getElementById('object-ui-stats');
+        if (!box || !stats) return;
+        box.innerHTML =
+          '<div class="object-ui__stat"><span class="object-ui__stat-value">' + stats.total + '</span><span class="object-ui__stat-label">Зон всего</span></div>' +
+          '<div class="object-ui__stat"><span class="object-ui__stat-value object-ui__stat-value--ok">' + stats.ok + '</span><span class="object-ui__stat-label">В норме</span></div>' +
+          '<div class="object-ui__stat"><span class="object-ui__stat-value object-ui__stat-value--warn">' + stats.problems + '</span><span class="object-ui__stat-label">Проблемы</span></div>';
+      }
+
+      function renderObjectDevices(devices) {
+        var box = document.getElementById('object-ui-devices');
+        if (!box) return;
+        var batteryIcon = '<svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><rect x="0.5" y="1.5" width="13" height="7" rx="1.5" stroke="currentColor"/><rect x="14" y="3.5" width="1.5" height="3" rx="0.5" fill="currentColor"/><rect x="2" y="3" width="8" height="4" rx="0.5" fill="currentColor"/></svg>';
+        var signalIcon = '<svg class="object-ui__device-signal" width="14" height="12" viewBox="0 0 14 12" fill="currentColor" aria-hidden="true"><rect x="0" y="9" width="2" height="3" rx="0.5"/><rect x="4" y="6" width="2" height="6" rx="0.5"/><rect x="8" y="3" width="2" height="9" rx="0.5"/><rect x="12" y="0" width="2" height="12" rx="0.5"/></svg>';
+        box.innerHTML = devices.map(function(d) {
+          var statusClass = d.alarm ? 'object-ui__device--alarm' : d.offline ? 'object-ui__device--off' : 'object-ui__device--ok';
+          var dotClass = d.alarm ? 'object-ui__device-dot--alarm' : d.offline ? 'object-ui__device-dot--off' : '';
+          var metrics = d.metrics.map(function(m) {
+            var label = m.label || '';
+            var value = (m.v || '') + (m.u ? ' ' + m.u : '');
+            return '<div class="object-ui__device-metric">' +
+              (label ? '<span class="object-ui__device-metric-label">' + label + '</span>' : '') +
+              '<span class="object-ui__device-metric-value">' + value + '</span></div>';
+          }).join('');
+          return '<article class="object-ui__device ' + statusClass + '">' +
+            '<div class="object-ui__device-top">' +
+              '<div class="object-ui__device-info">' +
+                '<div class="object-ui__device-title-row">' +
+                  '<span class="object-ui__device-name">' + d.name + '</span>' +
+                  (d.star !== false ? '<span class="object-ui__device-star" aria-hidden="true">★</span>' : '') +
+                  '<span class="object-ui__device-id">ID: ' + d.id + '</span>' +
+                '</div>' +
+                '<p class="object-ui__device-location">' + d.location + '</p>' +
+                '<div class="object-ui__device-model-row">' +
+                  '<span class="object-ui__device-model">' + d.model + '</span>' +
+                  (d.zoneId ? '<span class="object-ui__device-id">ID: ' + d.zoneId + '</span>' : '') +
+                '</div>' +
+                '<p class="object-ui__device-time">Обновлено: ' + d.updated + '</p>' +
+              '</div>' +
+              '<div class="object-ui__device-status">' +
+                '<span class="object-ui__device-battery">' + batteryIcon + (d.battery != null ? d.battery + '%' : '—') + '</span>' +
+                signalIcon +
+                '<span class="object-ui__device-dot ' + dotClass + '" aria-hidden="true"></span>' +
+              '</div>' +
+            '</div>' +
+            '<div class="object-ui__device-metrics">' + metrics + '</div>' +
+          '</article>';
+        }).join('');
+      }
+
+      function renderObjectProblems(problems) {
+        var box = document.getElementById('object-ui-problems');
+        if (!box) return;
+        if (!problems || !problems.length) {
+          box.innerHTML = '<div class="object-ui__empty"><div class="object-ui__empty-icon" aria-hidden="true">✓</div>' +
+            '<p class="object-ui__empty-title">Проблем не обнаружено</p>' +
+            '<p class="object-ui__empty-text">Все зоны работают в штатном режиме</p></div>';
+          return;
+        }
+        box.innerHTML = '<ul class="object-ui__problem-list">' + problems.map(function(p) {
+          return '<li class="object-ui__problem"><strong>' + p.title + '</strong> <span>ID: ' + p.id + '</span><p>' + p.text + '</p></li>';
+        }).join('') + '</ul>';
+      }
+
+      function drawObjectChart(svgId, lines, seed, hours) {
+        var svg = document.getElementById(svgId);
+        if (!svg) return;
+        var w = 400;
+        var h = 120;
+        var pad = 8;
+        var grid = '<line x1="0" y1="30" x2="400" y2="30" class="object-ui__chart-grid"/>' +
+          '<line x1="0" y1="60" x2="400" y2="60" class="object-ui__chart-grid"/>' +
+          '<line x1="0" y1="90" x2="400" y2="90" class="object-ui__chart-grid"/>';
+        var paths = lines.map(function(line, li) {
+          var pts = generateChartPoints(seed + li * 3 + hours, hours);
+          var min = Math.min.apply(null, pts);
+          var max = Math.max.apply(null, pts);
+          var range = max - min || 1;
+          var step = (w - pad * 2) / (pts.length - 1);
+          var coords = pts.map(function(v, i) {
+            var x = pad + i * step;
+            var y = h - pad - ((v - min) / range) * (h - pad * 2);
+            return x.toFixed(1) + ',' + y.toFixed(1);
+          });
+          return '<path class="object-ui__chart-line" d="M' + coords.join(' L') + '" style="stroke:' + line.color + '"/>';
+        }).join('');
+        svg.innerHTML = grid + paths;
+      }
+
+      function renderObjectScheme(scheme) {
+        var bg = document.getElementById('object-ui-scheme-bg');
+        var widgets = document.getElementById('object-ui-scheme-widgets');
+        if (!bg || !widgets || !scheme) return;
+        var image = scheme.image || 'Images/Mockups/floor-plan.jpg';
+        bg.style.background = 'none';
+        bg.style.backgroundImage = 'url("' + image + '")';
+        bg.style.backgroundSize = 'cover';
+        bg.style.backgroundPosition = 'center';
+        widgets.innerHTML = scheme.widgets.map(function(w) {
+          var cls = 'object-ui__scheme-widget' + (w.alarm ? ' object-ui__scheme-widget--alarm' : w.offline ? ' object-ui__scheme-widget--off' : '');
+          var metrics = w.metrics.map(function(m) { return '<span>' + m + '</span>'; }).join('');
+          return '<div class="' + cls + '" style="top:' + w.top + ';left:' + w.left + '">' +
+            '<strong>' + w.name + '</strong>' + metrics + '</div>';
+        }).join('');
+      }
+
+      function setObjectEditMode(on) {
+        ['object-ui-settings-name', 'object-ui-settings-address', 'object-ui-settings-section', 'object-ui-settings-tz'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) el.readOnly = !on;
+        });
+        ['object-ui-settings-access', 'object-ui-settings-visible'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) el.disabled = !on;
+        });
+        var editBtn = document.getElementById('object-ui-edit-toggle');
+        var saveBtn = document.getElementById('object-ui-settings-save');
+        if (editBtn) editBtn.textContent = on ? 'Отмена' : 'Редактировать';
+        if (saveBtn) saveBtn.classList.toggle('is-hidden', !on);
+      }
+
+      function loadObjectUI(row) {
+        var treeId = row.getAttribute('data-tree-id');
+        var base = readRowObject(row);
+        var profile = objectProfiles[treeId] || {
+          id: '—',
+          section: 'Раздел',
+          address: base.address,
+          stats: { total: 0, ok: 0, problems: 0 },
+          devices: [],
+          problems: [],
+          chartSeed: 1,
+          chartLines: [{ name: 'Зона 1', color: '#0e9fe9' }],
+          settings: { section: '—', tz: 'GMT +0', access: true, visible: true },
+          scheme: { image: 'Images/Mockups/floor-plan.jpg', widgets: [] }
+        };
+        currentObject = { row: row, profile: profile, treeId: treeId, base: base };
+        document.getElementById('object-ui-section').textContent = profile.section;
+        document.getElementById('object-ui-title').textContent = base.name;
+        document.getElementById('object-ui-id').textContent = 'ID: ' + profile.id;
+        document.getElementById('object-ui-address').textContent = profile.address || base.address;
+        renderObjectStats(profile.stats);
+        renderObjectDevices(profile.devices);
+        renderObjectProblems(profile.problems);
+        drawObjectChart('object-ui-chart-temp', profile.chartLines, profile.chartSeed, currentObjectHours);
+        drawObjectChart('object-ui-chart-hum', profile.chartLines.map(function(l, i) {
+          return { name: l.name, color: ['#8b5cf6', '#f59e0b', '#22c55e'][i % 3] };
+        }), profile.chartSeed + 2, currentObjectHours);
+        document.getElementById('object-ui-settings-name').value = base.name;
+        document.getElementById('object-ui-settings-address').value = profile.address || base.address;
+        document.getElementById('object-ui-settings-section').value = profile.settings.section;
+        document.getElementById('object-ui-settings-tz').value = profile.settings.tz;
+        document.getElementById('object-ui-settings-access').checked = profile.settings.access;
+        document.getElementById('object-ui-settings-visible').checked = profile.settings.visible;
+        renderObjectScheme(profile.scheme);
+        setObjectEditMode(false);
+      }
+
+      function toggleObjectApp(show, row) {
+        if (show) toggleZoneApp(false);
+        if (!objectApp) return;
+        objectApp.classList.toggle('is-hidden', !show);
+        objectApp.hidden = !show;
+        if (treeNav) {
+          treeNav.classList.toggle('is-hidden', show);
+          treeNav.hidden = show;
+        }
+        if (panel) {
+          panel.classList.toggle('cloud-tree__panel--object-open', show);
+          panel.classList.toggle('cloud-tree__panel--app-open', show || (zoneApp && !zoneApp.hidden));
+        }
+        if (layout) layout.classList.toggle('cloud-tree__layout--app-open', show || (zoneApp && !zoneApp.hidden));
+        if (show && row) {
+          loadObjectUI(row);
+          setObjectTab('overview');
+          setObjectEditMode(false);
+        }
+      }
 
       var copy = {
         section: {
@@ -1310,9 +2295,10 @@
             'Облако выдаёт объекту логин и пароль',
             'Их прописывают в шлюз GW-RS/GW-Bl или в приложение EClerk-WM на Android',
             'Устройства передачи «прозрачны» — облако видит зоны, а не модель телефона',
-            'На одном объекте может работать несколько шлюзов или телефонов'
+            'На одном объекте может работать несколько шлюзов или телефонов',
+            'Клик по объекту — пояснение справа. «Открыть →» — обзор, графики, настройки и схема слева'
           ],
-          example: 'Выберите объект слева, чтобы увидеть его зоны и статусы.'
+          example: 'Выберите объект и нажмите «Открыть →» — слева откроется интерфейс объекта.'
         },
         'object-boiler': {
           kicker: 'Объект контроля',
@@ -1354,10 +2340,10 @@
           bullets: [
             'Один датчик = одна зона',
             'Статус: Норма, Не в сети или Тревога',
-            'При замене прибора меняется только привязка — история сохраняется',
-            'ID зоны не меняется на протяжении эксплуатации'
+            'Клик по зоне — пояснение справа. Нажмите «Открыть →», чтобы открыть интерфейс зоны слева.',
+            'При замене прибора история сохраняется по ID зоны'
           ],
-          example: 'Выберите зону слева, чтобы увидеть показания и статус.'
+          example: 'Нажмите «Открыть →» у выбранной зоны — слева откроется её интерфейс.'
         },
         'zone-101': {
           kicker: 'Зона · ID 101',
@@ -1454,6 +2440,9 @@
       function setDetail(id, type) {
         var data = copy[id] || copy[type];
         if (!detail || !data || !kicker || !title || !lead || !list) return;
+        setTypeDef(type);
+        if (type !== 'zone') toggleZoneApp(false);
+        if (type !== 'object') toggleObjectApp(false);
         detail.classList.add('is-updating');
         window.setTimeout(function() {
           kicker.textContent = data.kicker;
@@ -1474,17 +2463,24 @@
         root.querySelectorAll('.cloud-tree__row').forEach(function(r) {
           r.classList.remove('is-active');
         });
-        row.classList.add('is-active');
-        setDetail(row.getAttribute('data-tree-id'), row.getAttribute('data-tree-type'));
-
-        var glossaryIndex = { section: 0, object: 1, zone: 2 };
-        var type = row.getAttribute('data-tree-type');
-        root.querySelectorAll('.cloud-tree__glossary-item').forEach(function(g, i) {
-          g.classList.toggle('is-active', type !== 'zone' && glossaryIndex[type] === i);
+        root.querySelectorAll('.cloud-tree__zone-wrap').forEach(function(w) {
+          w.classList.remove('is-active');
         });
+        root.querySelectorAll('.cloud-tree__object-wrap').forEach(function(w) {
+          w.classList.remove('is-active');
+        });
+        row.classList.add('is-active');
+        var wrap = row.closest('.cloud-tree__zone-wrap');
+        if (wrap) wrap.classList.add('is-active');
+        var objWrap = row.closest('.cloud-tree__object-wrap');
+        if (objWrap) objWrap.classList.add('is-active');
+        var type = row.getAttribute('data-tree-type');
+        setDetail(row.getAttribute('data-tree-id'), type);
+        toggleZoneApp(false);
+        toggleObjectApp(false);
 
-        var branch = row.parentElement;
-        if (branch && branch.classList.contains('cloud-tree__branch')) {
+        var branch = getRowBranch(row);
+        if (branch) {
           branch.classList.remove('is-collapsed');
           if (row.getAttribute('aria-expanded') === 'false') {
             row.setAttribute('aria-expanded', 'true');
@@ -1492,40 +2488,154 @@
         }
       }
 
-      root.querySelectorAll('.cloud-tree__glossary-item').forEach(function(item, index) {
-        item.addEventListener('click', function() {
-          var types = ['section', 'object', 'zone'];
-          var type = types[index];
-          root.querySelectorAll('.cloud-tree__glossary-item').forEach(function(g) {
-            g.classList.remove('is-active');
-          });
-          item.classList.add('is-active');
-
-          if (type === 'zone') {
-            root.querySelectorAll('.cloud-tree__row').forEach(function(r) {
-              r.classList.remove('is-active');
-            });
-            setDetail('zone', 'zone');
-            return;
-          }
-          var row = root.querySelector('[data-tree-type="' + type + '"]');
-          if (row) activateRow(row);
+      var backBtn = document.getElementById('zone-ui-back');
+      if (backBtn) {
+        backBtn.addEventListener('click', function() {
+          toggleZoneApp(false);
         });
-        item.setAttribute('role', 'button');
-        item.setAttribute('tabindex', '0');
-        item.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            item.click();
-          }
+      }
+
+      var objectBackBtn = document.getElementById('object-ui-back');
+      if (objectBackBtn) {
+        objectBackBtn.addEventListener('click', function() {
+          toggleObjectApp(false);
+        });
+      }
+
+      root.querySelectorAll('[data-object-tab]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          setObjectTab(btn.getAttribute('data-object-tab'));
         });
       });
+
+      root.querySelectorAll('#object-ui-range-pills .object-ui__pill').forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          root.querySelectorAll('#object-ui-range-pills .object-ui__pill').forEach(function(p) { p.classList.remove('is-active'); });
+          pill.classList.add('is-active');
+          currentObjectHours = parseInt(pill.getAttribute('data-hours'), 10) || 24;
+        });
+      });
+
+      var objectApplyRange = document.getElementById('object-ui-apply-range');
+      if (objectApplyRange) {
+        objectApplyRange.addEventListener('click', function() {
+          if (!currentObject) return;
+          var p = currentObject.profile;
+          drawObjectChart('object-ui-chart-temp', p.chartLines, p.chartSeed, currentObjectHours);
+          drawObjectChart('object-ui-chart-hum', p.chartLines.map(function(l, i) {
+            return { name: l.name, color: ['#8b5cf6', '#f59e0b', '#22c55e'][i % 3] };
+          }), p.chartSeed + 2, currentObjectHours);
+          showObjectToast('Графики обновлены за ' + currentObjectHours + ' ч');
+        });
+      }
+
+      var objectZonesBtn = document.getElementById('object-ui-zones-btn');
+      if (objectZonesBtn) {
+        objectZonesBtn.addEventListener('click', function() {
+          showObjectToast('Выбраны все зоны объекта (демо)');
+        });
+      }
+
+      var objectEditToggle = document.getElementById('object-ui-edit-toggle');
+      var objectSettingsSave = document.getElementById('object-ui-settings-save');
+      if (objectEditToggle) {
+        objectEditToggle.addEventListener('click', function() {
+          var on = objectSettingsSave && !objectSettingsSave.classList.contains('is-hidden');
+          setObjectEditMode(!on);
+        });
+      }
+      if (objectSettingsSave) {
+        objectSettingsSave.addEventListener('click', function() {
+          if (currentObject) {
+            document.getElementById('object-ui-title').textContent = document.getElementById('object-ui-settings-name').value;
+          }
+          setObjectEditMode(false);
+          showObjectToast('Настройки объекта сохранены');
+        });
+      }
+
+      root.querySelectorAll('.cloud-tree__zone-tab').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          setZoneTab(btn.getAttribute('data-zone-tab'));
+        });
+      });
+
+      root.querySelectorAll('.zone-ui__pill').forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          root.querySelectorAll('.zone-ui__pill').forEach(function(p) { p.classList.remove('is-active'); });
+          pill.classList.add('is-active');
+          currentHours = parseInt(pill.getAttribute('data-hours'), 10) || 24;
+          updateDateRange(currentHours);
+        });
+      });
+
+      var applyRange = document.getElementById('zone-ui-apply-range');
+      if (applyRange) {
+        applyRange.addEventListener('click', function() {
+          if (!currentZone) return;
+          drawChart(
+            generateChartPoints(currentZone.profile.chartSeed + currentHours, currentHours),
+            currentZone.profile.notify.color,
+            currentZone.profile.alarm
+          );
+          showToast('График обновлён за ' + currentHours + ' ч');
+        });
+      }
+
+      var exportBtn = document.getElementById('zone-ui-export');
+      if (exportBtn) {
+        exportBtn.addEventListener('click', function() {
+          showToast('Экспорт XLS подготовлен (демо)');
+        });
+      }
+
+      var editToggle = document.getElementById('zone-ui-edit-toggle');
+      var settingsSave = document.getElementById('zone-ui-settings-save');
+      if (editToggle) {
+        editToggle.addEventListener('click', function() {
+          var on = settingsSave && !settingsSave.classList.contains('is-hidden');
+          setEditMode(!on);
+        });
+      }
+      if (settingsSave) {
+        settingsSave.addEventListener('click', function() {
+          if (currentZone) {
+            document.getElementById('zone-ui-title').textContent = document.getElementById('zone-ui-settings-name').value;
+          }
+          setEditMode(false);
+          showToast('Настройки зоны сохранены');
+        });
+      }
+
+      var notifyEdit = document.getElementById('zone-ui-notify-edit');
+      var notifySave = document.getElementById('zone-ui-notify-save');
+      if (notifyEdit) {
+        notifyEdit.addEventListener('click', function() {
+          var on = notifySave && !notifySave.classList.contains('is-hidden');
+          setNotifyEditMode(!on);
+        });
+      }
+      if (notifySave) {
+        notifySave.addEventListener('click', function() {
+          setNotifyEditMode(false);
+          showToast('Пороги уведомлений сохранены');
+        });
+      }
+
+      function getRowBranch(row) {
+        var wrap = row.closest('.cloud-tree__object-wrap, .cloud-tree__zone-wrap');
+        var anchor = wrap || row;
+        if (anchor.parentElement && anchor.parentElement.classList.contains('cloud-tree__branch')) {
+          return anchor.parentElement;
+        }
+        return row.closest('.cloud-tree__branch');
+      }
 
       root.querySelectorAll('.cloud-tree__row').forEach(function(row) {
         row.addEventListener('click', function(e) {
           if (e.target.closest('.cloud-tree__chevron:not(.cloud-tree__chevron--leaf)')) {
-            var branch = row.parentElement;
-            if (branch && branch.classList.contains('cloud-tree__branch')) {
+            var branch = getRowBranch(row);
+            if (branch) {
               branch.classList.toggle('is-collapsed');
               row.setAttribute('aria-expanded', branch.classList.contains('is-collapsed') ? 'false' : 'true');
             }
