@@ -7069,3 +7069,38 @@ body.scroll-reveal--enabled .scroll-reveal.is-visible {
     max-height: calc(100dvh - 96px);
   }
 }
+
+/* Keep the mobile hero mockup clear of the fixed header. */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 104px;
+  }
+
+  .hero__image {
+    height: 190px;
+    min-height: 190px;
+    align-items: flex-start;
+    padding-top: 18px;
+  }
+
+  .hero__image--mockup img {
+    width: min(470px, 98vw);
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 98px;
+  }
+
+  .hero__image {
+    height: 184px;
+    min-height: 184px;
+    padding-top: 16px;
+  }
+
+  .hero__image--mockup img {
+    width: 102vw;
+  }
+}
