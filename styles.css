@@ -495,6 +495,22 @@ a {
   transform: translateX(4%);
 }
 
+.hero__image--video {
+  background: transparent;
+}
+
+.hero__video {
+  display: block;
+  width: min(100%, 780px);
+  height: auto;
+  max-height: 78%;
+  object-fit: contain;
+  object-position: center right;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -7142,6 +7158,40 @@ body.scroll-reveal--enabled .scroll-reveal.is-visible {
   }
 
   .hero__image--mockup img {
+    width: 90vw;
+  }
+}
+
+/* Hero video replaces the old laptop image. Keep it clean and uncropped. */
+@media (max-width: 768px) {
+  .hero__image--video {
+    height: auto;
+    min-height: 0;
+    padding: 18px 18px 4px;
+    margin: 0;
+    overflow: visible;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .hero__video {
+    width: min(430px, 92vw);
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__image--video {
+    padding: 16px 18px 2px;
+  }
+
+  .hero__video {
     width: 90vw;
   }
 }
