@@ -7104,3 +7104,44 @@ body.scroll-reveal--enabled .scroll-reveal.is-visible {
     width: 102vw;
   }
 }
+
+/* Show the full laptop mockup on phones. */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 104px;
+  }
+
+  .hero__image {
+    height: auto;
+    min-height: 0;
+    padding: 22px 18px 10px;
+    overflow: visible;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__image--mockup img {
+    display: block;
+    width: min(420px, 92vw);
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    transform: none;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 96px;
+  }
+
+  .hero__image {
+    padding: 20px 18px 8px;
+  }
+
+  .hero__image--mockup img {
+    width: 90vw;
+  }
+}
