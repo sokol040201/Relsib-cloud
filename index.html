@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RelsibCloud — система мониторинга за удалёнными объектами</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
-  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260714i">
 </head>
 <body>
@@ -84,46 +86,215 @@
       </div>
     </section>
 
+    <section class="features" id="features" aria-labelledby="features-title">
+      <h2 class="section-title" id="features-title">Преимущества облачного сервиса</h2>
+      <div class="features__grid">
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <img src="Images/features/archive.png" alt="" width="140" height="140">
+          </div>
+          <h3 class="feature-card__title">Архивирование</h3>
+          <h4 class="feature-card__subtitle">Надёжное хранение данных</h4>
+          <p class="feature-card__text">Данные измерений надёжно архивируются в облаке, хранятся на российских серверах.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <img src="Images/features/monitoring.png" alt="" width="140" height="140">
+          </div>
+          <h3 class="feature-card__title">Мониторинг</h3>
+          <h4 class="feature-card__subtitle">Контроль удалённых объектов</h4>
+          <p class="feature-card__text">Возможность создавать неограниченное количество разделов, объектов и зон контроля.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <img src="Images/features/notifications.png" alt="" width="140" height="140">
+          </div>
+          <h3 class="feature-card__title">Оповещения</h3>
+          <h4 class="feature-card__subtitle">Периодические и тревожные</h4>
+          <p class="feature-card__text">Гибко задайте пороги сигнализации для каждого параметра и получайте оповещения на почту или в мессенджер.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <img src="Images/features/reports.png" alt="" width="140" height="140">
+          </div>
+          <h3 class="feature-card__title">Отчёты</h3>
+          <h4 class="feature-card__subtitle">Анализ и отчётность</h4>
+          <p class="feature-card__text">Формирование отчётов. Анализ данных, экспорт в Excel, отчёт в PDF.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="architecture app-section" id="architecture">
       <h2 class="section-title">Состав и архитектура системы</h2>
 
       <div class="architecture-sub">
-        <div class="system-stack" role="img" aria-label="Состав системы: верхний уровень — RelsibCloud, средний — шлюзы и EClerk-WM, нижний — датчики и ПАС-01">
+        <p class="system-stack__lead">Три уровня системы — раскройте уровень или просто прокрутите страницу</p>
+        <div class="system-stack" id="system-stack" aria-label="Состав системы: верхний уровень — RelsibCloud, средний — шлюзы и EClerk-WM, нижний — датчики и ПАС-01">
           <div class="system-stack__line" aria-hidden="true"></div>
 
-          <div class="system-stack__row">
+          <div class="system-stack__row is-open" data-level="upper">
             <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
             <article class="system-stack__level">
-              <header class="system-stack__head">
-                <h3 class="system-stack__title">Верхний уровень</h3>
-              </header>
-              <p class="system-stack__text">Это «облако» RelsibCloud, а также универсальное и специализированные WEB-приложения, предоставляющие пользователю неограниченные возможности по удалённому контролю.</p>
+              <button type="button" class="system-stack__trigger" aria-expanded="true" aria-controls="stack-panel-upper" id="stack-trigger-upper">
+                <span class="system-stack__head">
+                  <span class="system-stack__index" aria-hidden="true">3</span>
+                  <span class="system-stack__head-text">
+                    <span class="system-stack__title">Верхний уровень</span>
+                    <span class="system-stack__hint">Облако и приложения</span>
+                  </span>
+                </span>
+                <p class="system-stack__text">Облачный сервис RelsibCloud. Данные — на защищённых российских серверах.</p>
+              </button>
+              <div class="system-stack__panel" id="stack-panel-upper" role="region" aria-labelledby="stack-trigger-upper" aria-hidden="false">
+                <div class="system-stack__panel-inner">
+                  <ul class="system-stack__details system-stack__details--compact">
+                    <li>
+                      <strong>Архивирование</strong>
+                      <span>Хранение истории измерений</span>
+                    </li>
+                    <li>
+                      <strong>Мониторинг</strong>
+                      <span>Контроль объектов онлайн</span>
+                    </li>
+                    <li>
+                      <strong>Оповещения</strong>
+                      <span>Сигнал при выходе за пороги</span>
+                    </li>
+                    <li>
+                      <strong>Формирование отчётов</strong>
+                      <span>Отчёты в Excel и PDF</span>
+                    </li>
+                  </ul>
+                  <div class="system-stack__links">
+                    <a href="https://app-uni.relsibcloud.com" class="system-stack__link" target="_blank" rel="noopener">Открыть веб‑приложение →</a>
+                    <a href="#cloud-tree" class="system-stack__link">Иерархия в облаке →</a>
+                  </div>
+                </div>
+              </div>
             </article>
             <div class="system-stack__visual">
               <img src="Images/structure%20shema/Macbook%20Air%20M2%20Silver%20Flatten.png" alt="WEB-приложение RelsibCloud" width="480" height="290" loading="lazy">
             </div>
           </div>
 
-          <div class="system-stack__row">
+          <div class="system-stack__row" data-level="middle">
             <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
             <article class="system-stack__level">
-              <header class="system-stack__head">
-                <h3 class="system-stack__title">Средний уровень</h3>
-              </header>
-              <p class="system-stack__text">В него входят преобразователи интерфейсов (шлюзы), а также стандартные устройства: телефон, планшет с установленным мобильным приложением. Тип входа шлюза должен соответствовать выходу подключаемых к нему приборов и датчиков. Шлюзы передают данные в облако через Ethernet по протоколам MQTT и HTTP.</p>
+              <button type="button" class="system-stack__trigger" aria-expanded="false" aria-controls="stack-panel-middle" id="stack-trigger-middle">
+                <span class="system-stack__head">
+                  <span class="system-stack__index" aria-hidden="true">2</span>
+                  <span class="system-stack__head-text">
+                    <span class="system-stack__title">Средний уровень</span>
+                    <span class="system-stack__hint">Шлюзы и мобильные устройства</span>
+                  </span>
+                </span>
+                <p class="system-stack__text">Шлюзы передают данные с приборов в облако по Ethernet (MQTT/HTTP).</p>
+              </button>
+              <div class="system-stack__panel" id="stack-panel-middle" role="region" aria-labelledby="stack-trigger-middle" aria-hidden="true">
+                <div class="system-stack__panel-inner">
+                  <div class="system-stack__table-wrap">
+                    <table class="system-stack__table">
+                      <thead>
+                        <tr>
+                          <th>Шлюз</th>
+                          <th>Назначение</th>
+                          <th>Связь</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>GW‑BT/E‑1</td>
+                          <td>Bluetooth → Ethernet (RelsibCloud), RS‑485</td>
+                          <td>Ethernet</td>
+                        </tr>
+                        <tr>
+                          <td>GW‑RS/E‑1</td>
+                          <td>RS‑485 → Ethernet (RelsibCloud)</td>
+                          <td>Ethernet</td>
+                        </tr>
+                        <tr>
+                          <td>GW‑BT/RS</td>
+                          <td>Bluetooth → RS‑485</td>
+                          <td>RS‑485</td>
+                        </tr>
+                        <tr>
+                          <td>GW‑BT/E‑1‑I</td>
+                          <td>Bluetooth → Ethernet, RS‑485; IP54, от −40 °C</td>
+                          <td>Ethernet</td>
+                        </tr>
+                        <tr>
+                          <td>GW‑RS/E‑1‑I</td>
+                          <td>RS‑485 → Ethernet; IP54, от −40 °C</td>
+                          <td>Ethernet</td>
+                        </tr>
+                        <tr>
+                          <td>GW‑BT/RS‑I</td>
+                          <td>Bluetooth → RS‑485; IP54, от −40 °C</td>
+                          <td>RS‑485</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="system-stack__links">
+                    <a href="devices.html?category=gateways" class="system-stack__link">Все шлюзы →</a>
+                  </div>
+                </div>
+              </div>
             </article>
-            <div class="system-stack__visual system-stack__visual--hardware">
+            <div class="system-stack__visual system-stack__visual--hardware system-stack__visual--stack">
               <img src="Images/structure%20shema/GW-sideangle%203.png" alt="Шлюз GW" width="200" height="200" loading="lazy">
+              <img src="Images/devices/Catalog/gw-rs-e-angle%201.png" alt="Шлюз GW-RS/E-1-I" width="400" height="300" loading="lazy">
             </div>
           </div>
 
-          <div class="system-stack__row">
+          <div class="system-stack__row" data-level="lower">
             <div class="system-stack__track" aria-hidden="true"><span class="system-stack__node"></span></div>
             <article class="system-stack__level">
-              <header class="system-stack__head">
-                <h3 class="system-stack__title">Нижний уровень</h3>
-              </header>
-              <p class="system-stack__text">Приборы и датчики НПК «Рэлсиб», а также приборы других изготовителей с аналоговым выходом, подключаемые к системе через преобразователи ПАС-01. Их задача — измерение физической величины, преобразование её в один из внешних интерфейсов, например, RS-485 ModBus или Bluetooth, и передача данных на средний уровень.</p>
+              <button type="button" class="system-stack__trigger" aria-expanded="false" aria-controls="stack-panel-lower" id="stack-trigger-lower">
+                <span class="system-stack__head">
+                  <span class="system-stack__index" aria-hidden="true">1</span>
+                  <span class="system-stack__head-text">
+                    <span class="system-stack__title">Нижний уровень</span>
+                    <span class="system-stack__hint">Датчики и преобразователи</span>
+                  </span>
+                </span>
+                <p class="system-stack__text">Датчики измеряют параметры и передают данные выше или сразу в облако.</p>
+              </button>
+              <div class="system-stack__panel" id="stack-panel-lower" role="region" aria-labelledby="stack-trigger-lower" aria-hidden="true">
+                <div class="system-stack__panel-inner">
+                  <ul class="system-stack__details system-stack__details--links">
+                    <li>
+                      <a href="devices.html?category=eclerk-ws&protocol=bluetooth">
+                        <strong>Датчики EClerk‑WS</strong>
+                        <span>Bluetooth, через шлюз</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="devices.html?protocol=rs485">
+                        <strong>Приборы RS‑485</strong>
+                        <span>RS‑485 ModBus</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="devices.html?category=eclerk-eco-m">
+                        <strong>Приборы Wi‑Fi и LTE</strong>
+                        <span>Напрямую в облако, без шлюза</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="devices.html?category=pas-01">
+                        <strong>ПАС‑01.RS</strong>
+                        <span>Сенсоры mV, V, mA: давление, расход и др.</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="system-stack__note">Задача — измерить величину, преобразовать в интерфейс (RS‑485, Bluetooth) и передать выше.</p>
+                  <div class="system-stack__links">
+                    <a href="devices.html" class="system-stack__link">Список приборов →</a>
+                    <a href="#architecture" class="system-stack__link" data-scroll-target=".architecture-protocols">Способы связи →</a>
+                  </div>
+                </div>
+              </div>
             </article>
             <div class="system-stack__visual system-stack__visual--hardware">
               <img src="Images/structure%20shema/freepik_0001%20(5)%201.png" alt="Беспроводные датчики EClerk" width="320" height="320" loading="lazy">
@@ -167,44 +338,6 @@
             </div>
           </div>
         </section>
-      </div>
-
-      <div class="architecture-sub">
-        <h3 class="subsection-title">Преимущества облачного сервиса</h3>
-        <div class="features__grid">
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">
-              <img src="Images/features/archive.png" alt="" width="140" height="140">
-            </div>
-            <h3 class="feature-card__title">Архивирование</h3>
-            <h4 class="feature-card__subtitle">Надёжное хранение данных</h4>
-            <p class="feature-card__text">Данные измерений надёжно архивируются в облаке. Просмотр графиков, экспорт в Excel.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">
-              <img src="Images/features/monitoring.png" alt="" width="140" height="140">
-            </div>
-            <h3 class="feature-card__title">Мониторинг</h3>
-            <h4 class="feature-card__subtitle">Контроль удалённых объектов</h4>
-            <p class="feature-card__text">Мониторинг за состоянием удалённых объектов. Разделы, объекты и зоны контроля.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">
-              <img src="Images/features/notifications.png" alt="" width="140" height="140">
-            </div>
-            <h3 class="feature-card__title">Оповещения</h3>
-            <h4 class="feature-card__subtitle">Периодические и тревожные</h4>
-            <p class="feature-card__text">SMS, электронная почта, Telegram. Пороги сигнализации для каждого параметра.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">
-              <img src="Images/features/reports.png" alt="" width="140" height="140">
-            </div>
-            <h3 class="feature-card__title">Отчёты</h3>
-            <h4 class="feature-card__subtitle">Анализ и отчётность</h4>
-            <p class="feature-card__text">Формирование отчётов. Анализ данных, экспорт в Excel, отчёт в PDF.</p>
-          </article>
-        </div>
       </div>
 
       <div class="architecture-sub">
@@ -771,7 +904,7 @@
       </div>
 
       <div class="architecture-sub architecture-sub--upper">
-        <div class="app-benefits">
+        <div class="app-benefits" hidden>
           <h4 class="app-benefits__title">Преимущества системы</h4>
           <div class="app-benefits__grid">
             <div class="app-benefit">Архивирование данных</div>
@@ -781,23 +914,87 @@
           </div>
         </div>
 
-        <div class="app-features">
-          <h4 class="app-features__title">Единая экосистема RelsibCloud</h4>
-          <div class="app-features__grid">
-            <article class="app-feature">
-              <h5 class="app-feature__title">Веб-приложение</h5>
-              <p class="app-feature__text">Архивирование, графики, мнемосхемы, оповещения и отчёты. Создание разделов, объектов и зон контроля в облаке RelsibCloud</p>
-            </article>
-            <article class="app-feature">
-              <h5 class="app-feature__title">EClerk-WM</h5>
-              <p class="app-feature__text">Мобильное приложение для Android: работа с беспроводными датчиками EClerk-WS, настройка шлюза GW-Bl/E-1 и push-уведомления</p>
-            </article>
+        <div class="ecosystem" id="ecosystem" hidden>
+          <h4 class="ecosystem__title">Единая экосистема RelsibCloud</h4>
+          <p class="ecosystem__lead">Путь данных от измерения до экрана пользователя. Выберите сценарий или нажмите на этап.</p>
+          <div class="ecosystem__modes" role="tablist" aria-label="Сценарий движения данных">
+            <button type="button" class="ecosystem__mode is-active" role="tab" aria-selected="true" data-eco-mode="in">В облако</button>
+            <button type="button" class="ecosystem__mode" role="tab" aria-selected="false" data-eco-mode="out">Из облака</button>
           </div>
-        </div>
 
-        <div class="app-buttons">
-          <a href="https://app-uni.relsibcloud.com" class="btn btn--primary btn--large">Веб-приложение</a>
-          <a href="https://relsib.com/catalog/eclerk-wm/" class="btn btn--outline btn--large">EClerk-WM — мобильное приложение</a>
+          <div class="ecosystem__layout">
+            <div class="ecosystem__flow" id="ecosystem-web" data-eco-mode-active="in" aria-label="Путь данных RelsibCloud">
+              <button type="button" class="ecosystem__node ecosystem__node--source is-active" data-eco-id="sensors" data-eco-mode="in" aria-pressed="true" aria-controls="ecosystem-detail">
+                <span class="ecosystem__step">1</span>
+                <span class="ecosystem__node-media" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+                </span>
+                <span class="ecosystem__node-label">Приборы</span>
+                <span class="ecosystem__node-text">Измеряют температуру, влажность, давление и другие параметры</span>
+              </button>
+
+              <div class="ecosystem__split" aria-label="Способы передачи в облако">
+                <button type="button" class="ecosystem__node ecosystem__node--transfer" data-eco-id="gateways" data-eco-mode="in" aria-pressed="false" aria-controls="ecosystem-detail">
+                  <span class="ecosystem__step">2A</span>
+                  <span class="ecosystem__node-media" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="10" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><circle cx="12" cy="13" r="1.25" fill="currentColor" stroke="none"/><path d="M12 18v2"/><path d="M9 20h6"/></svg>
+                  </span>
+                  <span class="ecosystem__node-label">Шлюзы GW</span>
+                  <span class="ecosystem__node-text">Bluetooth и RS-485 передаются в Ethernet</span>
+                </button>
+
+                <button type="button" class="ecosystem__node ecosystem__node--transfer" data-eco-id="direct" data-eco-mode="in" aria-pressed="false" aria-controls="ecosystem-detail">
+                  <span class="ecosystem__step">2B</span>
+                  <span class="ecosystem__node-media" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><path d="M12 20h.01"/></svg>
+                  </span>
+                  <span class="ecosystem__node-label">Wi-Fi / LTE</span>
+                  <span class="ecosystem__node-text">Приборы отправляют данные напрямую</span>
+                </button>
+              </div>
+
+              <button type="button" class="ecosystem__node ecosystem__node--cloud" data-eco-id="cloud" data-eco-mode="both" aria-pressed="false" aria-controls="ecosystem-detail">
+                <span class="ecosystem__step">3</span>
+                <span class="ecosystem__node-media">
+                  <img src="Images/Logo/Cloud_logo.svg" alt="" width="44" height="44">
+                </span>
+                <span class="ecosystem__node-label">RelsibCloud</span>
+                <span class="ecosystem__node-text">Хранит архив, события, настройки и структуру объектов</span>
+              </button>
+
+              <div class="ecosystem__split ecosystem__split--out" aria-label="Доступ к данным из облака">
+                <button type="button" class="ecosystem__node ecosystem__node--viewer" data-eco-id="web" data-eco-mode="out" aria-pressed="false" aria-controls="ecosystem-detail">
+                  <span class="ecosystem__step">4A</span>
+                  <span class="ecosystem__node-media" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></svg>
+                  </span>
+                  <span class="ecosystem__node-label">Веб-приложение</span>
+                  <span class="ecosystem__node-text">Графики, отчёты, мнемосхемы и настройки</span>
+                </button>
+
+                <button type="button" class="ecosystem__node ecosystem__node--viewer" data-eco-id="mobile" data-eco-mode="out" aria-pressed="false" aria-controls="ecosystem-detail">
+                  <span class="ecosystem__step">4B</span>
+                  <span class="ecosystem__node-media" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+                  </span>
+                  <span class="ecosystem__node-label">Мобильный доступ</span>
+                  <span class="ecosystem__node-text">Тот же сервис в браузере телефона</span>
+                </button>
+              </div>
+            </div>
+
+            <aside class="ecosystem__detail" id="ecosystem-detail" aria-live="polite">
+              <p class="ecosystem__detail-kicker">В облако · измерение</p>
+              <h5 class="ecosystem__detail-title">Приборы и датчики</h5>
+              <p class="ecosystem__detail-text">EClerk-WS, RS-485 и ПАС-01 снимают параметры и отдают их в шлюз или напрямую по Wi-Fi/LTE.</p>
+              <a href="devices.html" class="ecosystem__detail-link">Каталог приборов →</a>
+            </aside>
+          </div>
+
+          <div class="ecosystem__actions">
+            <a href="https://app-uni.relsibcloud.com" class="btn btn--primary btn--large" target="_blank" rel="noopener">Открыть веб‑приложение</a>
+            <a href="devices.html" class="btn btn--outline btn--large">К приборам</a>
+          </div>
         </div>
       </div>
     </section>
@@ -837,7 +1034,7 @@
               <div class="solutions__grid">
                 <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/home/dacha.jpg" alt="Загородный дом">
+                    <img src="Images/solutions/home/dacha.png" alt="Загородный дом">
                     <span class="solution-card__tag">Загородный дом</span>
                   </div>
                   <div class="solution-card__body">
@@ -857,7 +1054,7 @@
                 </a>
                 <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/home/sauna.jpg" alt="Баня и сауна">
+                    <img src="Images/solutions/home/sauna.png" alt="Баня и сауна">
                     <span class="solution-card__tag">Баня и сауна</span>
                   </div>
                   <div class="solution-card__body">
@@ -912,7 +1109,7 @@
                 </a>
                 <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/business/education.jpg" alt="Образование">
+                    <img src="Images/solutions/business/education.png" alt="Образование">
                     <span class="solution-card__tag">Образование</span>
                   </div>
                   <div class="solution-card__body">
@@ -922,7 +1119,7 @@
                 </a>
                 <a href="https://relsib.com/" class="solution-card" target="_blank" rel="noopener">
                   <div class="solution-card__image">
-                    <img src="Images/solutions/business/jkh.jpg" alt="ЖКХ">
+                    <img src="Images/solutions/business/jkh.png" alt="ЖКХ">
                     <span class="solution-card__tag">ЖКХ и склады</span>
                   </div>
                   <div class="solution-card__body">
@@ -2661,8 +2858,7 @@
       mark('.architecture-sub');
       mark('.architecture-protocols');
       mark('.app-benefits');
-      mark('.app-features');
-      mark('.app-buttons');
+      mark('.ecosystem');
       mark('.mobile-web');
       mark('.selector');
       mark('.devices__slider-wrap');
@@ -2711,10 +2907,18 @@
 
       var line = stack.querySelector('.system-stack__line');
       var nodes = stack.querySelectorAll('.system-stack__node');
-      if (!line || nodes.length < 2) return;
+      var rows = Array.prototype.slice.call(stack.querySelectorAll('.system-stack__row'));
+      if (!line || nodes.length < 2 || !rows.length) return;
+
+      var userPausedUntil = 0;
+      var rafId = 0;
+      var lastOpen = null;
 
       function updateLine() {
-        if (window.matchMedia('(max-width: 640px)').matches) return;
+        if (window.matchMedia('(max-width: 640px)').matches) {
+          line.style.height = '0px';
+          return;
+        }
 
         var stackRect = stack.getBoundingClientRect();
         var first = nodes[0].getBoundingClientRect();
@@ -2726,11 +2930,233 @@
         line.style.height = Math.max(0, height) + 'px';
       }
 
+      function setRowOpen(row, open) {
+        var trigger = row.querySelector('.system-stack__trigger');
+        var panel = row.querySelector('.system-stack__panel');
+        row.classList.toggle('is-open', open);
+        if (trigger) trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (panel) {
+          panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+          if (open) panel.removeAttribute('inert');
+          else panel.setAttribute('inert', '');
+        }
+      }
+
+      function openOnly(row) {
+        if (!row || row === lastOpen) return;
+        lastOpen = row;
+        rows.forEach(function(r) {
+          setRowOpen(r, r === row);
+        });
+        requestAnimationFrame(function() {
+          updateLine();
+          setTimeout(updateLine, 360);
+        });
+      }
+
+      function pickRowByScroll() {
+        var stackRect = stack.getBoundingClientRect();
+        if (stackRect.bottom < 80 || stackRect.top > window.innerHeight - 80) {
+          return null;
+        }
+
+        var focusY = window.innerHeight * 0.38;
+        var best = rows[0];
+        var bestDist = Infinity;
+
+        rows.forEach(function(row) {
+          var rect = row.getBoundingClientRect();
+          if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+          var mid = rect.top + Math.min(rect.height, 120) * 0.45;
+          var dist = Math.abs(mid - focusY);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = row;
+          }
+        });
+
+        return best;
+      }
+
+      function syncFromScroll() {
+        if (Date.now() < userPausedUntil) return;
+        var row = pickRowByScroll();
+        if (row) openOnly(row);
+      }
+
+      function onScrollOrResize() {
+        if (rafId) return;
+        rafId = requestAnimationFrame(function() {
+          rafId = 0;
+          syncFromScroll();
+          updateLine();
+        });
+      }
+
+      rows.forEach(function(row) {
+        setRowOpen(row, row.classList.contains('is-open'));
+        if (row.classList.contains('is-open')) lastOpen = row;
+      });
+
+      stack.addEventListener('click', function(e) {
+        var trigger = e.target.closest('.system-stack__trigger');
+        if (!trigger || !stack.contains(trigger)) return;
+
+        var row = trigger.closest('.system-stack__row');
+        if (!row) return;
+
+        var willOpen = !row.classList.contains('is-open');
+        userPausedUntil = Date.now() + 1800;
+        if (willOpen) openOnly(row);
+        else {
+          lastOpen = null;
+          setRowOpen(row, false);
+          requestAnimationFrame(function() {
+            updateLine();
+            setTimeout(updateLine, 360);
+          });
+        }
+      });
+
+      stack.querySelectorAll('[data-scroll-target]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var sel = link.getAttribute('data-scroll-target');
+          var target = sel && document.querySelector(sel);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
       updateLine();
-      window.addEventListener('resize', updateLine);
+      syncFromScroll();
+      window.addEventListener('scroll', onScrollOrResize, { passive: true });
+      window.addEventListener('resize', onScrollOrResize);
       if (document.fonts && document.fonts.ready) {
         document.fonts.ready.then(updateLine);
       }
+      if (typeof ResizeObserver !== 'undefined') {
+        new ResizeObserver(updateLine).observe(stack);
+      }
+    })();
+
+    (function initEcosystem() {
+      var root = document.getElementById('ecosystem');
+      var web = document.getElementById('ecosystem-web');
+      var detail = document.getElementById('ecosystem-detail');
+      if (!root || !web || !detail) return;
+
+      var content = {
+        cloud: {
+          kicker: 'Центр · облако',
+          title: 'RelsibCloud',
+          text: 'Сюда сходятся данные со шлюзов и приборов Wi‑Fi/LTE. Отсюда их читают веб и мобильный браузер.',
+          linkHref: '#cloud-tree',
+          linkLabel: 'Иерархия в облаке →'
+        },
+        sensors: {
+          kicker: 'В облако · измерение',
+          title: 'Приборы и датчики',
+          text: 'EClerk‑WS, RS‑485 и ПАС‑01 снимают параметры и отдают их в шлюз или напрямую по Wi‑Fi/LTE.',
+          linkHref: 'devices.html',
+          linkLabel: 'Каталог приборов →'
+        },
+        gateways: {
+          kicker: 'В облако · передача',
+          title: 'Шлюзы GW',
+          text: 'Шлюзы собирают данные с Bluetooth‑ и RS‑485‑приборов и отправляют их в RelsibCloud по Ethernet.',
+          linkHref: 'devices.html?category=gateways',
+          linkLabel: 'Все шлюзы →'
+        },
+        direct: {
+          kicker: 'В облако · передача',
+          title: 'Wi‑Fi и LTE',
+          text: 'Приборы с Wi‑Fi или LTE пишут показания напрямую в облако — без шлюза.',
+          linkHref: 'devices.html?category=eclerk-eco-m',
+          linkLabel: 'Приборы Wi‑Fi / LTE →'
+        },
+        web: {
+          kicker: 'Из облака · доступ',
+          title: 'Веб‑приложение',
+          text: 'Графики, мнемосхемы, оповещения и отчёты — данные читаются из RelsibCloud.',
+          linkHref: 'https://app-uni.relsibcloud.com',
+          linkLabel: 'Открыть веб‑приложение →',
+          external: true
+        },
+        mobile: {
+          kicker: 'Из облака · доступ',
+          title: 'Мобильный доступ',
+          text: 'Тот же сервис в браузере на телефоне — без установки приложения.',
+          linkHref: '#mobile-web',
+          linkLabel: 'Как это выглядит →'
+        }
+      };
+
+      var allNodes = Array.prototype.slice.call(web.querySelectorAll('.ecosystem__node'));
+      var modeButtons = Array.prototype.slice.call(root.querySelectorAll('.ecosystem__mode'));
+      var activeId = 'sensors';
+      var activeMode = 'in';
+
+      function renderDetail(id) {
+        var data = content[id] || content.cloud;
+        detail.classList.add('is-updating');
+        detail.innerHTML =
+          '<p class="ecosystem__detail-kicker">' + data.kicker + '</p>' +
+          '<h5 class="ecosystem__detail-title">' + data.title + '</h5>' +
+          '<p class="ecosystem__detail-text">' + data.text + '</p>' +
+          '<a href="' + data.linkHref + '" class="ecosystem__detail-link"' +
+            (data.external ? ' target="_blank" rel="noopener"' : '') +
+          '>' + data.linkLabel + '</a>';
+        requestAnimationFrame(function() {
+          detail.classList.remove('is-updating');
+        });
+      }
+
+      function setActive(id) {
+        activeId = id || 'cloud';
+        allNodes.forEach(function(node) {
+          var on = node.getAttribute('data-eco-id') === activeId;
+          node.classList.toggle('is-active', on);
+          node.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        renderDetail(activeId);
+      }
+
+      function setMode(mode) {
+        activeMode = mode === 'out' ? 'out' : 'in';
+        web.setAttribute('data-eco-mode-active', activeMode);
+        modeButtons.forEach(function(btn) {
+          var on = btn.getAttribute('data-eco-mode') === activeMode;
+          btn.classList.toggle('is-active', on);
+          btn.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        var nextId = activeMode === 'out' ? 'web' : 'sensors';
+        setActive(nextId);
+      }
+
+      web.addEventListener('click', function(e) {
+        var node = e.target.closest('.ecosystem__node');
+        if (!node || !web.contains(node)) return;
+        var nodeMode = node.getAttribute('data-eco-mode');
+        if (nodeMode === 'in' || nodeMode === 'out') {
+          activeMode = nodeMode;
+          web.setAttribute('data-eco-mode-active', activeMode);
+          modeButtons.forEach(function(btn) {
+            var on = btn.getAttribute('data-eco-mode') === activeMode;
+            btn.classList.toggle('is-active', on);
+            btn.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+        }
+        setActive(node.getAttribute('data-eco-id'));
+      });
+
+      modeButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          setMode(btn.getAttribute('data-eco-mode'));
+        });
+      });
+
+      setMode('in');
     })();
   })();
   </script>
