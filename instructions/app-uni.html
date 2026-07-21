@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260605i">
+  <link rel="stylesheet" href="../styles.css?v=20260721z">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -83,9 +83,9 @@
         <a href="../index.html#instructions" class="catalog-header__back" aria-label="Назад к инструкциям">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         </a>
-        <h1 class="catalog-header__title">WEB-приложение app-uni</h1>
+        <h1 class="catalog-header__title">Инструкция по WEB-приложению app-uni</h1>
       </header>
-      <p class="catalog-hero__lead">Настройка, мнемосхемы, отчёты, оповещения, экспорт в Excel и PDF</p>
+      <p class="catalog-hero__lead">Настройка WEB-приложения. Удобное отображение данных в виде мнемосхемы. Просмотр отчётов.</p>
 
       <article class="guide">
         <section class="guide__section">
@@ -102,14 +102,21 @@
         </section>
 
         <section class="guide__section">
-          <h2 class="guide__heading">Пошаговая инструкция</h2>
+          <h2 class="guide__heading">Вход и структура</h2>
           <ol class="guide__steps">
-            <li>Откройте <a href="https://app-uni.relsibcloud.com">app-uni.relsibcloud.com</a> и войдите под учётной записью RelsibCloud.</li>
+            <li>Откройте <a href="https://app-uni.relsibcloud.com" target="_blank" rel="noopener">app-uni.relsibcloud.com</a> и войдите учётной записью RelsibCloud.</li>
             <li>Выберите раздел, объект и зону — структура совпадает с настройками в облаке.</li>
-            <li>Настройте <strong>мнемосхемы</strong> и таблицы для наглядного отображения параметров на объекте.</li>
+            <li>Убедитесь, что в выбранных зонах уже поступают данные с приборов.</li>
+          </ol>
+        </section>
+
+        <section class="guide__section">
+          <h2 class="guide__heading">Мнемосхемы, отчёты и оповещения</h2>
+          <ol class="guide__steps">
+            <li>Настройте <strong>мнемосхемы</strong> и таблицы для наглядного отображения параметров объекта.</li>
             <li>Задайте пороги и правила <strong>оповещений</strong>, проверьте журнал событий.</li>
-            <li>Формируйте <strong>отчёты</strong> в PDF и выгружайте данные в Excel для анализа архива.</li>
-            <li>Используйте графики и архив для анализа истории измерений по каждой зоне.</li>
+            <li>Формируйте <strong>отчёты</strong> в PDF и выгружайте архив в Excel.</li>
+            <li>Используйте графики для анализа истории измерений по каждой зоне.</li>
           </ol>
           <p class="guide__more">
             <a href="https://relsib.com/relsibcloud/relsibcloud-webapp-instruction/" target="_blank" rel="noopener">Полная инструкция на relsib.com →</a>
@@ -126,24 +133,49 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__contacts">
-        <p><strong>ООО НПК «Рэлсиб»</strong></p>
-        <p>г. Новосибирск, ул. Немировича-Данченко, д. 128/1</p>
+      <div class="footer__col footer__col--company">
+        <p class="footer__title">ООО НПК «Рэлсиб»</p>
+        <p class="footer__legal-name">ООО Научно-производственная компания «Рэлсиб»</p>
+        <p>Юридический и почтовый адрес: 630087, Новосибирская область, г.&nbsp;Новосибирск, ул.&nbsp;Немировича-Данченко, зд.&nbsp;128/1</p>
+        <p class="footer__ids">ОГРН&nbsp;1035401005529 · ИНН&nbsp;5402159819 · КПП&nbsp;540301001</p>
         <p><a href="tel:+73833830286">8 (383) 383-02-86</a></p>
-        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a></p>
+        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a> · <a href="mailto:office@relsib.com">office@relsib.com</a></p>
       </div>
-      <nav class="footer__nav">
-        <a href="https://relsib.com/">relsib.com</a>
-        <a href="https://relsib.com/relsibcloud/">RelsibCloud</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/">О сервисе</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-devices/">Приборы</a>
-      </nav>
-      <div class="footer__brand">
-        <a href="../index.html" class="footer__logo">
+
+      <div class="footer__col">
+        <p class="footer__heading">Сервис</p>
+        <nav class="footer__nav" aria-label="Разделы сайта">
+          <a href="../index.html#architecture">Архитектура</a>
+          <a href="../index.html#use-cases">Примеры</a>
+          <a href="../devices.html">Приборы</a>
+          <a href="../index.html#instructions">Инструкции</a>
+          <a href="https://relsibcloud.com" target="_blank" rel="noopener">Войти в RelsibCloud</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__heading">Документы</p>
+        <nav class="footer__nav" aria-label="Юридические документы">
+          <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">Политика конфиденциальности</a>
+          <a href="https://relsib.com/company/consent/consent-form/" target="_blank" rel="noopener">Согласие на обработку ПДн</a>
+          <a href="https://relsib.com/company/consent/user-agreement/" target="_blank" rel="noopener">Пользовательское соглашение</a>
+          <a href="https://relsib.com/company/bank_details/" target="_blank" rel="noopener">Реквизиты</a>
+        </nav>
+      </div>
+
+      <div class="footer__col footer__col--brand">
+        <a href="../index.html" class="footer__logo" aria-label="RelsibCloud">
           <img src="../Images/Logo/Cloud_logo.svg" alt="" width="40" height="40" class="footer__logo-img">
+          <span class="footer__logo-text">RelsibCloud</span>
         </a>
-        <p class="footer__copyright">© 2026 RelsibCloud. Все права защищены</p>
+        <p class="footer__brand-note">Облачный сервис мониторинга параметров</p>
+        <a class="footer__ext" href="https://relsib.com/" target="_blank" rel="noopener">relsib.com</a>
       </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2001–2026 ООО НПК «Рэлсиб». Все права защищены.</p>
+      <p class="footer__pdn">Обработка персональных данных осуществляется в соответствии с Федеральным законом от&nbsp;27.07.2006 №&nbsp;152‑ФЗ «О&nbsp;персональных данных». Используя сайт, вы соглашаетесь с <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">политикой конфиденциальности</a> и обработкой файлов cookie.</p>
     </div>
   </footer>
 

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог приборов — RelsibCloud</title>
+  <title>Приборы — RelsibCloud</title>
   <link rel="icon" type="image/svg+xml" href="Images/Logo/Cloud_logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260706">
+  <link rel="stylesheet" href="styles.css?v=20260721z">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -74,776 +74,554 @@
       <nav class="breadcrumb">
         <a href="index.html">Главная</a>
         <span class="breadcrumb__sep">/</span>
-        <span>Каталог приборов</span>
+        <span>Приборы</span>
       </nav>
 
       <header class="catalog-header">
         <a href="index.html#devices" class="catalog-header__back" aria-label="Назад">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         </a>
-        <h1 class="catalog-header__title">Приборы</h1>
+        <h1 class="catalog-header__title">Приборы для RelsibCloud</h1>
       </header>
 
-      <p class="catalog-hero__lead">Подключайте приборы НПК «Рэлсиб» к облаку — датчики, термогигрометры, измерители, шлюзы.</p>
+      <p class="catalog-hero__lead">Перечень приборов НПК «Рэлсиб», которые подключаются к облаку. Подробности и заказ — на <a href="https://relsib.com/" target="_blank" rel="noopener">relsib.com</a>.</p>
 
-      <div class="catalog-chips-wrap">
-        <div class="catalog-chips">
-          <button type="button" class="catalog-chip catalog-chip--active" data-filter="category" data-value="">Все</button>
-          <button type="button" class="catalog-chip" data-filter="category" data-value="eclerk-ws">EClerk-WS</button>
-          <button type="button" class="catalog-chip" data-filter="category" data-value="ivit">Ivit</button>
-          <button type="button" class="catalog-chip" data-filter="category" data-value="ivit-m-dvt">Ивит-М / ДВТ</button>
-          <button type="button" class="catalog-chip" data-filter="category" data-value="eclerk-eco-m">EClerk-Eco-M</button>
-          <button type="button" class="catalog-chip" data-filter="category" data-value="pas-01">PAS-01</button>
-          <button type="button" class="catalog-chip" data-filter="category" data-value="gateways">Шлюзы</button>
-        </div>
-        <div class="catalog-chips catalog-chips--protocol">
-          <button type="button" class="catalog-chip catalog-chip--protocol catalog-chip--active" data-filter="protocol" data-value="">Все протоколы</button>
-          <button type="button" class="catalog-chip catalog-chip--protocol" data-filter="protocol" data-value="bluetooth">Bluetooth</button>
-          <button type="button" class="catalog-chip catalog-chip--protocol" data-filter="protocol" data-value="rs485">RS-485</button>
-          <button type="button" class="catalog-chip catalog-chip--protocol" data-filter="protocol" data-value="wifi">Wi‑Fi</button>
-          <button type="button" class="catalog-chip catalog-chip--protocol" data-filter="protocol" data-value="lte">LTE</button>
-        </div>
-      </div>
+      <div class="devices-table-wrap">
+        <table class="devices-table">
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Назначение</th>
+              <th>Интерфейс</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="devices-table__group">
+              <th colspan="4">EClerk-WS — беспроводные датчики</th>
+            </tr>
+            <tr>
+              <td>EClerk-WS-T</td>
+              <td>Датчик температуры</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/datchik-temperaturyeclerk-ws-t-i-s-bluetooth50" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-T" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-WS-K</td>
+              <td>Датчик температуры (термопарный)</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/besprovodnoj-datchik-temperatury-eclerk-ws-k-i-so-vhodom-k" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-K" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-WS-HT</td>
+              <td>Датчик температуры и влажности</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/datchik-temperatury-i-vlazhnosti-eclerk-ws-ht-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-HT" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-WS-QT</td>
+              <td>Датчик температуры и освещённости</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/datchik-temperatury-i-urovnya-osveschennosti-eclerk-ws-qt-m" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-QT" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-WS-HTC</td>
+              <td>Датчик температуры, влажности, СО₂</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/datchik-temperatury-vlazhnosti-i-urovnya-so2-v-vozduhe-eclerk-ws-htc-m" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-HTC" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-WS-L</td>
+              <td>Датчик протечки</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/datchik-protechki-eclerk-ws-l-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-L" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-WS-R</td>
+              <td>Датчик открытия/закрытия двери</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/datchik-polozheniya-dverej-eclerk-ws-r-m" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-R" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-WS-HTCPm</td>
+              <td>Датчик температуры, влажности, СО₂, пыли</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/catalog/eclerk-wm/" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-WS-HTCPm" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
 
-      <div class="catalog-dropdowns">
-        <div class="catalog-dropdown">
-          <span class="catalog-dropdown__icon" aria-hidden="true">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
-          </span>
-          <button type="button" class="catalog-dropdown__btn" id="sortBtn" aria-expanded="false" aria-haspopup="listbox" aria-label="Сортировка">Без сортировки</button>
-          <ul class="catalog-dropdown__menu" id="sortMenu" role="listbox" hidden>
-            <li role="option" data-sort="">Без сортировки</li>
-            <li role="option" data-sort="name">По названию</li>
-            <li role="option" data-sort="category">По категории</li>
-          </ul>
-        </div>
-        <div class="catalog-dropdown">
-          <button type="button" class="catalog-dropdown__btn" id="protocolBtn" aria-expanded="false" aria-haspopup="listbox" aria-label="Протокол связи">Протокол связи</button>
-          <ul class="catalog-dropdown__menu" id="protocolMenu" role="listbox" hidden>
-            <li role="option" data-value="">Все протоколы</li>
-            <li role="option" data-value="bluetooth">Bluetooth</li>
-            <li role="option" data-value="rs485">RS-485</li>
-            <li role="option" data-value="wifi">Wi-Fi</li>
-            <li role="option" data-value="lte">LTE</li>
-          </ul>
-        </div>
-        <button type="button" class="catalog-reset" id="catalogReset">Сбросить фильтры</button>
-      </div>
+            <tr class="devices-table__group">
+              <th colspan="4">Ivit — термогигрометры</th>
+            </tr>
+            <tr>
+              <td>Ivit-1</td>
+              <td>Термогигрометр</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/catalog/termogigrometry-ivit/" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20Ivit-1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>Ivit-s-1</td>
+              <td>Термогигрометр</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/catalog/termogigrometry-ivit-s/" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20Ivit-s-1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>Ivit-1-b</td>
+              <td>Термогигрометр, модификация b</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/catalog/termogigrometry-ivit/" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20Ivit-1-b" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>Ivit-4</td>
+              <td>Термогигрометр, 4 канала</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/termogigrometr-ivit-4" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20Ivit-4" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>RELSIB WT50</td>
+              <td>Переносной термогигрометр</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/perenosnoj-termogigrometr-relsib-wt50" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20RELSIB%20WT50" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>RELSIB WT51</td>
+              <td>Переносной термогигрометр с выносным зондом</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/perenosnoj-termogigrometr-relsib-wt51" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20RELSIB%20WT51" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
 
-      <p class="catalog-count" id="catalogCount"></p>
+            <tr class="devices-table__group">
+              <th colspan="4">Ивит-М и ДВТ-03 — проводные измерители</th>
+            </tr>
+            <tr>
+              <td>Ивит-М</td>
+              <td>Измеритель температуры и влажности</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/catalog/izmeriteli-vlazhnosti-i-temperatury-elektronnye-ivit-m/" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20%D0%98%D0%B2%D0%B8%D1%82-%D0%9C" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>ДВТ-03</td>
+              <td>Датчик температуры и влажности</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/catalog/datchiki-vlazhnosti-i-temperatury-dvt-03/" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20%D0%94%D0%92%D0%A2-03" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
 
-      <div class="catalog-grid" id="catalogGrid">
-        <!-- 1. EClerk-WS -->
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/EClerk-WS-T.jpg" alt="EClerk-WS-T"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-T</h3>
-          <p class="device-card__type">Датчик температуры</p>
-          <ul class="device-card__spec"><li>Температура: −40…+120 °С</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/datchik-temperaturyeclerk-ws-t-i-s-bluetooth50" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/datchik-temperaturyeclerk-ws-t-i-s-bluetooth50" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
+            <tr class="devices-table__group">
+              <th colspan="4">EClerk-Eco-M — измерители-регистраторы</th>
+            </tr>
+            <tr>
+              <td>EClerk-Eco-M-RHT-RS</td>
+              <td>Измеритель-регистратор температуры и влажности</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/izmeritel-registrator-eclerk-eco-m-rht-01-" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-Eco-M-RHT-RS" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-Eco-M-RHTC-RS</td>
+              <td>Измеритель-регистратор температуры, влажности, СО₂</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/izmeritel-registrator-eclerk-eco-m-rhtc-01-" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-Eco-M-RHTC-RS" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-Eco-M-RHT-WiFi</td>
+              <td>Измеритель-регистратор температуры и влажности</td>
+              <td>Wi‑Fi</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rht-11-wifi" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-Eco-M-RHT-WiFi" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-Eco-M-RHTC-WiFi</td>
+              <td>Измеритель-регистратор температуры, влажности, СО₂</td>
+              <td>Wi‑Fi</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rhtc-11-wifi" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-Eco-M-RHTC-WiFi" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-Eco-M-RHT-LTE</td>
+              <td>Измеритель-регистратор температуры и влажности</td>
+              <td>LTE</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rht-11-lte" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-Eco-M-RHT-LTE" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>EClerk-Eco-M-RHTC-LTE</td>
+              <td>Измеритель-регистратор температуры, влажности, СО₂</td>
+              <td>LTE</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rhtc-11-lte" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20EClerk-Eco-M-RHTC-LTE" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
 
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/eclerk-ws-k.jpg" alt="EClerk-WS-K"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-K</h3>
-          <p class="device-card__type">Датчик температуры (термопарный)</p>
-          <ul class="device-card__spec"><li>Температура: −40…+1200 °С</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/besprovodnoj-datchik-temperatury-eclerk-ws-k-i-so-vhodom-k" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/besprovodnoj-datchik-temperatury-eclerk-ws-k-i-so-vhodom-k" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
+            <tr class="devices-table__group">
+              <th colspan="4">ПАС-01 — преобразователи аналоговых сигналов</th>
+            </tr>
+            <tr>
+              <td>PAS-01-RS-T</td>
+              <td>Преобразователь температуры</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20PAS-01-RS-T" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>PAS-01-RS-I</td>
+              <td>Преобразователь тока</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20PAS-01-RS-I" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>PAS-01-RS-mV</td>
+              <td>Преобразователь напряжения</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20PAS-01-RS-mV" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>PAS-01-RS-V</td>
+              <td>Преобразователь напряжения</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20PAS-01-RS-V" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
 
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/EClerk-WS-HT.jpg" alt="EClerk-WS-HT"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-HT</h3>
-          <p class="device-card__type">Датчик температуры и влажности</p>
-          <ul class="device-card__spec"><li>Температура: −40…+55 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/datchik-temperatury-i-vlazhnosti-eclerk-ws-ht-i" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/datchik-temperatury-i-vlazhnosti-eclerk-ws-ht-i" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/EClerk-WS-QT.jpg" alt="EClerk-WS-QT"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-QT</h3>
-          <p class="device-card__type">Датчик температуры и освещённости</p>
-          <ul class="device-card__spec"><li>Температура: −20…+55 °С</li><li>Освещённость: 0…10000 лк</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/datchik-temperatury-i-urovnya-osveschennosti-eclerk-ws-qt-m" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/datchik-temperatury-i-urovnya-osveschennosti-eclerk-ws-qt-m" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/EClerk-WS-HTC.jpg" alt="EClerk-WS-HTC"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-HTC</h3>
-          <p class="device-card__type">Датчик температуры, влажности, СО₂</p>
-          <ul class="device-card__spec"><li>Температура: −10…+55 °С</li><li>Влажность: 0…100 %</li><li>СО₂: 0…10000 ppm</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/datchik-temperatury-vlazhnosti-i-urovnya-so2-v-vozduhe-eclerk-ws-htc-m" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/datchik-temperatury-vlazhnosti-i-urovnya-so2-v-vozduhe-eclerk-ws-htc-m" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/EClerk-WS-L.jpg" alt="EClerk-WS-L"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-L</h3>
-          <p class="device-card__type">Датчик протечки</p>
-          <p class="device-card__desc">Протечка. Есть/Нет</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/datchik-protechki-eclerk-ws-l-i" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/datchik-protechki-eclerk-ws-l-i" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/EClerk-WS-R.jpg" alt="EClerk-WS-R"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-R</h3>
-          <p class="device-card__type">Датчик открытия/закрытия двери</p>
-          <p class="device-card__desc">Состояние двери. Открыта/Закрыта</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/datchik-polozheniya-dverej-eclerk-ws-r-m" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/datchik-polozheniya-dverej-eclerk-ws-r-m" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-ws" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/EClerk-WS-HTC.jpg" alt="EClerk-WS-HTCPm"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-WS-HTCPm</h3>
-          <p class="device-card__type">Датчик температуры, влажности, СО₂, пыли</p>
-          <p class="device-card__desc">Температура, влажность, СО₂, пыль (мкг/м³)</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/catalog/eclerk-wm/" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/catalog/eclerk-wm/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- 2. Ivit -->
-        <article class="device-card catalog-card" data-category="ivit" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/ivit-1.jpg" alt="Ivit-1"></div>
-          </div>
-          <h3 class="device-card__title">Ivit-1</h3>
-          <p class="device-card__type">Термогигрометр</p>
-          <ul class="device-card__spec"><li>Температура: −10…+55 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/catalog/termogigrometry-ivit/" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/catalog/termogigrometry-ivit/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+Ivit" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="ivit" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/ivit-1.jpg" alt="Ivit-s-1"></div>
-          </div>
-          <h3 class="device-card__title">Ivit-s-1</h3>
-          <p class="device-card__type">Термогигрометр</p>
-          <ul class="device-card__spec"><li>Температура: −10…+55 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/catalog/termogigrometry-ivit-s/" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/catalog/termogigrometry-ivit-s/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+Ivit" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="ivit" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/ivit-1.jpg" alt="Ivit-1-b"></div>
-          </div>
-          <h3 class="device-card__title">Ivit-1-b</h3>
-          <p class="device-card__type">Термогигрометр, модификация b</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>5</span></p>
-          <ul class="device-card__spec"><li>Температура: −10…+55 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/catalog/termogigrometry-ivit/" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/catalog/termogigrometry-ivit/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+Ivit" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="ivit" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/ivit-1.jpg" alt="Ivit-4"></div>
-          </div>
-          <h3 class="device-card__title">Ivit-4</h3>
-          <p class="device-card__type">Термогигрометр, 4 канала</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>8</span></p>
-          <ul class="device-card__spec"><li>Температура: −10…+55 °С</li><li>Влажность: 0…100 %</li><li>До 4 зондов</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/termogigrometr-ivit-4" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/termogigrometr-ivit-4" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+Ivit" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="ivit" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span><span class="device-card__tag">Переносной</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/ivit-1.jpg" alt="RELSIB WT50"></div>
-          </div>
-          <h3 class="device-card__title">RELSIB WT50</h3>
-          <p class="device-card__type">Переносной термогигрометр</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>9</span></p>
-          <ul class="device-card__spec"><li>Температура и влажность</li><li>Bluetooth, передача в облако через EClerk-WM</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/perenosnoj-termogigrometr-relsib-wt50" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/perenosnoj-termogigrometr-relsib-wt50" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+WT50" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="ivit" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Bluetooth</span><span class="device-card__tag">Переносной</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/ivit-1.jpg" alt="RELSIB WT51"></div>
-          </div>
-          <h3 class="device-card__title">RELSIB WT51</h3>
-          <p class="device-card__type">Переносной термогигрометр с выносным зондом</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>10</span></p>
-          <ul class="device-card__spec"><li>Температура и влажность</li><li>Выносной зонд</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/perenosnoj-termogigrometr-relsib-wt51" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/perenosnoj-termogigrometr-relsib-wt51" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+WT51" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3. Ивит-М / ДВТ -->
-        <article class="device-card catalog-card" data-category="ivit-m-dvt" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/IVIT-M.jpg" alt="Ивит-М"></div>
-          </div>
-          <h3 class="device-card__title">Ивит-М</h3>
-          <p class="device-card__type">Измеритель температуры и влажности</p>
-          <ul class="device-card__spec"><li>Температура: −40…+100 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/catalog/izmeriteli-vlazhnosti-i-temperatury-elektronnye-ivit-m/" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/catalog/izmeriteli-vlazhnosti-i-temperatury-elektronnye-ivit-m/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="ivit-m-dvt" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/dvt-03-rs.jpg" alt="ДВТ-03"></div>
-          </div>
-          <h3 class="device-card__title">ДВТ-03</h3>
-          <p class="device-card__type">Датчик температуры и влажности</p>
-          <ul class="device-card__spec"><li>Температура: −40…+100 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/catalog/datchiki-vlazhnosti-i-temperatury-dvt-03/" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/catalog/datchiki-vlazhnosti-i-temperatury-dvt-03/" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4. EClerk-Eco-M (RS-485 и Wi-Fi варианты) -->
-        <article class="device-card catalog-card" data-category="eclerk-eco-m" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M-RHT-RS"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-Eco-M-RHT-RS</h3>
-          <p class="device-card__type">Измеритель-регистратор температуры и влажности</p>
-          <ul class="device-card__spec"><li>Температура: −40…+55 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/izmeritel-registrator-eclerk-eco-m-rht-01-" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/izmeritel-registrator-eclerk-eco-m-rht-01-" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-eco-m" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M-RHTC-RS"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-Eco-M-RHTC-RS</h3>
-          <p class="device-card__type">Измеритель-регистратор температуры, влажности, СО₂</p>
-          <ul class="device-card__spec"><li>Температура: −40…+55 °С</li><li>Влажность: 0…100 %</li><li>СО₂: 0…10000 ppm</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/izmeritel-registrator-eclerk-eco-m-rhtc-01-" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/izmeritel-registrator-eclerk-eco-m-rhtc-01-" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-eco-m" data-protocol="wifi">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Wi-Fi</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M-RHT-WiFi"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-Eco-M-RHT-WiFi</h3>
-          <p class="device-card__type">Измеритель-регистратор температуры и влажности</p>
-          <ul class="device-card__spec"><li>Температура: −40…+55 °С</li><li>Влажность: 0…100 %</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rht-11-wifi" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rht-11-wifi" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-eco-m" data-protocol="wifi">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Wi-Fi</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M-RHTC-WiFi"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-Eco-M-RHTC-WiFi</h3>
-          <p class="device-card__type">Измеритель-регистратор температуры, влажности, СО₂</p>
-          <ul class="device-card__spec"><li>Температура: −40…+55 °С</li><li>Влажность: 0…100 %</li><li>СО₂: 0…10000 ppm</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rhtc-11-wifi" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rhtc-11-wifi" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-eco-m" data-protocol="lte">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">LTE</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M-RHT-LTE"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-Eco-M-RHT-LTE</h3>
-          <p class="device-card__type">Измеритель-регистратор температуры и влажности</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>18</span></p>
-          <ul class="device-card__spec"><li>Температура: −40…+55 °С</li><li>Влажность: 0…100 %</li><li>Передача в облако по LTE</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rht-11-lte" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rht-11-lte" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk+LTE" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="eclerk-eco-m" data-protocol="lte">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">LTE</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M-RHTC-LTE"></div>
-          </div>
-          <h3 class="device-card__title">EClerk-Eco-M-RHTC-LTE</h3>
-          <p class="device-card__type">Измеритель-регистратор температуры, влажности, СО₂</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>19</span></p>
-          <ul class="device-card__spec"><li>Температура: −40…+55 °С</li><li>Влажность: 0…100 %</li><li>СО₂: 0…10000 ppm</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rhtc-11-lte" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/izmeritel-registrator-parametrov-mikroklimata-eclerk-eco-m-rhtc-11-lte" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+EClerk+LTE" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5. ПАС-01 -->
-        <article class="device-card catalog-card" data-category="pas-01" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/PAS-01.jpg" alt="ПАС-01 — преобразователь температуры"></div>
-          </div>
-          <h3 class="device-card__title">Преобразователь температуры</h3>
-          <p class="device-card__type">Модификация PAS-01-RS-T</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>21</span></p>
-          <ul class="device-card__spec"><li>Температура: −200…+1300 °С</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+ПАС-01" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="pas-01" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/PAS-01.jpg" alt="ПАС-01 — преобразователь тока"></div>
-          </div>
-          <h3 class="device-card__title">Преобразователь тока</h3>
-          <p class="device-card__type">Модификация PAS-01-RS-I</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>22</span></p>
-          <ul class="device-card__spec"><li>Ток: 4…20 мА</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+ПАС-01" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="pas-01" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/PAS-01.jpg" alt="ПАС-01 — преобразователь напряжения мВ"></div>
-          </div>
-          <h3 class="device-card__title">Преобразователь напряжения</h3>
-          <p class="device-card__type">Модификация PAS-01-RS-mV</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>23</span></p>
-          <ul class="device-card__spec"><li>Напряжение: −50…+50 мВ</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+ПАС-01" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="pas-01" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">RS-485</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/PAS-01.jpg" alt="ПАС-01 — преобразователь напряжения В"></div>
-          </div>
-          <h3 class="device-card__title">Преобразователь напряжения</h3>
-          <p class="device-card__type">Модификация PAS-01-RS-V</p>
-          <p class="device-card__cloud-id">ID в облаке: <span>24</span></p>
-          <ul class="device-card__spec"><li>Напряжение: 0…1 В</li></ul>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-analogovyh-signalov-pas-01-rs" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+ПАС-01" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- 6. Шлюзы -->
-        <article class="device-card catalog-card" data-category="gateways" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Шлюз</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/GW-BT-E-1.jpg" alt="GW-Bl/E-1"></div>
-          </div>
-          <h3 class="device-card__title">GW-Bl/E-1</h3>
-          <p class="device-card__type">Шлюз</p>
-          <p class="device-card__desc">Работа с беспроводными устройствами НПК "Рэлсиб" по Bleotooth</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-bte-1" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-bte-1" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="gateways" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags"><span class="device-card__tag">Шлюз</span></div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/GW-RS-E-1.jpg" alt="GW-RS/E-1"></div>
-          </div>
-          <h3 class="device-card__title">GW-RS/E-1</h3>
-          <p class="device-card__type">Шлюз</p>
-          <p class="device-card__desc">Поддержка приборов с интерфейсом RS-485</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-rse-1" class="device-card__link" target="_blank">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-rse-1" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Шлюзы в герметичном исполнении (IP54) -->
-        <article class="device-card catalog-card" data-category="gateways" data-protocol="rs485">
-          <div class="device-card__media">
-            <div class="device-card__tags">
-              <span class="device-card__tag">Шлюз</span>
-              <span class="device-card__tag">IP54</span>
-            </div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/GW-RS-E-1-I.jpg" alt="GW-RS/E-1-I"></div>
-          </div>
-          <h3 class="device-card__title">GW-RS/E-1-I</h3>
-          <p class="device-card__type">Шлюз, герметичное исполнение</p>
-          <p class="device-card__desc">RS-485 → Ethernet (RelsibCloud). Корпус IP54, эксплуатация от −40 °С</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-rs-e-1-i" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-rs-e-1-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+GW-RS" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="gateways" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags">
-              <span class="device-card__tag">Шлюз</span>
-              <span class="device-card__tag">IP54</span>
-            </div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/GW-BT-RS-I.jpg" alt="GW-BT/RS-I"></div>
-          </div>
-          <h3 class="device-card__title">GW-BT/RS-I</h3>
-          <p class="device-card__type">Шлюз, герметичное исполнение</p>
-          <p class="device-card__desc">Bluetooth → RS-485. Корпус IP54, эксплуатация от −40 °С</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-bt-rs-i" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-bt-rs-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+GW" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="device-card catalog-card" data-category="gateways" data-protocol="bluetooth">
-          <div class="device-card__media">
-            <div class="device-card__tags">
-              <span class="device-card__tag">Шлюз</span>
-              <span class="device-card__tag">IP54</span>
-            </div>
-            <div class="device-card__image"><img src="Images/devices/Catalog/GW-BT-E-1-I.jpg" alt="GW-BT/E-1-I"></div>
-          </div>
-          <h3 class="device-card__title">GW-BT/E-1-I</h3>
-          <p class="device-card__type">Шлюз, герметичное исполнение</p>
-          <p class="device-card__desc">Bluetooth → Ethernet (RelsibCloud), RS-485. IP54, эксплуатация от −40 °С</p>
-          <div class="device-card__actions">
-            <a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-bt-e-1-i" class="device-card__link" target="_blank" rel="noopener">Подробнее</a>
-            <div class="device-card__dropdown">
-              <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
-              <ul class="device-card__dropdown-menu">
-                <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-bt-e-1-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
-                <li><a href="https://www.ozon.ru/search/?text=Рэлсиб+GW" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
-                <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
-                <li><a href="https://market.yandex.ru/search?text=Рэлсиб" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
-              </ul>
-            </div>
-          </div>
-        </article>
+            <tr class="devices-table__group">
+              <th colspan="4">Шлюзы GW — подключение приборов к облаку</th>
+            </tr>
+            <tr>
+              <td>GW-Bl/E-1</td>
+              <td>Подключение приборов по Bluetooth к RelsibCloud</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-bte-1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20GW-Bl/E-1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>GW-RS/E-1</td>
+              <td>Подключение приборов по RS-485 к RelsibCloud</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-gw-rse-1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20GW-RS/E-1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>GW-BT/E-1-I</td>
+              <td>Подключение приборов по Bluetooth к RelsibCloud, IP54</td>
+              <td>Bluetooth</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-bt-e-1-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20GW-BT/E-1-I" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>GW-RS/E-1-I</td>
+              <td>Подключение приборов по RS-485 к RelsibCloud, IP54</td>
+              <td>RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-rs-e-1-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20GW-RS/E-1-I" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+            <tr>
+              <td>GW-BT/RS-I</td>
+              <td>Подключение приборов по Bluetooth и RS-485, IP54</td>
+              <td>Bluetooth, RS-485</td>
+              <td class="devices-table__buy">
+              <div class="device-card__dropdown">
+                <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
+                <ul class="device-card__dropdown-menu">
+                  <li><a href="https://relsib.com/product/preobrazovatel-interfejsov-shlyuz-gw-bt-rs-i" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/relsib-sign-logo.svg" alt="" width="24" height="24"></span>relsib.com</a></li>
+                  <li><a href="https://www.ozon.ru/search/?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1%20GW-BT/RS-I" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/ozon-icon-logo.svg" alt="" width="24" height="24"></span>Ozon</a></li>
+                  <li><a href="https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/wildberries-sign-logo.svg" alt="" width="24" height="24"></span>Wildberries</a></li>
+                  <li><a href="https://market.yandex.ru/search?text=%D0%A0%D1%8D%D0%BB%D1%81%D0%B8%D0%B1" target="_blank" rel="noopener"><span class="device-card__menu-logo"><img src="Images/marketplaces/yandex-market-sign-logo.svg" alt="" width="24" height="24"></span>Яндекс Маркет</a></li>
+                </ul>
+              </div>
+            </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="page__cta">
-        <p>Подробная информация о приборах — на сайте <a href="https://relsib.com/" target="_blank">relsib.com</a></p>
+        <p>Подробная информация о приборах — на сайте <a href="https://relsib.com/" target="_blank" rel="noopener">relsib.com</a></p>
         <a href="https://relsibcloud.com" class="btn btn--primary">Войти в relsibcloud.com</a>
       </div>
     </div>
@@ -851,24 +629,49 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__contacts">
-        <p><strong>ООО НПК «Рэлсиб»</strong></p>
-        <p>г. Новосибирск, ул. Немировича-Данченко, д. 128/1</p>
+      <div class="footer__col footer__col--company">
+        <p class="footer__title">ООО НПК «Рэлсиб»</p>
+        <p class="footer__legal-name">ООО Научно-производственная компания «Рэлсиб»</p>
+        <p>Юридический и почтовый адрес: 630087, Новосибирская область, г.&nbsp;Новосибирск, ул.&nbsp;Немировича-Данченко, зд.&nbsp;128/1</p>
+        <p class="footer__ids">ОГРН&nbsp;1035401005529 · ИНН&nbsp;5402159819 · КПП&nbsp;540301001</p>
         <p><a href="tel:+73833830286">8 (383) 383-02-86</a></p>
-        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a></p>
+        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a> · <a href="mailto:office@relsib.com">office@relsib.com</a></p>
       </div>
-      <nav class="footer__nav">
-        <a href="https://relsib.com/">relsib.com</a>
-        <a href="https://relsib.com/relsibcloud/">RelsibCloud</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/">О сервисе</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-devices/">Приборы</a>
-      </nav>
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
+
+      <div class="footer__col">
+        <p class="footer__heading">Сервис</p>
+        <nav class="footer__nav" aria-label="Разделы сайта">
+          <a href="index.html#architecture">Архитектура</a>
+          <a href="index.html#use-cases">Примеры</a>
+          <a href="devices.html">Приборы</a>
+          <a href="index.html#instructions">Инструкции</a>
+          <a href="https://relsibcloud.com" target="_blank" rel="noopener">Войти в RelsibCloud</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__heading">Документы</p>
+        <nav class="footer__nav" aria-label="Юридические документы">
+          <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">Политика конфиденциальности</a>
+          <a href="https://relsib.com/company/consent/consent-form/" target="_blank" rel="noopener">Согласие на обработку ПДн</a>
+          <a href="https://relsib.com/company/consent/user-agreement/" target="_blank" rel="noopener">Пользовательское соглашение</a>
+          <a href="https://relsib.com/company/bank_details/" target="_blank" rel="noopener">Реквизиты</a>
+        </nav>
+      </div>
+
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo" aria-label="RelsibCloud">
           <img src="Images/Logo/Cloud_logo.svg" alt="" width="40" height="40" class="footer__logo-img">
+          <span class="footer__logo-text">RelsibCloud</span>
         </a>
-        <p class="footer__copyright">© 2026 RelsibCloud. Все права защищены</p>
+        <p class="footer__brand-note">Облачный сервис мониторинга параметров</p>
+        <a class="footer__ext" href="https://relsib.com/" target="_blank" rel="noopener">relsib.com</a>
       </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2001–2026 ООО НПК «Рэлсиб». Все права защищены.</p>
+      <p class="footer__pdn">Обработка персональных данных осуществляется в соответствии с Федеральным законом от&nbsp;27.07.2006 №&nbsp;152‑ФЗ «О&nbsp;персональных данных». Используя сайт, вы соглашаетесь с <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">политикой конфиденциальности</a> и обработкой файлов cookie.</p>
     </div>
   </footer>
 
@@ -910,133 +713,33 @@
       });
     }
 
+    function closeBuyDropdowns(except) {
+      document.querySelectorAll('.device-card__dropdown.is-open').forEach(function(d) {
+        if (except && d === except) return;
+        d.classList.remove('is-open');
+        var row = d.closest('tr');
+        if (row) row.classList.remove('is-dropdown-open');
+        var toggle = d.querySelector('button');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+    }
+
     document.querySelectorAll('.device-card__dropdown-btn').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
         var dropdown = btn.closest('.device-card__dropdown');
-        var card = btn.closest('.device-card');
-        var isOpen = dropdown.classList.toggle('is-open');
-        if (card) card.classList.toggle('is-dropdown-open', isOpen);
-        btn.setAttribute('aria-expanded', isOpen);
+        var row = btn.closest('tr');
+        var willOpen = !dropdown.classList.contains('is-open');
+        closeBuyDropdowns(willOpen ? dropdown : null);
+        dropdown.classList.toggle('is-open', willOpen);
+        if (row) row.classList.toggle('is-dropdown-open', willOpen);
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
       });
     });
-    document.addEventListener('click', function() {
-      document.querySelectorAll('.device-card__dropdown.is-open').forEach(function(d) {
-        d.classList.remove('is-open');
-        var card = d.closest('.device-card');
-        if (card) card.classList.remove('is-dropdown-open');
-        var toggle = d.querySelector('button');
-        if (toggle) toggle.setAttribute('aria-expanded', 'false');
-      });
+    document.addEventListener('click', function() { closeBuyDropdowns(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeBuyDropdowns();
     });
-
-    var grid = document.getElementById('catalogGrid');
-    var countEl = document.getElementById('catalogCount');
-    var cards = grid ? grid.querySelectorAll('.catalog-card') : [];
-    var categoryFilter = '';
-    var protocolFilter = '';
-    var openDropdown = null;
-
-    function updateCount(visible) {
-      if (countEl) countEl.textContent = 'Найдено: ' + visible + ' из ' + cards.length;
-    }
-    function applyFilters() {
-      var visible = 0;
-      cards.forEach(function(card) {
-        var cat = card.getAttribute('data-category') || '';
-        var prot = card.getAttribute('data-protocol') || '';
-        var show = (!categoryFilter || cat === categoryFilter) && (!protocolFilter || prot === protocolFilter);
-        card.classList.toggle('catalog-card--hidden', !show);
-        if (show) visible++;
-      });
-      updateCount(visible);
-    }
-    function setFilter(type, value) {
-      if (type === 'category') {
-        categoryFilter = value;
-        document.querySelectorAll('.catalog-chips:not(.catalog-chips--protocol) .catalog-chip[data-filter="category"]').forEach(function(btn) {
-          btn.classList.toggle('catalog-chip--active', btn.getAttribute('data-value') === value);
-        });
-      } else if (type === 'protocol') {
-        protocolFilter = value;
-        document.querySelectorAll('.catalog-chips--protocol .catalog-chip[data-filter="protocol"]').forEach(function(btn) {
-          btn.classList.toggle('catalog-chip--active', btn.getAttribute('data-value') === value);
-        });
-        var protocolBtn = document.getElementById('protocolBtn');
-        var protocolMenu = document.getElementById('protocolMenu');
-        var label = protocolMenu && protocolMenu.querySelector('[data-value="' + value + '"]');
-        if (protocolBtn && label) protocolBtn.textContent = label.textContent.trim();
-      }
-      applyFilters();
-    }
-    function closeDropdown() {
-      if (!openDropdown) return;
-      openDropdown.menu.hidden = true;
-      openDropdown.btn.setAttribute('aria-expanded', 'false');
-      openDropdown = null;
-    }
-    function initDropdown(btnId, menuId, onSelect) {
-      var btn = document.getElementById(btnId);
-      var menu = document.getElementById(menuId);
-      if (!btn || !menu) return;
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (openDropdown && openDropdown.menu !== menu) closeDropdown();
-        var willOpen = menu.hidden;
-        menu.hidden = !willOpen;
-        btn.setAttribute('aria-expanded', willOpen);
-        openDropdown = willOpen ? { btn: btn, menu: menu } : null;
-      });
-      menu.querySelectorAll('li[role="option"]').forEach(function(li) {
-        li.addEventListener('click', function() { onSelect(li); closeDropdown(); });
-      });
-    }
-    document.addEventListener('click', closeDropdown);
-
-    var params = new URLSearchParams(window.location.search);
-    if (params.get('category')) setFilter('category', params.get('category'));
-    if (params.get('protocol')) setFilter('protocol', params.get('protocol'));
-
-    document.querySelectorAll('.catalog-chip').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        setFilter(this.getAttribute('data-filter'), this.getAttribute('data-value') || '');
-      });
-    });
-    initDropdown('protocolBtn', 'protocolMenu', function(li) {
-      setFilter('protocol', li.getAttribute('data-value') || '');
-    });
-    initDropdown('sortBtn', 'sortMenu', function(li) {
-      var sortOrder = li.getAttribute('data-sort') || '';
-      var sortBtn = document.getElementById('sortBtn');
-      if (sortBtn) sortBtn.textContent = li.textContent.trim();
-      if (!grid || !sortOrder) return;
-      var visible = Array.from(cards).filter(function(c) { return !c.classList.contains('catalog-card--hidden'); });
-      var hidden = Array.from(cards).filter(function(c) { return c.classList.contains('catalog-card--hidden'); });
-      if (sortOrder === 'name') visible.sort(function(a, b) {
-        return (a.querySelector('.device-card__title').textContent || '').localeCompare(b.querySelector('.device-card__title').textContent || '');
-      });
-      if (sortOrder === 'category') visible.sort(function(a, b) {
-        return (a.getAttribute('data-category') || '').localeCompare(b.getAttribute('data-category') || '');
-      });
-      visible.concat(hidden).forEach(function(card) { grid.appendChild(card); });
-    });
-    var resetBtn = document.getElementById('catalogReset');
-    if (resetBtn) resetBtn.addEventListener('click', function() {
-      categoryFilter = '';
-      protocolFilter = '';
-      document.querySelectorAll('.catalog-chips:not(.catalog-chips--protocol) .catalog-chip[data-filter="category"]').forEach(function(btn) {
-        btn.classList.toggle('catalog-chip--active', btn.getAttribute('data-value') === '');
-      });
-      document.querySelectorAll('.catalog-chips--protocol .catalog-chip[data-filter="protocol"]').forEach(function(btn) {
-        btn.classList.toggle('catalog-chip--active', btn.getAttribute('data-value') === '');
-      });
-      var protocolBtn = document.getElementById('protocolBtn');
-      var protocolMenu = document.getElementById('protocolMenu');
-      var first = protocolMenu && protocolMenu.querySelector('li[data-value=""]');
-      if (protocolBtn && first) protocolBtn.textContent = first.textContent.trim();
-      applyFilters();
-    });
-    applyFilters();
   })();
   </script>
 </body>

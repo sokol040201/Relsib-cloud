@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260715r">
+  <link rel="stylesheet" href="styles.css?v=20260721ac">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -71,10 +71,56 @@
 
   <main>
     <section class="hero">
-      <div class="hero__image hero__image--video">
-        <video class="hero__video" autoplay muted loop playsinline preload="metadata" aria-label="Интерфейс RelsibCloud">
-          <source src="Main%20Demo%20Video.mp4" type="video/mp4">
-        </video>
+      <div class="hero__image hero__image--ecosystem">
+        <div class="hero-ecosystem" aria-label="Путь данных: приборы через шлюзы или приложения, либо Wi‑Fi и LTE напрямую — в RelsibCloud, затем к пользователю">
+          <article class="hero-eco-node">
+            <img src="Images/structure%20shema/freepik_0001%20(5)%201.png" alt="" width="160" height="160">
+            <strong>Приборы</strong>
+            <span>RS485, Bluetooth</span>
+          </article>
+
+          <span class="hero-eco-arrow" aria-hidden="true">
+            <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M2 7h20M16 2l6 5-6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+
+          <div class="hero-eco-group">
+            <article class="hero-eco-node">
+              <img src="Images/hero-ecosystem/gateways.png?v=2" alt="" width="140" height="140">
+              <strong>Шлюзы GW</strong>
+              <span>Преобразователи</span>
+            </article>
+            <article class="hero-eco-node">
+              <img src="Images/hero-ecosystem/mobile-app.png?v=2" alt="" width="140" height="140">
+              <strong>Приложения</strong>
+              <span>EClerk‑WM</span>
+            </article>
+            <p class="hero-eco-or">или Wi‑Fi / LTE напрямую</p>
+            <article class="hero-eco-node hero-eco-node--wifi">
+              <img src="Images/hero-ecosystem/wifi-lte.png?v=2" alt="" width="120" height="120">
+              <strong>Wi‑Fi, LTE</strong>
+            </article>
+          </div>
+
+          <span class="hero-eco-arrow" aria-hidden="true">
+            <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M2 7h20M16 2l6 5-6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+
+          <article class="hero-eco-node hero-eco-node--cloud">
+            <img class="hero-eco-node__logo" src="Images/Logo/Cloud_logo.svg" alt="" width="96" height="96">
+            <strong>RelsibCloud</strong>
+            <span>Облако</span>
+          </article>
+
+          <span class="hero-eco-arrow" aria-hidden="true">
+            <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M2 7h20M16 2l6 5-6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+
+          <article class="hero-eco-node">
+            <img src="Images/hero-ecosystem/user.png?v=2" alt="" width="140" height="140">
+            <strong>Пользователь</strong>
+            <span>Веб и мобильный</span>
+          </article>
+        </div>
       </div>
       <div class="hero__content">
         <h1 class="hero__title">RelsibCloud.com — облачный сервис</h1>
@@ -194,51 +240,42 @@
               </button>
               <div class="system-stack__panel" id="stack-panel-middle" role="region" aria-labelledby="stack-trigger-middle" aria-hidden="true">
                 <div class="system-stack__panel-inner">
-                  <div class="system-stack__table-wrap">
-                    <table class="system-stack__table">
-                      <thead>
-                        <tr>
-                          <th>Шлюз</th>
-                          <th>Назначение</th>
-                          <th>Связь</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>GW‑BT/E‑1</td>
-                          <td>Bluetooth → Ethernet (RelsibCloud), RS‑485</td>
-                          <td>Ethernet</td>
-                        </tr>
-                        <tr>
-                          <td>GW‑RS/E‑1</td>
-                          <td>RS‑485 → Ethernet (RelsibCloud)</td>
-                          <td>Ethernet</td>
-                        </tr>
-                        <tr>
-                          <td>GW‑BT/RS</td>
-                          <td>Bluetooth → RS‑485</td>
-                          <td>RS‑485</td>
-                        </tr>
-                        <tr>
-                          <td>GW‑BT/E‑1‑I</td>
-                          <td>Bluetooth → Ethernet, RS‑485; IP54, от −40 °C</td>
-                          <td>Ethernet</td>
-                        </tr>
-                        <tr>
-                          <td>GW‑RS/E‑1‑I</td>
-                          <td>RS‑485 → Ethernet; IP54, от −40 °C</td>
-                          <td>Ethernet</td>
-                        </tr>
-                        <tr>
-                          <td>GW‑BT/RS‑I</td>
-                          <td>Bluetooth → RS‑485; IP54, от −40 °C</td>
-                          <td>RS‑485</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="system-stack__links">
-                    <a href="devices.html?category=gateways" class="system-stack__link">Все шлюзы →</a>
+                  <div class="system-stack__gateway-types">
+                    <article class="system-stack__gateway-type">
+                      <span class="system-stack__gateway-icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="m7 7 10 10-4 4V4l4 4-8 8"/>
+                          <path d="M7 17V7"/>
+                        </svg>
+                      </span>
+                      <div>
+                        <strong>Bluetooth и RS‑485</strong>
+                        <p>Шлюзы принимают данные от беспроводных датчиков Bluetooth либо опрашивают проводные приборы по RS‑485 Modbus.</p>
+                      </div>
+                    </article>
+                    <article class="system-stack__gateway-type">
+                      <span class="system-stack__gateway-icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                          <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        </svg>
+                      </span>
+                      <div>
+                        <strong>Компактное исполнение</strong>
+                        <p>Шлюзы в небольшом пластиковом корпусе предназначены для установки внутри помещений.</p>
+                      </div>
+                    </article>
+                    <article class="system-stack__gateway-type">
+                      <span class="system-stack__gateway-icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                        </svg>
+                      </span>
+                      <div>
+                        <strong>Промышленное исполнение</strong>
+                        <p>Версии с индексом «‑I» выпускаются в герметичном корпусе IP54 и работают при температуре от −40 °C.</p>
+                      </div>
+                    </article>
                   </div>
                 </div>
               </div>
@@ -257,43 +294,42 @@
                   <span class="system-stack__index" aria-hidden="true">1</span>
                   <span class="system-stack__head-text">
                     <span class="system-stack__title">Нижний уровень</span>
-                    <span class="system-stack__hint">Датчики и преобразователи</span>
+                    <span class="system-stack__hint">Приборы, которые собирают измерения</span>
                   </span>
                 </span>
-                <p class="system-stack__text">Датчики измеряют параметры и передают данные выше или сразу в облако.</p>
+                <p class="system-stack__text">Здесь стоят датчики и измерители: они фиксируют температуру, давление и другие параметры и передают их в систему — через шлюз или сразу в облако.</p>
               </button>
               <div class="system-stack__panel" id="stack-panel-lower" role="region" aria-labelledby="stack-trigger-lower" aria-hidden="true">
                 <div class="system-stack__panel-inner">
                   <ul class="system-stack__details system-stack__details--links">
                     <li>
-                      <a href="devices.html?category=eclerk-ws&protocol=bluetooth">
-                        <strong>Датчики EClerk‑WS</strong>
-                        <span>Bluetooth, через шлюз</span>
+                      <a href="devices.html">
+                        <strong>Беспроводные датчики EClerk‑WS</strong>
+                        <span>Температура, влажность, СО₂, протечка — передают на шлюз по Bluetooth</span>
                       </a>
                     </li>
                     <li>
-                      <a href="devices.html?protocol=rs485">
-                        <strong>Приборы RS‑485</strong>
-                        <span>RS‑485 ModBus</span>
+                      <a href="devices.html">
+                        <strong>Проводные приборы RS‑485</strong>
+                        <span>Ивит‑М, ДВТ и др. — шлюз опрашивает их по шине Modbus</span>
                       </a>
                     </li>
                     <li>
-                      <a href="devices.html?category=eclerk-eco-m">
-                        <strong>Приборы Wi‑Fi и LTE</strong>
-                        <span>Напрямую в облако, без шлюза</span>
+                      <a href="devices.html">
+                        <strong>Приборы с Wi‑Fi и LTE</strong>
+                        <span>Сами выходят в интернет и отправляют данные в облако — шлюз не нужен</span>
                       </a>
                     </li>
                     <li>
-                      <a href="devices.html?category=pas-01">
-                        <strong>ПАС‑01.RS</strong>
-                        <span>Сенсоры mV, V, mA: давление, расход и др.</span>
+                      <a href="devices.html">
+                        <strong>Преобразователь ПАС‑01.RS</strong>
+                        <span>Подключает сторонние датчики (4–20 мА, mV) — давление, расход и др.</span>
                       </a>
                     </li>
                   </ul>
-                  <p class="system-stack__note">Задача — измерить величину, преобразовать в интерфейс (RS‑485, Bluetooth) и передать выше.</p>
+                  <p class="system-stack__note">Итог один: измерения попадают в RelsibCloud — напрямую или через шлюз на среднем уровне.</p>
                   <div class="system-stack__links">
                     <a href="devices.html" class="system-stack__link">Список приборов →</a>
-                    <a href="#architecture" class="system-stack__link" data-scroll-target=".architecture-protocols">Способы связи →</a>
                   </div>
                 </div>
               </div>
@@ -303,43 +339,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="architecture-protocols">
-        <section class="protocols protocols--nested">
-          <div class="protocols__inner">
-            <div class="protocols__content">
-              <h3 class="protocols__title">Способы связи</h3>
-              <p class="protocols__lead">RelsibCloud работает с несколькими способами связи — через шлюзы или напрямую по Wi‑Fi</p>
-              <div class="protocols__connections">
-                <ul class="protocols__list">
-                  <li class="protocols__list-item active" data-connection="bluetooth">
-                    <h5 class="protocols__item-title">Bluetooth 5.0</h5>
-                    <p class="protocols__item-text">Беспроводные датчики EClerk-WS и термогигрометры Ivit. Передача в облако через шлюз GW-Bl/E-1</p>
-                  </li>
-                  <li class="protocols__list-item" data-connection="rs485">
-                    <h5 class="protocols__item-title">RS-485</h5>
-                    <p class="protocols__item-text">Шлюз GW-RS/E-1 опрашивает приборы по сети RS485 (до 32 шт.) и отправляет данные в облако</p>
-                    <a href="devices.html" class="protocols__item-link">Список приборов →</a>
-                  </li>
-                  <li class="protocols__list-item" data-connection="wifi">
-                    <h5 class="protocols__item-title">Wi-Fi</h5>
-                    <p class="protocols__item-text">Приборы с модулем Wi-Fi (EClerk-Eco-M-RHT-WiFi и др.) отправляют данные в облако напрямую</p>
-                  </li>
-                  <li class="protocols__list-item" data-connection="gateways">
-                    <h5 class="protocols__item-title">Шлюзы</h5>
-                    <p class="protocols__item-text">GW-Bl/E-1 и GW-RS/E-1; линейка GW-I (IP54) — для улицы и промышленных условий. Не менее 15 датчиков на шлюз</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="protocols__visual">
-              <div class="protocols__image">
-                <img src="Images/protocols-visual.png" alt="Мониторинг удалённых объектов" class="protocols__image-img">
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
 
       <div class="architecture-sub">
@@ -905,100 +904,6 @@
         </div>
       </div>
 
-      <div class="architecture-sub architecture-sub--upper">
-        <div class="app-benefits" hidden>
-          <h4 class="app-benefits__title">Преимущества системы</h4>
-          <div class="app-benefits__grid">
-            <div class="app-benefit">Архивирование данных</div>
-            <div class="app-benefit">Мониторинг удалённых объектов</div>
-            <div class="app-benefit">Push-уведомления</div>
-            <div class="app-benefit">Отчёты в Excel и PDF</div>
-          </div>
-        </div>
-
-        <div class="ecosystem" id="ecosystem" hidden>
-          <h4 class="ecosystem__title">Единая экосистема RelsibCloud</h4>
-          <p class="ecosystem__lead">Путь данных от измерения до экрана пользователя. Выберите сценарий или нажмите на этап.</p>
-          <div class="ecosystem__modes" role="tablist" aria-label="Сценарий движения данных">
-            <button type="button" class="ecosystem__mode is-active" role="tab" aria-selected="true" data-eco-mode="in">В облако</button>
-            <button type="button" class="ecosystem__mode" role="tab" aria-selected="false" data-eco-mode="out">Из облака</button>
-          </div>
-
-          <div class="ecosystem__layout">
-            <div class="ecosystem__flow" id="ecosystem-web" data-eco-mode-active="in" aria-label="Путь данных RelsibCloud">
-              <button type="button" class="ecosystem__node ecosystem__node--source is-active" data-eco-id="sensors" data-eco-mode="in" aria-pressed="true" aria-controls="ecosystem-detail">
-                <span class="ecosystem__step">1</span>
-                <span class="ecosystem__node-media" aria-hidden="true">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
-                </span>
-                <span class="ecosystem__node-label">Приборы</span>
-                <span class="ecosystem__node-text">Измеряют температуру, влажность, давление и другие параметры</span>
-              </button>
-
-              <div class="ecosystem__split" aria-label="Способы передачи в облако">
-                <button type="button" class="ecosystem__node ecosystem__node--transfer" data-eco-id="gateways" data-eco-mode="in" aria-pressed="false" aria-controls="ecosystem-detail">
-                  <span class="ecosystem__step">2A</span>
-                  <span class="ecosystem__node-media" aria-hidden="true">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="8" width="12" height="10" rx="2"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><circle cx="12" cy="13" r="1.25" fill="currentColor" stroke="none"/><path d="M12 18v2"/><path d="M9 20h6"/></svg>
-                  </span>
-                  <span class="ecosystem__node-label">Шлюзы GW</span>
-                  <span class="ecosystem__node-text">Bluetooth и RS-485 передаются в Ethernet</span>
-                </button>
-
-                <button type="button" class="ecosystem__node ecosystem__node--transfer" data-eco-id="direct" data-eco-mode="in" aria-pressed="false" aria-controls="ecosystem-detail">
-                  <span class="ecosystem__step">2B</span>
-                  <span class="ecosystem__node-media" aria-hidden="true">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><path d="M12 20h.01"/></svg>
-                  </span>
-                  <span class="ecosystem__node-label">Wi-Fi / LTE</span>
-                  <span class="ecosystem__node-text">Приборы отправляют данные напрямую</span>
-                </button>
-              </div>
-
-              <button type="button" class="ecosystem__node ecosystem__node--cloud" data-eco-id="cloud" data-eco-mode="both" aria-pressed="false" aria-controls="ecosystem-detail">
-                <span class="ecosystem__step">3</span>
-                <span class="ecosystem__node-media">
-                  <img src="Images/Logo/Cloud_logo.svg" alt="" width="44" height="44">
-                </span>
-                <span class="ecosystem__node-label">RelsibCloud</span>
-                <span class="ecosystem__node-text">Хранит архив, события, настройки и структуру объектов</span>
-              </button>
-
-              <div class="ecosystem__split ecosystem__split--out" aria-label="Доступ к данным из облака">
-                <button type="button" class="ecosystem__node ecosystem__node--viewer" data-eco-id="web" data-eco-mode="out" aria-pressed="false" aria-controls="ecosystem-detail">
-                  <span class="ecosystem__step">4A</span>
-                  <span class="ecosystem__node-media" aria-hidden="true">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></svg>
-                  </span>
-                  <span class="ecosystem__node-label">Веб-приложение</span>
-                  <span class="ecosystem__node-text">Графики, отчёты, мнемосхемы и настройки</span>
-                </button>
-
-                <button type="button" class="ecosystem__node ecosystem__node--viewer" data-eco-id="mobile" data-eco-mode="out" aria-pressed="false" aria-controls="ecosystem-detail">
-                  <span class="ecosystem__step">4B</span>
-                  <span class="ecosystem__node-media" aria-hidden="true">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
-                  </span>
-                  <span class="ecosystem__node-label">Мобильный доступ</span>
-                  <span class="ecosystem__node-text">Тот же сервис в браузере телефона</span>
-                </button>
-              </div>
-            </div>
-
-            <aside class="ecosystem__detail" id="ecosystem-detail" aria-live="polite">
-              <p class="ecosystem__detail-kicker">В облако · измерение</p>
-              <h5 class="ecosystem__detail-title">Приборы и датчики</h5>
-              <p class="ecosystem__detail-text">EClerk-WS, RS-485 и ПАС-01 снимают параметры и отдают их в шлюз или напрямую по Wi-Fi/LTE.</p>
-              <a href="devices.html" class="ecosystem__detail-link">Каталог приборов →</a>
-            </aside>
-          </div>
-
-          <div class="ecosystem__actions">
-            <a href="https://app-uni.relsibcloud.com" class="btn btn--primary btn--large" target="_blank" rel="noopener">Открыть веб‑приложение</a>
-            <a href="devices.html" class="btn btn--outline btn--large">К приборам</a>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="mobile-web" id="mobile-web" aria-labelledby="mobile-web-title">
@@ -1151,16 +1056,16 @@
         <div class="device-card">
           <div class="device-card__media">
             <div class="device-card__tags">
-              <span class="device-card__tag">Wi‑Fi</span>
+              <span class="device-card__tag">Bluetooth</span>
             </div>
             <div class="device-card__image">
               <img src="Images/devices/Catalog/EClerk-WS-T.jpg" alt="EClerk-WS — беспроводные датчики">
             </div>
           </div>
           <h4 class="device-card__title">EClerk-WS — беспроводные датчики</h4>
-          <p class="device-card__desc">Температура, влажность, СО2, протечка</p>
+          <p class="device-card__desc">Температура, влажность, СО₂, протечка, освещённость</p>
           <div class="device-card__actions">
-            <a href="devices.html?category=eclerk-ws" class="device-card__link">Подробнее</a>
+            <a href="devices.html" class="device-card__link">Подробнее</a>
             <div class="device-card__dropdown">
               <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
               <ul class="device-card__dropdown-menu">
@@ -1184,7 +1089,7 @@
           <h4 class="device-card__title">Термогигрометры Ivit</h4>
           <p class="device-card__desc">Ivit-1, Ivit-s-1 — Bluetooth 5.0</p>
           <div class="device-card__actions">
-            <a href="devices.html?category=ivit" class="device-card__link">Подробнее</a>
+            <a href="devices.html" class="device-card__link">Подробнее</a>
             <div class="device-card__dropdown">
               <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
               <ul class="device-card__dropdown-menu">
@@ -1208,7 +1113,7 @@
           <h4 class="device-card__title">Ивит-М, ДВТ-03–05</h4>
           <p class="device-card__desc">Температура и влажность, RS-485</p>
           <div class="device-card__actions">
-            <a href="devices.html?category=ivit-m-dvt" class="device-card__link">Подробнее</a>
+            <a href="devices.html" class="device-card__link">Подробнее</a>
             <div class="device-card__dropdown">
               <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
               <ul class="device-card__dropdown-menu">
@@ -1225,15 +1130,16 @@
             <div class="device-card__tags">
               <span class="device-card__tag">RS-485</span>
               <span class="device-card__tag">Wi‑Fi</span>
+              <span class="device-card__tag">LTE</span>
             </div>
             <div class="device-card__image">
               <img src="Images/devices/Catalog/Eclerk-ECO-M.png" alt="EClerk-Eco-M">
             </div>
           </div>
           <h4 class="device-card__title">EClerk-Eco-M</h4>
-          <p class="device-card__desc">Качество воздуха, RS-485 и Wi-Fi</p>
+          <p class="device-card__desc">Измерители-регистраторы качества воздуха: температура, влажность, СО₂</p>
           <div class="device-card__actions">
-            <a href="devices.html?category=eclerk-eco-m" class="device-card__link">Подробнее</a>
+            <a href="devices.html" class="device-card__link">Подробнее</a>
             <div class="device-card__dropdown">
               <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
               <ul class="device-card__dropdown-menu">
@@ -1248,16 +1154,17 @@
         <div class="device-card">
           <div class="device-card__media">
             <div class="device-card__tags">
-              <span class="device-card__tag">Шлюз</span>
+              <span class="device-card__tag">Bluetooth</span>
+              <span class="device-card__tag">RS-485</span>
             </div>
             <div class="device-card__image">
               <img src="Images/devices/Catalog/GW-RS-E-1.jpg" alt="Шлюзы GW-Bl/E-1 и GW-RS/E-1">
             </div>
           </div>
           <h4 class="device-card__title">Шлюзы GW</h4>
-          <p class="device-card__desc">Беспроводные датчики и RS-485 до 32 приборов → облако</p>
+          <p class="device-card__desc">Bluetooth или RS-485 → Ethernet (RelsibCloud), до 30 приборов</p>
           <div class="device-card__actions">
-            <a href="devices.html?category=gateways" class="device-card__link">Подробнее</a>
+            <a href="devices.html" class="device-card__link">Подробнее</a>
             <div class="device-card__dropdown">
               <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
               <ul class="device-card__dropdown-menu">
@@ -1273,7 +1180,6 @@
         <div class="device-card">
           <div class="device-card__media">
             <div class="device-card__tags">
-              <span class="device-card__tag">Шлюз</span>
               <span class="device-card__tag">IP54</span>
             </div>
             <div class="device-card__image">
@@ -1281,9 +1187,9 @@
             </div>
           </div>
           <h4 class="device-card__title">Шлюзы GW-I</h4>
-          <p class="device-card__desc">Герметичное исполнение IP54, уличная и промышленная эксплуатация от −40 °С</p>
+          <p class="device-card__desc">Bluetooth или RS-485 → Ethernet (RelsibCloud), IP54, от −40 °С</p>
           <div class="device-card__actions">
-            <a href="devices.html?category=gateways" class="device-card__link">Подробнее</a>
+            <a href="devices.html" class="device-card__link">Подробнее</a>
             <div class="device-card__dropdown">
               <button class="device-card__dropdown-btn" type="button" aria-expanded="false" aria-haspopup="true">Купить ▾</button>
               <ul class="device-card__dropdown-menu">
@@ -1315,23 +1221,20 @@
 
     <section class="zigbee" id="instructions">
       <h2 class="section-title">Инструкции</h2>
-      <p class="section-subtitle">Как начать работать с сервисом. Создание аккаунта, настройка объектов, подключение приборов</p>
-      <div class="zigbee__features">
-        <div class="zigbee-feature">
-          <h4>Инструкция по RelsibCloud</h4>
-          <p>Создание и базовая настройка объектов, зон контроля, подключение приборов</p>
-          <a href="instructions/relsibcloud.html" class="protocol-card__link">Читать</a>
-        </div>
-        <div class="zigbee-feature">
-          <h4>WEB-приложение app-uni</h4>
-          <p>Настройка, мнемосхемы, отчёты, оповещения, экспорт в Excel и PDF</p>
-          <a href="instructions/app-uni.html" class="protocol-card__link">Читать</a>
-        </div>
-        <div class="zigbee-feature">
+      <p class="section-subtitle">Как начать работать с сервисом: регистрация, настройка объектов, подключение приборов и приложений</p>
+      <div class="zigbee__features zigbee__features--guides">
+        <a href="instructions/relsibcloud.html" class="zigbee-feature zigbee-feature--link">
+          <span class="zigbee-feature__step">1</span>
+          <h4>RelsibCloud</h4>
+          <p>Быстрый старт: создать объект, подключить шлюз и увидеть показания — потом настройки подробнее</p>
+          <span class="protocol-card__link">Читать инструкцию</span>
+        </a>
+        <a href="instructions/eclerk-wm.html" class="zigbee-feature zigbee-feature--link">
+          <span class="zigbee-feature__step">2</span>
           <h4>Мобильное приложение EClerk-WM</h4>
-          <p>Настройка беспроводных датчиков, шлюза и оповещений на планшете или телефоне</p>
-          <a href="instructions/eclerk-wm.html" class="protocol-card__link">Читать</a>
-        </div>
+          <p>Сбор данных с Bluetooth-датчиков, настройка шлюза и оповещений на планшете или телефоне</p>
+          <span class="protocol-card__link">Читать инструкцию</span>
+        </a>
       </div>
     </section>
 
@@ -1357,7 +1260,7 @@
           </summary>
           <div class="faq__body">
             <div class="faq__body-inner">
-              <p class="faq__answer">Беспроводные датчики EClerk-WS, термогигрометры Ivit, измерители по RS-485, приборы с Wi‑Fi и LTE, а также аналоговые датчики через преобразователи ПАС-01. Полный перечень — в <a href="devices.html">каталоге приборов</a>.</p>
+              <p class="faq__answer">Беспроводные датчики EClerk-WS, термогигрометры Ivit, измерители по RS-485, приборы с Wi‑Fi и LTE, а также аналоговые датчики через преобразователи ПАС-01. Полный перечень — в <a href="devices.html">таблице приборов</a>.</p>
             </div>
           </div>
         </details>
@@ -1401,7 +1304,7 @@
           </summary>
           <div class="faq__body">
             <div class="faq__body-inner">
-              <p class="faq__answer">Раздел <a href="#instructions">Инструкции</a> на этой странице: <a href="instructions/relsibcloud.html">RelsibCloud</a>, <a href="instructions/app-uni.html">app-uni</a>, <a href="instructions/eclerk-wm.html">EClerk-WM</a>. Также документация на <a href="https://relsib.com/relsibcloud/">relsib.com/relsibcloud</a>.</p>
+              <p class="faq__answer">Раздел <a href="#instructions">Инструкции</a> на этой странице: <a href="instructions/relsibcloud.html">RelsibCloud</a> и <a href="instructions/eclerk-wm.html">EClerk-WM</a>. Также документация на <a href="https://relsib.com/relsibcloud/">relsib.com/relsibcloud</a>.</p>
             </div>
           </div>
         </details>
@@ -1411,24 +1314,49 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__contacts">
-        <p><strong>ООО НПК «Рэлсиб»</strong></p>
-        <p>г. Новосибирск, ул. Немировича-Данченко, д. 128/1</p>
+      <div class="footer__col footer__col--company">
+        <p class="footer__title">ООО НПК «Рэлсиб»</p>
+        <p class="footer__legal-name">ООО Научно-производственная компания «Рэлсиб»</p>
+        <p>Юридический и почтовый адрес: 630087, Новосибирская область, г.&nbsp;Новосибирск, ул.&nbsp;Немировича-Данченко, зд.&nbsp;128/1</p>
+        <p class="footer__ids">ОГРН&nbsp;1035401005529 · ИНН&nbsp;5402159819 · КПП&nbsp;540301001</p>
         <p><a href="tel:+73833830286">8 (383) 383-02-86</a></p>
-        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a></p>
+        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a> · <a href="mailto:office@relsib.com">office@relsib.com</a></p>
       </div>
-      <nav class="footer__nav">
-        <a href="https://relsib.com/">relsib.com</a>
-        <a href="https://relsib.com/relsibcloud/">RelsibCloud</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/">О сервисе</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-devices/">Приборы</a>
-      </nav>
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
+
+      <div class="footer__col">
+        <p class="footer__heading">Сервис</p>
+        <nav class="footer__nav" aria-label="Разделы сайта">
+          <a href="#architecture">Архитектура</a>
+          <a href="#use-cases">Примеры</a>
+          <a href="devices.html">Приборы</a>
+          <a href="#instructions">Инструкции</a>
+          <a href="https://relsibcloud.com" target="_blank" rel="noopener">Войти в RelsibCloud</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__heading">Документы</p>
+        <nav class="footer__nav" aria-label="Юридические документы">
+          <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">Политика конфиденциальности</a>
+          <a href="https://relsib.com/company/consent/consent-form/" target="_blank" rel="noopener">Согласие на обработку ПДн</a>
+          <a href="https://relsib.com/company/consent/user-agreement/" target="_blank" rel="noopener">Пользовательское соглашение</a>
+          <a href="https://relsib.com/company/bank_details/" target="_blank" rel="noopener">Реквизиты</a>
+        </nav>
+      </div>
+
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo" aria-label="RelsibCloud">
           <img src="Images/Logo/Cloud_logo.svg" alt="" width="40" height="40" class="footer__logo-img">
+          <span class="footer__logo-text">RelsibCloud</span>
         </a>
-        <p class="footer__copyright">© 2026 RelsibCloud. Все права защищены</p>
+        <p class="footer__brand-note">Облачный сервис мониторинга параметров</p>
+        <a class="footer__ext" href="https://relsib.com/" target="_blank" rel="noopener">relsib.com</a>
       </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2001–2026 ООО НПК «Рэлсиб». Все права защищены.</p>
+      <p class="footer__pdn">Обработка персональных данных осуществляется в соответствии с Федеральным законом от&nbsp;27.07.2006 №&nbsp;152‑ФЗ «О&nbsp;персональных данных». Используя сайт, вы соглашаетесь с <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">политикой конфиденциальности</a> и обработкой файлов cookie.</p>
     </div>
   </footer>
   <script>
@@ -1617,31 +1545,6 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateAllIndicators);
     else updateAllIndicators();
     window.addEventListener('resize', updateAllIndicators);
-
-    document.querySelectorAll('.protocols__list-item .protocols__item-title').forEach(function(title) {
-      var item = title.closest('.protocols__list-item');
-      title.setAttribute('role', 'button');
-      title.setAttribute('tabindex', '0');
-      title.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
-      title.addEventListener('click', function() {
-        var wasActive = item.classList.contains('active');
-        document.querySelectorAll('.protocols__list-item').forEach(function(li) {
-          li.classList.remove('active');
-          var t = li.querySelector('.protocols__item-title');
-          if (t) t.setAttribute('aria-expanded', 'false');
-        });
-        if (!wasActive) {
-          item.classList.add('active');
-          title.setAttribute('aria-expanded', 'true');
-        }
-      });
-      title.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          title.click();
-        }
-      });
-    });
 
     document.addEventListener('click', function(e) {
       var btn = e.target.closest('.device-card__dropdown-btn');
@@ -2858,9 +2761,7 @@
       mark('.section-subtitle:not(:empty)');
       mark('.subsection-title');
       mark('.architecture-sub');
-      mark('.architecture-protocols');
       mark('.app-benefits');
-      mark('.ecosystem');
       mark('.mobile-web');
       mark('.selector');
       mark('.devices__slider-wrap');
@@ -3042,124 +2943,6 @@
       }
     })();
 
-    (function initEcosystem() {
-      var root = document.getElementById('ecosystem');
-      var web = document.getElementById('ecosystem-web');
-      var detail = document.getElementById('ecosystem-detail');
-      if (!root || !web || !detail) return;
-
-      var content = {
-        cloud: {
-          kicker: 'Центр · облако',
-          title: 'RelsibCloud',
-          text: 'Сюда сходятся данные со шлюзов и приборов Wi‑Fi/LTE. Отсюда их читают веб и мобильный браузер.',
-          linkHref: '#cloud-tree',
-          linkLabel: 'Иерархия в облаке →'
-        },
-        sensors: {
-          kicker: 'В облако · измерение',
-          title: 'Приборы и датчики',
-          text: 'EClerk‑WS, RS‑485 и ПАС‑01 снимают параметры и отдают их в шлюз или напрямую по Wi‑Fi/LTE.',
-          linkHref: 'devices.html',
-          linkLabel: 'Каталог приборов →'
-        },
-        gateways: {
-          kicker: 'В облако · передача',
-          title: 'Шлюзы GW',
-          text: 'Шлюзы собирают данные с Bluetooth‑ и RS‑485‑приборов и отправляют их в RelsibCloud по Ethernet.',
-          linkHref: 'devices.html?category=gateways',
-          linkLabel: 'Все шлюзы →'
-        },
-        direct: {
-          kicker: 'В облако · передача',
-          title: 'Wi‑Fi и LTE',
-          text: 'Приборы с Wi‑Fi или LTE пишут показания напрямую в облако — без шлюза.',
-          linkHref: 'devices.html?category=eclerk-eco-m',
-          linkLabel: 'Приборы Wi‑Fi / LTE →'
-        },
-        web: {
-          kicker: 'Из облака · доступ',
-          title: 'Веб‑приложение',
-          text: 'Графики, мнемосхемы, оповещения и отчёты — данные читаются из RelsibCloud.',
-          linkHref: 'https://app-uni.relsibcloud.com',
-          linkLabel: 'Открыть веб‑приложение →',
-          external: true
-        },
-        mobile: {
-          kicker: 'Из облака · доступ',
-          title: 'Мобильный доступ',
-          text: 'Тот же сервис в браузере на телефоне — без установки приложения.',
-          linkHref: '#mobile-web',
-          linkLabel: 'Как это выглядит →'
-        }
-      };
-
-      var allNodes = Array.prototype.slice.call(web.querySelectorAll('.ecosystem__node'));
-      var modeButtons = Array.prototype.slice.call(root.querySelectorAll('.ecosystem__mode'));
-      var activeId = 'sensors';
-      var activeMode = 'in';
-
-      function renderDetail(id) {
-        var data = content[id] || content.cloud;
-        detail.classList.add('is-updating');
-        detail.innerHTML =
-          '<p class="ecosystem__detail-kicker">' + data.kicker + '</p>' +
-          '<h5 class="ecosystem__detail-title">' + data.title + '</h5>' +
-          '<p class="ecosystem__detail-text">' + data.text + '</p>' +
-          '<a href="' + data.linkHref + '" class="ecosystem__detail-link"' +
-            (data.external ? ' target="_blank" rel="noopener"' : '') +
-          '>' + data.linkLabel + '</a>';
-        requestAnimationFrame(function() {
-          detail.classList.remove('is-updating');
-        });
-      }
-
-      function setActive(id) {
-        activeId = id || 'cloud';
-        allNodes.forEach(function(node) {
-          var on = node.getAttribute('data-eco-id') === activeId;
-          node.classList.toggle('is-active', on);
-          node.setAttribute('aria-pressed', on ? 'true' : 'false');
-        });
-        renderDetail(activeId);
-      }
-
-      function setMode(mode) {
-        activeMode = mode === 'out' ? 'out' : 'in';
-        web.setAttribute('data-eco-mode-active', activeMode);
-        modeButtons.forEach(function(btn) {
-          var on = btn.getAttribute('data-eco-mode') === activeMode;
-          btn.classList.toggle('is-active', on);
-          btn.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-        var nextId = activeMode === 'out' ? 'web' : 'sensors';
-        setActive(nextId);
-      }
-
-      web.addEventListener('click', function(e) {
-        var node = e.target.closest('.ecosystem__node');
-        if (!node || !web.contains(node)) return;
-        var nodeMode = node.getAttribute('data-eco-mode');
-        if (nodeMode === 'in' || nodeMode === 'out') {
-          activeMode = nodeMode;
-          web.setAttribute('data-eco-mode-active', activeMode);
-          modeButtons.forEach(function(btn) {
-            var on = btn.getAttribute('data-eco-mode') === activeMode;
-            btn.classList.toggle('is-active', on);
-            btn.setAttribute('aria-selected', on ? 'true' : 'false');
-          });
-        }
-        setActive(node.getAttribute('data-eco-id'));
-      });
-
-      modeButtons.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          setMode(btn.getAttribute('data-eco-mode'));
-        });
-      });
-
-      setMode('in');
-    })();
   })();
   </script>
 </body>

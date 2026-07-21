@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260605i">
+  <link rel="stylesheet" href="../styles.css?v=20260721z">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -83,42 +83,238 @@
         <a href="../index.html#instructions" class="catalog-header__back" aria-label="Назад к инструкциям">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         </a>
-        <h1 class="catalog-header__title">Инструкция по RelsibCloud</h1>
+        <h1 class="catalog-header__title">Инструкция по работе с RelsibCloud</h1>
       </header>
-      <p class="catalog-hero__lead">Создание и базовая настройка объектов, зон контроля, подключение приборов</p>
+      <p class="catalog-hero__lead">Как впервые зайти в <a href="https://app2.relsibcloud.com/" target="_blank" rel="noopener">app2.relsibcloud.com</a>, создать объект и увидеть показания приборов. Сначала быстрый старт — потом настройки подробнее.</p>
 
       <article class="guide">
-        <section class="guide__section">
-          <h2 class="guide__heading">Видеоинструкция</h2>
-          <div class="guide__video-wrap">
-            <!-- Вставьте iframe с YouTube или Rutube, например:
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Инструкция по RelsibCloud" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            -->
-            <div class="guide__video-placeholder">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
-              <p>Видео скоро появится</p>
-            </div>
-          </div>
+        <section class="guide__section" id="g-start">
+          <h2 class="guide__heading">Быстрый старт</h2>
+          <p class="guide__lead">Чтобы данные с приборов появились в облаке, достаточно сделать четыре шага. Остальное можно настроить позже.</p>
+          <ol class="guide__path">
+            <li><a href="#g-login">Войти</a></li>
+            <li><a href="#g-setup">Создать раздел → объект → зону</a></li>
+            <li><a href="#g-connect">Подключить шлюз или приложение</a></li>
+            <li><a href="#g-check">Проверить в «Приборах»</a></li>
+          </ol>
+          <nav class="guide__toc" aria-label="Содержание">
+            <a href="#g-start">Быстрый старт</a>
+            <a href="#g-setup">Создать объект</a>
+            <a href="#g-connect">Подключить</a>
+            <a href="#g-check">Проверить</a>
+            <a href="#g-next">Дальше</a>
+            <a href="#g-more">Подробнее</a>
+          </nav>
         </section>
 
-        <section class="guide__section">
-          <h2 class="guide__heading">Пошаговая инструкция</h2>
+        <section class="guide__section" id="g-login">
+          <h2 class="guide__heading">1. Войти в кабинет</h2>
           <ol class="guide__steps">
-            <li>Зарегистрируйтесь на <a href="https://relsibcloud.com">relsibcloud.com</a> и войдите в личный кабинет.</li>
-            <li>Создайте <strong>раздел</strong> — логическую группу объектов (например, производственный комплекс или офисный центр).</li>
-            <li>Добавьте <strong>объект</strong> внутри раздела — здание, цех, помещение или другую единицу мониторинга.</li>
-            <li>Настройте <strong>зоны контроля</strong> — каждая зона соответствует одному месту измерения и имеет уникальный ID.</li>
-            <li>Привяжите приборы к зонам: данные архивируются по месту измерения, а не по серийному номеру датчика.</li>
-            <li>Настройте пороги и оповещения, проверьте поступление данных в архив и на графиках.</li>
+            <li>Откройте <a href="https://relsibcloud.com" target="_blank" rel="noopener">relsibcloud.com</a> — зарегистрируйтесь или войдите.</li>
+            <li>Откроется кабинет. Слева — меню: <strong>Контроль</strong>, <strong>Объекты</strong>, <strong>Приборы</strong> и другие разделы.</li>
           </ol>
+        </section>
+
+        <section class="guide__section" id="g-setup">
+          <h2 class="guide__heading">2. Создать раздел, объект и зону</h2>
+          <p class="guide__lead">Откройте <strong>Объекты</strong>. Нужны три уровня: где площадка → куда подключается шлюз → где стоит датчик.</p>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/60-marketing-tree.png" alt="Пример дерева объектов" width="1440" height="900" loading="lazy">
+            <figcaption>Раздел → объект → зоны. Показания появляются у зон после подключения приборов</figcaption>
+          </figure>
+
+          <h3 class="guide__subheading">Раздел</h3>
+          <ol class="guide__steps">
+            <li>Нажмите <strong>+ Добавить раздел</strong>.</li>
+            <li>Укажите название (например, «Офис» или «Склад») → <strong>Сохранить</strong>.</li>
+          </ol>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/18-section-form-clean.png" alt="Параметры раздела" width="1440" height="900" loading="lazy">
+            <figcaption>«Параметры раздела» — достаточно названия</figcaption>
+          </figure>
+
+          <h3 class="guide__subheading">Объект</h3>
+          <p class="guide__lead">Объект — точка подключения шлюза. У него будут логин и пароль для связи с облаком.</p>
+          <ol class="guide__steps">
+            <li>В строке раздела нажмите иконку <strong>«Добавить объект»</strong>.</li>
+            <li>Заполните <strong>название</strong>, <strong>адрес</strong> и <strong>часовой пояс</strong> (обязательно) → <strong>Сохранить</strong>.</li>
+          </ol>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/19-object-form-clean.png" alt="Параметры объекта" width="1440" height="900" loading="lazy">
+            <figcaption>«Параметры объекта» — название, адрес, часовой пояс</figcaption>
+          </figure>
+
+          <h3 class="guide__subheading">Зона</h3>
+          <p class="guide__lead">Зона — место измерения (комната, холодильник, точка с датчиком). История данных хранится на зоне.</p>
+          <ol class="guide__steps">
+            <li>Раскройте раздел, найдите объект.</li>
+            <li>Нажмите зелёный <strong>«+» — Добавить зону</strong>.</li>
+            <li>Укажите название → <strong>Сохранить</strong>.</li>
+          </ol>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/65-zone-add.png" alt="Параметры зоны" width="1440" height="900" loading="lazy">
+            <figcaption>«Параметры зоны» — для старта хватит названия</figcaption>
+          </figure>
+        </section>
+
+        <section class="guide__section" id="g-connect">
+          <h2 class="guide__heading">3. Подключить шлюз или приложение</h2>
+          <p class="guide__lead">В строке объекта нажмите первую иконку — <strong>«Информация для подключения»</strong>.</p>
+          <figure class="guide__figure guide__figure--icons">
+            <img src="../Images/instructions/detail/object-row-icons.png" alt="Иконки объекта" width="320" height="80" loading="lazy">
+            <figcaption>Первая иконка — данные для шлюза; третья (зелёный +) — добавить зону</figcaption>
+          </figure>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/61-connection-info.png" alt="Параметры подключения" width="1440" height="900" loading="lazy">
+            <figcaption>Сервер, порт, логин и пароль (на скрине скрыты) — введите в шлюз или отсканируйте QR</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li>Скопируйте <strong>логин</strong> и <strong>пароль</strong> объекта (или отсканируйте QR).</li>
+            <li>Введите их в шлюз GW / приложение EClerk-WM / настройки прибора Wi‑Fi или LTE.</li>
+            <li>MQTT: сервер <code>relsibcloud.com</code>, порт <strong>8883</strong>. HTTPS: порт <strong>8080</strong>.</li>
+            <li>Подробнее по мобильному приложению — в инструкции <a href="eclerk-wm.html">EClerk-WM</a>.</li>
+          </ol>
+        </section>
+
+        <section class="guide__section" id="g-check">
+          <h2 class="guide__heading">4. Проверить, что приборы подключены</h2>
+          <p class="guide__lead">После настройки шлюза откройте <strong>Приборы</strong> — там появятся устройства и их статус (онлайн / офлайн). Так проще всего убедиться, что связь с облаком есть.</p>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/23-devices.png" alt="Список приборов" width="1440" height="900" loading="lazy">
+            <figcaption>«Приборы» — сводка и список устройств</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li>Откройте <strong>Приборы</strong>.</li>
+            <li>Проверьте, что нужные устройства в списке и в статусе онлайн.</li>
+            <li>Текущие показания также видны в дереве <strong>Объектов</strong> у соответствующих зон.</li>
+          </ol>
+          <p class="guide__lead"><strong>Контроль</strong> — не полный список всех зон. Туда попадают только зоны из <strong>избранного</strong>: когда зон много, на экран выводят самые нужные. Чтобы зона появилась в Контроле, добавьте её в избранное.</p>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/21-kontrol.png" alt="Раздел Контроль" width="1440" height="900" loading="lazy">
+            <figcaption>«Контроль» — избранные зоны для постоянного мониторинга</figcaption>
+          </figure>
+          <p class="guide__lead">На этом базовый запуск закончен: объект создан, шлюз подключён, приборы видны в списке.</p>
+        </section>
+
+        <section class="guide__section" id="g-next">
+          <h2 class="guide__heading">Что настроить дальше</h2>
+          <p class="guide__lead">Когда первые приборы уже отдают данные, удобно сразу включить оповещения и посмотреть отчёты.</p>
+
+          <h3 class="guide__subheading">Уведомления</h3>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/24-alerts.png" alt="Уведомления" width="1440" height="900" loading="lazy">
+            <figcaption>E-mail, SMS, Telegram, MAX</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li>Откройте <strong>Уведомления</strong>.</li>
+            <li>Включите канал и укажите адрес, телефон или код бота → <strong>Сохранить</strong>.</li>
+          </ol>
+
+          <h3 class="guide__subheading">Отчёты</h3>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/22-reports.png" alt="Отчёты" width="1440" height="900" loading="lazy">
+            <figcaption>График, события, анализ, экспорт</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li>Откройте <strong>Отчёты</strong> → выберите зоны и интервал → <strong>Показать</strong>.</li>
+          </ol>
+        </section>
+
+        <section class="guide__section" id="g-more">
+          <h2 class="guide__heading">Подробнее по кабинету</h2>
+          <p class="guide__lead">Ниже — когда базовый запуск уже сделан и нужно разобраться глубже.</p>
+
+          <h3 class="guide__subheading" id="g-structure">Как устроено дерево</h3>
+          <ol class="guide__steps">
+            <li><strong>Раздел</strong> — группа (филиал, этаж, площадка). Можно вкладывать разделы друг в друга.</li>
+            <li><strong>Объект</strong> — точка подключения шлюза: адрес, часовой пояс, права доступа, логин/пароль.</li>
+            <li><strong>Зона</strong> — место измерения. Данные хранятся на зоне: при замене датчика история не пропадает.</li>
+          </ol>
+
+          <h3 class="guide__subheading" id="g-object-icons">Иконки объекта</h3>
+          <figure class="guide__figure guide__figure--icons">
+            <img src="../Images/instructions/detail/object-row-icons.png" alt="Пять иконок объекта" width="320" height="80" loading="lazy">
+            <figcaption>Слева направо</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li>документ — информация для подключения шлюза;</li>
+            <li>монитор — дашборд объекта;</li>
+            <li>«+» — добавить зону;</li>
+            <li>карандаш — редактировать объект;</li>
+            <li>корзина — удалить объект.</li>
+          </ol>
+          <p class="guide__lead">У раздела иконки другие: добавить подраздел, добавить объект, редактировать, удалить.</p>
+
+          <h3 class="guide__subheading" id="g-dashboard">Дашборд объекта</h3>
+          <p class="guide__lead">Синий монитор открывает карточку объекта со всеми зонами.</p>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/62-object-dashboard.png" alt="Дашборд объекта" width="1440" height="900" loading="lazy">
+            <figcaption>Сводка по зонам, карточки с показаниями, вкладки</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li><strong>Обзор</strong> — карточки зон (температура, влажность, CO₂, батарея, сигнал).</li>
+            <li><strong>Проблемы</strong> — зоны с отклонениями.</li>
+            <li><strong>Графики</strong> — история измерений.</li>
+            <li><strong>Настройки</strong> — параметры объекта.</li>
+            <li><strong>Схема</strong> — показания на плане или фото.</li>
+          </ol>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/62b-object-dashboard-settings.png" alt="Настройки в дашборде" width="1440" height="900" loading="lazy">
+            <figcaption>Вкладка «Настройки» в дашборде</figcaption>
+          </figure>
+
+          <h3 class="guide__subheading" id="g-edit">Редактирование объекта и зоны</h3>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/63-object-edit-marketing.png" alt="Редактирование объекта" width="1440" height="900" loading="lazy">
+            <figcaption>Параметры объекта: название, адрес, раздел, пояс, права, видимость</figcaption>
+          </figure>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/64-zone-edit.png" alt="Редактирование зоны" width="1440" height="900" loading="lazy">
+            <figcaption>Параметры зоны: название, комментарий, транзит, видимость</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li>Карандаш у объекта или зоны открывает форму параметров.</li>
+            <li>В зоне можно уточнить комментарий и видимость в Контроле.</li>
+          </ol>
+
+          <h3 class="guide__subheading" id="g-control-more">Контроль: экран и схема</h3>
+          <p class="guide__lead">В <strong>Контроле</strong> показываются только зоны из избранного — удобный экран для самых важных точек, а не для всего списка зон.</p>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/guide-shema.png" alt="Контроль схема" width="1440" height="900" loading="lazy">
+            <figcaption>Вкладка «Схема» — показания избранных зон на изображении объекта</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li><strong>Экран</strong> — карточки избранных зон.</li>
+            <li><strong>Схема</strong> — те же данные на плане или фото.</li>
+            <li>Чтобы проверить, что приборы вообще подключились, смотрите раздел <strong>Приборы</strong>.</li>
+          </ol>
+
+          <h3 class="guide__subheading" id="g-users">Пользователи</h3>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/25-users.png" alt="Пользователи" width="1440" height="900" loading="lazy">
+            <figcaption>Роли и доступ к объектам</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li><strong>Пользователи</strong> → <strong>+ Добавить пользователя</strong>.</li>
+            <li>Назначьте роль и объекты, к которым есть доступ.</li>
+          </ol>
+
+          <h3 class="guide__subheading" id="g-log">Журнал</h3>
+          <figure class="guide__figure">
+            <img src="../Images/instructions/detail/26-logs.png" alt="Журнал" width="1440" height="900" loading="lazy">
+            <figcaption>События по объекту, зоне и сотруднику</figcaption>
+          </figure>
+          <ol class="guide__steps">
+            <li>Выберите объект, сотрудника и интервал → <strong>Показать</strong>.</li>
+          </ol>
+
           <p class="guide__more">
-            <a href="https://relsib.com/relsibcloud/instruktsiya-po-rabote-s-relsibcloud/" target="_blank" rel="noopener">Полная инструкция на relsib.com →</a>
+            <a href="https://relsib.com/relsibcloud/instruktsiya-po-rabote-s-relsibcloud/" target="_blank" rel="noopener">Дополнительно на relsib.com →</a>
           </p>
         </section>
       </article>
 
       <nav class="guide-nav" aria-label="Другие инструкции">
-        <a href="app-uni.html" class="guide-nav__link">WEB-приложение app-uni</a>
         <a href="eclerk-wm.html" class="guide-nav__link">Мобильное приложение EClerk-WM</a>
       </nav>
     </div>
@@ -126,24 +322,49 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__contacts">
-        <p><strong>ООО НПК «Рэлсиб»</strong></p>
-        <p>г. Новосибирск, ул. Немировича-Данченко, д. 128/1</p>
+      <div class="footer__col footer__col--company">
+        <p class="footer__title">ООО НПК «Рэлсиб»</p>
+        <p class="footer__legal-name">ООО Научно-производственная компания «Рэлсиб»</p>
+        <p>Юридический и почтовый адрес: 630087, Новосибирская область, г.&nbsp;Новосибирск, ул.&nbsp;Немировича-Данченко, зд.&nbsp;128/1</p>
+        <p class="footer__ids">ОГРН&nbsp;1035401005529 · ИНН&nbsp;5402159819 · КПП&nbsp;540301001</p>
         <p><a href="tel:+73833830286">8 (383) 383-02-86</a></p>
-        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a></p>
+        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a> · <a href="mailto:office@relsib.com">office@relsib.com</a></p>
       </div>
-      <nav class="footer__nav">
-        <a href="https://relsib.com/">relsib.com</a>
-        <a href="https://relsib.com/relsibcloud/">RelsibCloud</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/">О сервисе</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-devices/">Приборы</a>
-      </nav>
-      <div class="footer__brand">
-        <a href="../index.html" class="footer__logo">
+
+      <div class="footer__col">
+        <p class="footer__heading">Сервис</p>
+        <nav class="footer__nav" aria-label="Разделы сайта">
+          <a href="../index.html#architecture">Архитектура</a>
+          <a href="../index.html#use-cases">Примеры</a>
+          <a href="../devices.html">Приборы</a>
+          <a href="../index.html#instructions">Инструкции</a>
+          <a href="https://relsibcloud.com" target="_blank" rel="noopener">Войти в RelsibCloud</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__heading">Документы</p>
+        <nav class="footer__nav" aria-label="Юридические документы">
+          <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">Политика конфиденциальности</a>
+          <a href="https://relsib.com/company/consent/consent-form/" target="_blank" rel="noopener">Согласие на обработку ПДн</a>
+          <a href="https://relsib.com/company/consent/user-agreement/" target="_blank" rel="noopener">Пользовательское соглашение</a>
+          <a href="https://relsib.com/company/bank_details/" target="_blank" rel="noopener">Реквизиты</a>
+        </nav>
+      </div>
+
+      <div class="footer__col footer__col--brand">
+        <a href="../index.html" class="footer__logo" aria-label="RelsibCloud">
           <img src="../Images/Logo/Cloud_logo.svg" alt="" width="40" height="40" class="footer__logo-img">
+          <span class="footer__logo-text">RelsibCloud</span>
         </a>
-        <p class="footer__copyright">© 2026 RelsibCloud. Все права защищены</p>
+        <p class="footer__brand-note">Облачный сервис мониторинга параметров</p>
+        <a class="footer__ext" href="https://relsib.com/" target="_blank" rel="noopener">relsib.com</a>
       </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2001–2026 ООО НПК «Рэлсиб». Все права защищены.</p>
+      <p class="footer__pdn">Обработка персональных данных осуществляется в соответствии с Федеральным законом от&nbsp;27.07.2006 №&nbsp;152‑ФЗ «О&nbsp;персональных данных». Используя сайт, вы соглашаетесь с <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">политикой конфиденциальности</a> и обработкой файлов cookie.</p>
     </div>
   </footer>
 

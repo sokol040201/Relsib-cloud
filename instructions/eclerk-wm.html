@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260605i">
+  <link rel="stylesheet" href="../styles.css?v=20260721z">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -85,7 +85,7 @@
         </a>
         <h1 class="catalog-header__title">Мобильное приложение EClerk-WM</h1>
       </header>
-      <p class="catalog-hero__lead">Настройка беспроводных датчиков, шлюза и оповещений на планшете или телефоне</p>
+      <p class="catalog-hero__lead">Сбор данных с Bluetooth-датчиков, настройка шлюза и оповещений на планшете или телефоне с Android.</p>
 
       <article class="guide">
         <section class="guide__section">
@@ -102,48 +102,79 @@
         </section>
 
         <section class="guide__section">
-          <h2 class="guide__heading">Пошаговая инструкция</h2>
+          <h2 class="guide__heading">Установка</h2>
           <ol class="guide__steps">
-            <li>Установите приложение <strong>EClerk-WM</strong> на планшет или телефон с Android.</li>
-            <li>Включите Bluetooth и добавьте беспроводные датчики EClerk-WS или термогигрометры Ivit.</li>
-            <li>Настройте шлюз <strong>GW-Bl/E-1</strong> — укажите параметры подключения к облаку RelsibCloud.</li>
-            <li>Привяжите датчики к зонам контроля в соответствии со структурой объектов в облаке.</li>
-            <li>Проверьте передачу данных и настройте <strong>push-оповещения</strong> при выходе параметров за пороги.</li>
-            <li>Используйте приложение для первичной настройки объекта на месте без доступа к компьютеру.</li>
+            <li>Установите приложение <strong>EClerk Wireless Monitoring (EClerk-WM)</strong> на планшет или телефон с Android 5.0 и выше — из Google Play или с <a href="https://relsib.com/catalog/eclerk-wm/" target="_blank" rel="noopener">relsib.com</a>.</li>
+            <li>При первом запуске выдайте разрешения (в том числе геолокацию и работу в фоне), отключите агрессивную экономию батареи для стабильного приёма данных.</li>
+          </ol>
+        </section>
+
+        <section class="guide__section">
+          <h2 class="guide__heading">Датчики, шлюз и облако</h2>
+          <ol class="guide__steps">
+            <li>Включите Bluetooth. Добавьте беспроводные датчики EClerk-WS, термогигрометры Ivit и другие приборы с Bluetooth производства НПК «Рэлсиб».</li>
+            <li>Создайте объекты контроля в приложении и привяжите к ним датчики.</li>
+            <li>При работе с облаком настройте шлюз GW (Bluetooth или RS-485): укажите логин и пароль объекта RelsibCloud.</li>
+            <li>Проверьте передачу данных и настройте оповещения (локальные, e-mail, мессенджеры) при выходе параметров за пороги.</li>
+            <li>Приложение удобно для первичной настройки объекта на месте — без компьютера.</li>
           </ol>
           <p class="guide__more">
-            <a href="https://relsib.com/catalog/eclerk-wm/" target="_blank" rel="noopener">Подробнее о приложении на relsib.com →</a>
+            <a href="https://relsib.com/catalog/eclerk-wm/" target="_blank" rel="noopener">Подробнее о системе EClerk-WM на relsib.com →</a>
           </p>
         </section>
       </article>
 
       <nav class="guide-nav" aria-label="Другие инструкции">
         <a href="relsibcloud.html" class="guide-nav__link">Инструкция по RelsibCloud</a>
-        <a href="app-uni.html" class="guide-nav__link">WEB-приложение app-uni</a>
       </nav>
     </div>
   </main>
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__contacts">
-        <p><strong>ООО НПК «Рэлсиб»</strong></p>
-        <p>г. Новосибирск, ул. Немировича-Данченко, д. 128/1</p>
+      <div class="footer__col footer__col--company">
+        <p class="footer__title">ООО НПК «Рэлсиб»</p>
+        <p class="footer__legal-name">ООО Научно-производственная компания «Рэлсиб»</p>
+        <p>Юридический и почтовый адрес: 630087, Новосибирская область, г.&nbsp;Новосибирск, ул.&nbsp;Немировича-Данченко, зд.&nbsp;128/1</p>
+        <p class="footer__ids">ОГРН&nbsp;1035401005529 · ИНН&nbsp;5402159819 · КПП&nbsp;540301001</p>
         <p><a href="tel:+73833830286">8 (383) 383-02-86</a></p>
-        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a></p>
+        <p><a href="mailto:sales@relsib.com">sales@relsib.com</a> · <a href="mailto:office@relsib.com">office@relsib.com</a></p>
       </div>
-      <nav class="footer__nav">
-        <a href="https://relsib.com/">relsib.com</a>
-        <a href="https://relsib.com/relsibcloud/">RelsibCloud</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-main-info/">О сервисе</a>
-        <a href="https://relsib.com/relsibcloud/relsibcloud-devices/">Приборы</a>
-      </nav>
-      <div class="footer__brand">
-        <a href="../index.html" class="footer__logo">
+
+      <div class="footer__col">
+        <p class="footer__heading">Сервис</p>
+        <nav class="footer__nav" aria-label="Разделы сайта">
+          <a href="../index.html#architecture">Архитектура</a>
+          <a href="../index.html#use-cases">Примеры</a>
+          <a href="../devices.html">Приборы</a>
+          <a href="../index.html#instructions">Инструкции</a>
+          <a href="https://relsibcloud.com" target="_blank" rel="noopener">Войти в RelsibCloud</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__heading">Документы</p>
+        <nav class="footer__nav" aria-label="Юридические документы">
+          <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">Политика конфиденциальности</a>
+          <a href="https://relsib.com/company/consent/consent-form/" target="_blank" rel="noopener">Согласие на обработку ПДн</a>
+          <a href="https://relsib.com/company/consent/user-agreement/" target="_blank" rel="noopener">Пользовательское соглашение</a>
+          <a href="https://relsib.com/company/bank_details/" target="_blank" rel="noopener">Реквизиты</a>
+        </nav>
+      </div>
+
+      <div class="footer__col footer__col--brand">
+        <a href="../index.html" class="footer__logo" aria-label="RelsibCloud">
           <img src="../Images/Logo/Cloud_logo.svg" alt="" width="40" height="40" class="footer__logo-img">
+          <span class="footer__logo-text">RelsibCloud</span>
         </a>
-        <p class="footer__copyright">© 2026 RelsibCloud. Все права защищены</p>
+        <p class="footer__brand-note">Облачный сервис мониторинга параметров</p>
+        <a class="footer__ext" href="https://relsib.com/" target="_blank" rel="noopener">relsib.com</a>
       </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">© 2001–2026 ООО НПК «Рэлсиб». Все права защищены.</p>
+      <p class="footer__pdn">Обработка персональных данных осуществляется в соответствии с Федеральным законом от&nbsp;27.07.2006 №&nbsp;152‑ФЗ «О&nbsp;персональных данных». Используя сайт, вы соглашаетесь с <a href="https://relsib.com/company/consent/" target="_blank" rel="noopener">политикой конфиденциальности</a> и обработкой файлов cookie.</p>
     </div>
   </footer>
 
