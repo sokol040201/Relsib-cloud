@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260721z">
+  <link rel="stylesheet" href="../styles.css?v=20260817c">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -51,8 +51,8 @@
         </button>
       </div>
     </div>
-    <div class="header__menu-overlay" aria-hidden="true"></div>
-    <div class="header__menu" aria-hidden="true">
+    <div class="header__menu-overlay" aria-hidden="true" inert></div>
+    <div class="header__menu" aria-hidden="true" hidden inert>
       <button type="button" class="header__menu-close" aria-label="Закрыть меню">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
@@ -194,15 +194,29 @@
     function openMenu() {
       header.classList.add('header--menu-open');
       if (burger) burger.setAttribute('aria-expanded', 'true');
-      if (overlay) overlay.setAttribute('aria-hidden', 'false');
-      if (menu) menu.setAttribute('aria-hidden', 'false');
+      if (overlay) {
+        overlay.setAttribute('aria-hidden', 'false');
+        overlay.removeAttribute('inert');
+      }
+      if (menu) {
+        menu.setAttribute('aria-hidden', 'false');
+        menu.removeAttribute('hidden');
+        menu.removeAttribute('inert');
+      }
       document.body.style.overflow = 'hidden';
     }
     function closeMenu() {
       header.classList.remove('header--menu-open');
       if (burger) burger.setAttribute('aria-expanded', 'false');
-      if (overlay) overlay.setAttribute('aria-hidden', 'true');
-      if (menu) menu.setAttribute('aria-hidden', 'true');
+      if (overlay) {
+        overlay.setAttribute('aria-hidden', 'true');
+        overlay.setAttribute('inert', '');
+      }
+      if (menu) {
+        menu.setAttribute('aria-hidden', 'true');
+        menu.setAttribute('hidden', '');
+        menu.setAttribute('inert', '');
+      }
       document.body.style.overflow = '';
     }
     if (burger) burger.addEventListener('click', function() {
