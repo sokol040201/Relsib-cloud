@@ -3,12 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEB-приложение app-uni — RelsibCloud</title>
+  <title>Инструкция app-uni — WEB-приложение мнемосхем RelsibCloud</title>
+  <meta name="description" content="Инструкция по WEB-приложению app-uni: вход, настройка мнемосхем, пороги оповещений, отчёты в PDF и экспорт в Excel для объектов RelsibCloud.">
+  <meta name="keywords" content="app-uni, RelsibCloud, мнемосхема, WEB-приложение, отчёты, оповещения, мониторинг">
+  <meta name="author" content="ООО НПК «Рэлсиб»">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0e9fe9">
+  <link rel="canonical" href="https://relsibcloud.com/instructions/app-uni.html">
+  <link rel="alternate" hreflang="ru" href="https://relsibcloud.com/instructions/app-uni.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="RelsibCloud">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Инструкция app-uni — WEB-приложение мнемосхем">
+  <meta property="og:description" content="Настройка мнемосхем, оповещений и отчётов в WEB-приложении app-uni.relsibcloud.com.">
+  <meta property="og:url" content="https://relsibcloud.com/instructions/app-uni.html">
+  <meta property="og:image" content="https://relsibcloud.com/Images/Mockups/App-uni-ios.png">
+  <meta property="og:image:alt" content="WEB-приложение app-uni на смартфоне">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Инструкция app-uni">
+  <meta name="twitter:description" content="Мнемосхемы, оповещения и отчёты в WEB-приложении RelsibCloud.">
+  <meta name="twitter:image" content="https://relsibcloud.com/Images/Mockups/App-uni-ios.png">
   <link rel="icon" type="image/svg+xml" href="../Images/Logo/Cloud_logo.svg">
+  <link rel="apple-touch-icon" href="../Images/Logo/Cloud_logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20260817c">
+  <link rel="stylesheet" href="../styles.css?v=20260822b">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "@id": "https://relsibcloud.com/instructions/app-uni.html#howto",
+        "name": "Настройка WEB-приложения app-uni",
+        "description": "Как работать с мнемосхемами, оповещениями и отчётами в app-uni.relsibcloud.com.",
+        "inLanguage": "ru-RU",
+        "image": "https://relsibcloud.com/Images/Mockups/App-uni-ios.png",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Войти в app-uni", "text": "Откройте app-uni.relsibcloud.com и войдите учётной записью RelsibCloud." },
+          { "@type": "HowToStep", "position": 2, "name": "Выбрать объект", "text": "Выберите раздел, объект и зону — структура совпадает с настройками в облаке." },
+          { "@type": "HowToStep", "position": 3, "name": "Настроить мнемосхемы", "text": "Создайте мнемосхемы и таблицы для наглядного отображения параметров объекта." },
+          { "@type": "HowToStep", "position": 4, "name": "Настроить оповещения и отчёты", "text": "Задайте пороги, проверьте журнал событий, формируйте отчёты PDF и выгрузку в Excel." }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://relsibcloud.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Инструкции", "item": "https://relsibcloud.com/#instructions" },
+          { "@type": "ListItem", "position": 3, "name": "app-uni", "item": "https://relsibcloud.com/instructions/app-uni.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111382488', 'ym');
+
+  ym(111382488, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111382488" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
@@ -150,6 +212,7 @@
           <a href="../devices.html">Приборы</a>
           <a href="../index.html#instructions">Инструкции</a>
           <a href="https://app2.relsibcloud.com/login/" target="_blank" rel="noopener">Войти в RelsibCloud</a>
+          <a href="/sitemap.xml">Карта сайта</a>
         </nav>
       </div>
 
