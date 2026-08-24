@@ -1,4 +1,10 @@
 {
   "version": 1,
-  "hooks": {}
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "python .cursor/hooks/sftp_upload_hook.py"
+      }
+    ]
+  }
 }
